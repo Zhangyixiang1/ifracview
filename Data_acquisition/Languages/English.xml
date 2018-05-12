@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Lan Language="英文">
+  <Form>
+    <!--首界面-->
+    <Name>Form_Main</Name>
+    <Controls>
+      <Control name="文件ToolStripMenuItem1" text="File"/>
+      <Control name="新建施工ToolStripMenuItem" text="New job"/>
+      <Control name="追加施工ToolStripMenuItem" text="Append job"/>
+      <Control name="结束施工ToolStripMenuItem" text="Finish job"/>
+      <Control name="退出ToolStripMenuItem2" text="Exit"/>
+      <Control name="设置ToolStripMenuItem1" text="Setup"/>
+      <Control name="系统设置ToolStripMenuItem1" text="System Settings"/>
+      <Control name="通道设置ToolStripMenuItem" text="Channel Settings"/>
+      <Control name="图像编辑ToolStripMenuItem1" text="Graph Edit"/>
+      <Control name="视图ToolStripMenuItem1" text="Window"/>
+      <Control name="视图1ToolStripMenuItem1" text="Window1"/>
+      <Control name="视图2ToolStripMenuItem1" text="Window2"/>
+      <Control name="视图3ToolStripMenuItem1" text="Window3"/>
+      <Control name="视图4ToolStripMenuItem1" text="Window4"/>
+      <Control name="关于ToolStripMenuItem1" text="About"/>
+      <Control name="帮助ToolStripMenuItem1" text="Hlep"/>
+      <Control name="btn_start" text="Start"/>
+      <Control name="btn_report" text="Report"/>
+      <Control name="btn_print" text="Print"/>
+      <Control name="btn_zero" text="Zero"/>
+      <Control name="btn_next" text="Next"/>
+      <Control name="btn_left" text="Left"/>
+      <Control name="btn_right" text="Right"/>
+      <Control name="btn_zoomin" text="Zoom In"/>
+      <Control name="btn_zoomout" text="Zoom Out"/>
+      <Control name="label5" text="Graph Edit"/>
+      <Control name="groupBox1" text="Time Range"/>
+      <Control name="label6" text="Start(s)"/>
+      <Control name="chk_time" text="Whole Range"/>
+      <Control name="label7" text="End(s)"/>
+      <Control name="groupBox2" text="Line Choose"/>
+      <Control name="groupBox3" text="Edit Method"/>
+      <Control name="rab_interpolation" text="Interpolation"/>
+      <Control name="rab_set" text="Setting Value"/>
+      <Control name="label8" text="Value"/>
+      <Control name="rab_recurrence" text="Recurrence Average"/>
+      <Control name="label9" text="Count"/>
+      <Control name="rab_none" text="Unedit"/>
+      <Control name="btn_ok" text="Apply"/>
+      <Control name="btn_undo" text="Undo"/>
+      <Control name="btn_confirm" text="Ack."/>
+      <Control name="groupBox4" text="Schedule"/>
+      <Control name="label4" text="Blender1-"/>
+      <Control name="lbl_blender1" text="ONLINE"/>
+      <Control name="label3" text="Blender2-"/>
+      <Control name="lbl_blender2" text="OFFLINE"/>
+      <Control name="btn_import" text="Open"/>
+      <Control name="btn_export" text="Save"/>
+      <Control name="btn_table" text="Chart"/>
+      <Control name="btn_chart" text="Curve"/>
+      <Control name="radioButton1" text="Sand"/>
+      <Control name="radioButton3" text="LA1"/>
+      <Control name="radioButton4" text="LA2"/>
+      <Control name="radioButton5" text="LA3"/>
+      <Control name="radioButton6" text="DA1"/>
+      <Control name="radioButton2" text="DA2"/>
+      <Control name="btn_send" text="Send"/>
+      <Control name="btn_jobstart" text="Start"/>
+      <Control name="btn_blenderstop" text="Stop"/>
+      <Control name="btn_blenderhold" text="Hold"/>
+      <Control name="btn_blendernext" text="Next"/>
+      <Control name="rdbtn_auto" text="Stage Auto"/>
+      <Control name="rdbtn_hand" text="Stage Hand"/>
+      <Control name="label10" text="Stage:"/>
+      <Control name="label2" text="Stage Progress"/>
+      <Control name="label1" text="Job Progress"/>
+      <Control name="toolStripStatusLabel2" text="Stage Time："/>
+      <Control name="toolStripStatusLabel3" text="Current Time："/>
+      <Control name="toolStripStatusLabel5" text="Device"/>
+      <Control name="toolStripStatusLabel12" text="Record"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--曲线界面1-->
+    <Name>Frm_Realtrend</Name>
+    <Controls>
+      <Control name="label1" text="Oil Field "/>
+      <Control name="label2" text="Well No. "/>
+      <Control name="label6" text="Stage Progress "/>
+      <Control name="label3" text="Job "/>
+      <Control name="label4" text="Stage "/>
+      <Control name="label5" text="Job Progress "/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--曲线界面2-->
+    <Name>Frm_Realtrend2</Name>
+    <Controls>
+      <Control name="label1" text="Oil Field "/>
+      <Control name="label2" text="Well No. "/>
+      <Control name="label6" text="Stage Progress "/>
+      <Control name="label3" text="Job "/>
+      <Control name="label4" text="Stage "/>
+      <Control name="label5" text="Job Progress "/>
+      <Control name="groupBox4" text="Blender"/>
+      <Control name="label8" text="Blender1:"/>
+      <Control name="lbl_blender1" text="ONLINE"/>
+      <Control name="label7" text="Blender2:"/>
+      <Control name="lbl_blender2" text="OFFLINE"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--数字界面-->
+    <Name>Frm_Paradigital2</Name>
+    <Controls>
+      <Control name="**" text="**"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--表盘界面-->
+    <Name>Frm_Paraanalog2</Name>
+    <Controls>
+      <Control name="**" text="**"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--追加施工界面-->
+    <Name>Frm_add</Name>
+    <Controls>
+      <Control name="Frm_add" text="Add Job"/>
+      <Control name="btn_OK" text="OK"/>
+      <Control name="btn_del" text="Delete"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--新建施工界面-->
+    <Name>Frm_creat</Name>
+    <Controls>
+      <Control name="Frm_creat" text="Information"/>
+      <Control name="label1" text="Oil Field"/>
+      <Control name="label2" text="Well No."/>
+      <Control name="label10" text="Job No."/>
+      <Control name="label3" text="Date"/>
+      <Control name="label4" text="Client Name"/>
+      <Control name="label5" text="Client Rep"/>
+      <Control name="label6" text="Lease"/>
+      <Control name="label7" text="Lease Rep"/>
+      <Control name="label8" text="Lease Leader"/>
+      <Control name="label9" text="Comment"/>
+      <Control name="btn_OK" text="OK"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--Overide界面-->
+    <Name>Frm_override</Name>
+    <Controls>
+      <Control name="radioButton1" text="Sand"/>
+      <Control name="radioButton2" text="Chem1"/>
+      <Control name="radioButton3" text="Chem2"/>
+      <Control name="radioButton4" text="Chem3"/>
+      <Control name="radioButton5" text="DryAdd1"/>
+      <Control name="radioButton6" text="DryAdd2"/>
+      <Control name="label1" text="Old Target"/>
+      <Control name="label2" text="New Target"/>
+      <Control name="rdbtn_stage" text="Stage Only"/>
+      <Control name="rdbtn_job" text="Rest of Job"/>
+      <Control name="button2" text="Cancel"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--输出配置界面-->
+    <Name>Frm_Paraset</Name>
+    <Controls>
+      <Control name="Frm_Paraset" text="Output Config"/>
+      <Control name="tabPage1" text="Report"/>
+      <Control name="groupBox2" text="Parameters"/>
+      <Control name="groupBox1" text="Choose"/>
+      <Control name="groupBox3" text="Time Interval"/>
+      <Control name="btn_OK" text="OK"/>
+      <Control name="btn_Cancel" text="Cancel"/>
+      <Control name="tabPage2" text="Series Port"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--打印界面-->
+    <Name>Frm_print</Name>
+    <Controls>
+      <Control name="Frm_print" text="PrintPreview"/>
+      <Control name="lbl_title" text="Title"/>
+      <Control name="label1" text="Title"/>
+      <Control name="btn_refresh" text="Refresh"/>
+      <Control name="btn_print" text="Print"/>
+      <Control name="btn_export" text="Export"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--发送界面-->
+    <Name>Frm_send</Name>
+    <Controls>
+      <Control name="Frm_send" text="Warning"/>
+      <Control name="label1" text="Are you sure to send the schedual？"/>
+      <Control name="chb_auto" text="Auto"/>
+      <Control name="btn_ok" text="OK"/>
+      <Control name="btn_cancel" text="Cancel"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--系统设置界面-->
+    <Name>Frm_setting</Name>
+    <Controls>
+      <Control name="Frm_setting" text="System Config"/>
+      <Control name="groupBox1" text="Unit"/>
+      <Control name="rdb_engunit" text="English"/>
+      <Control name="rdb_metric" text="Metric"/>
+      <Control name="groupBox2" text="Language"/>
+      <Control name="rdb_eng" text="English"/>
+      <Control name="rdb_chn" text="中文"/>
+      <Control name="btn_OK" text="OK"/>
+      <Control name="btn_cancel" text="Cancel"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--参数选择界面-->
+    <Name>Para_choose</Name>
+    <Controls>
+      <Control name="Para_choose" text="Parameters"/>
+      <Control name="tabPage1" text="DAQ"/>
+      <Control name="tabPage2" text="Blender"/>
+      <Control name="tabPage3" text="Pumps"/>
+      <Control name="tabPage4" text="Pupms(old)"/>
+      <Control name="btn_OK" text="OK"/>
+      <Control name="btn_cancel" text="Cancel"/>
+      <Control name="label2" text="Min"/>
+      <Control name="label1" text="Max"/>
+    </Controls>
+  </Form>
+</Lan>

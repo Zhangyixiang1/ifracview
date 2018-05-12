@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD09ACE2-77D8-40EF-88DA-7644772F8E49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data_acquisition</RootNamespace>
+    <AssemblyName>Data_acquisition</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>C:\Users\zhangyx1\Downloads\NPOI-Lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.OPCAutomation">
+      <HintPath>..\..\..\..\Interop.OPCAutomation.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\zhangyx1\Desktop\driver_mysql\v4.0\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.SpellChecker, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.0.621, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\0301\Data_acquisition\bin\x86\Debug\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comm\Ctr_change.cs" />
+    <Compile Include="Comm\Datamodel.cs" />
+    <Compile Include="Comm\JsonHelper.cs" />
+    <Compile Include="Comm\Kepware.cs" />
+    <Compile Include="Comm\MultiLanguage.cs" />
+    <Compile Include="Comm\Pub_func.cs" />
+    <Compile Include="Comm\ReadColor.cs" />
+    <Compile Include="Ctrl\Gauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\Gauge.Designer.cs">
+      <DependentUpon>Gauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\Gauge_big.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\Gauge_big.Designer.cs">
+      <DependentUpon>Gauge_big.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\Gauge_mid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\Gauge_mid.Designer.cs">
+      <DependentUpon>Gauge_mid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\Meter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\Meter.Designer.cs">
+      <DependentUpon>Meter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\ParaLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\ParaLine.Designer.cs">
+      <DependentUpon>ParaLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\Parashow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\Parashow.Designer.cs">
+      <DependentUpon>Parashow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\Parashownew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\Parashownew.Designer.cs">
+      <DependentUpon>Parashownew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DbManager.cs" />
+    <Compile Include="DAL\ExcelHelper.cs" />
+    <Compile Include="Frm_Chnset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Chnset.Designer.cs">
+      <DependentUpon>Frm_Chnset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Manifold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Manifold.designer.cs">
+      <DependentUpon>Frm_Manifold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Parachoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Parachoose.Designer.cs">
+      <DependentUpon>Frm_Parachoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_report.Designer.cs">
+      <DependentUpon>Frm_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_serial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_serial.Designer.cs">
+      <DependentUpon>Frm_serial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_setting.Designer.cs">
+      <DependentUpon>Frm_setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_add.Designer.cs">
+      <DependentUpon>Frm_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_creat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_creat.Designer.cs">
+      <DependentUpon>Frm_creat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_override.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_override.Designer.cs">
+      <DependentUpon>Frm_override.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Paraanalog2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Paraanalog2.Designer.cs">
+      <DependentUpon>Frm_Paraanalog2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Paradigital2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Paradigital2.Designer.cs">
+      <DependentUpon>Frm_Paradigital2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Paraset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Paraset.Designer.cs">
+      <DependentUpon>Frm_Paraset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_print.Designer.cs">
+      <DependentUpon>Frm_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Realtrend2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Realtrend2.Designer.cs">
+      <DependentUpon>Frm_Realtrend2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Paraanalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Paraanalog.Designer.cs">
+      <DependentUpon>Frm_Paraanalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Paradigital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Paradigital.Designer.cs">
+      <DependentUpon>Frm_Paradigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Realtrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Realtrend.Designer.cs">
+      <DependentUpon>Frm_Realtrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_send.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_send.Designer.cs">
+      <DependentUpon>Frm_send.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Window.Designer.cs">
+      <DependentUpon>Frm_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Para_choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Para_choose.Designer.cs">
+      <DependentUpon>Para_choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ctrl\Gauge.resx">
+      <DependentUpon>Gauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\Gauge_big.resx">
+      <DependentUpon>Gauge_big.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\Gauge_mid.resx">
+      <DependentUpon>Gauge_mid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\Meter.resx">
+      <DependentUpon>Meter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\ParaLine.resx">
+      <DependentUpon>ParaLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\Parashow.resx">
+      <DependentUpon>Parashow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\Parashownew.resx">
+      <DependentUpon>Parashownew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Chnset.resx">
+      <DependentUpon>Frm_Chnset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Manifold.resx">
+      <DependentUpon>Frm_Manifold.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Parachoose.resx">
+      <DependentUpon>Frm_Parachoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_report.resx">
+      <DependentUpon>Frm_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_serial.resx">
+      <DependentUpon>Frm_serial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_setting.resx">
+      <DependentUpon>Frm_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_add.resx">
+      <DependentUpon>Frm_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_creat.resx">
+      <DependentUpon>Frm_creat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_override.resx">
+      <DependentUpon>Frm_override.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Paraanalog.resx">
+      <DependentUpon>Frm_Paraanalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Paraanalog2.resx">
+      <DependentUpon>Frm_Paraanalog2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Paradigital.resx">
+      <DependentUpon>Frm_Paradigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Paradigital2.resx">
+      <DependentUpon>Frm_Paradigital2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Paraset.resx">
+      <DependentUpon>Frm_Paraset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_print.resx">
+      <DependentUpon>Frm_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Realtrend.resx">
+      <DependentUpon>Frm_Realtrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Realtrend2.resx">
+      <DependentUpon>Frm_Realtrend2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_send.resx">
+      <DependentUpon>Frm_send.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Window.resx">
+      <DependentUpon>Frm_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Para_choose.resx">
+      <DependentUpon>Para_choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\good.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Blender.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Frac.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\preference.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Para.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\System.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Languages\Chinese.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Languages\English.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\arrow51.png" />
+    <None Include="Resources\arrows31.png" />
+    <None Include="Resources\arrows42.png" />
+    <None Include="Resources\arrows21.png" />
+    <None Include="Resources\Valve_R1.png" />
+    <None Include="Resources\Valve_G1.png" />
+    <None Include="Resources\Meter21.png" />
+    <None Include="Resources\Valve1.png" />
+    <None Include="Resources\Valve.png" />
+    <None Include="Resources\Meter1.png" />
+    <None Include="Resources\Meter.png" />
+    <None Include="Resources\BMP111.bmp" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\按钮2.jpg" />
+    <None Include="Resources\按钮1.jpg" />
+    <None Include="Resources\按钮凸.jpg" />
+    <None Include="Resources\cancel.jpg" />
+    <None Include="Resources\捕获.PNG" />
+    <None Include="Resources\hhlogo.png" />
+    <None Include="Resources\24压力泵.jpg" />
+    <None Include="Resources\Button-Last.png" />
+    <None Include="Resources\Button-First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="template\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

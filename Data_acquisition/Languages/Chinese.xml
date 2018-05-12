@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Lan Language="简体中文">
+  <Form>
+    <!--首界面-->
+    <Name>Form_Main</Name>
+    <Controls>
+      <Control name="文件ToolStripMenuItem1" text="文件"/>
+      <Control name="新建施工ToolStripMenuItem" text="新建施工"/>
+      <Control name="追加施工ToolStripMenuItem" text="追加施工"/>
+      <Control name="结束施工ToolStripMenuItem" text="结束施工"/>
+      <Control name="退出ToolStripMenuItem2" text="退出"/>
+      <Control name="设置ToolStripMenuItem1" text="设置"/>
+      <Control name="系统设置ToolStripMenuItem1" text="系统设置"/>
+      <Control name="通道设置ToolStripMenuItem" text="输出配置"/>
+      <Control name="图像编辑ToolStripMenuItem1" text="图像编辑"/>
+      <Control name="参数设置ToolStripMenuItem" text="参数设置"/>
+      <Control name="视图ToolStripMenuItem1" text="视图"/>
+      <Control name="视图1ToolStripMenuItem1" text="视图1"/>
+      <Control name="视图2ToolStripMenuItem1" text="视图2"/>
+      <Control name="视图3ToolStripMenuItem1" text="视图3"/>
+      <Control name="视图4ToolStripMenuItem1" text="视图4"/>
+      <Control name="关于ToolStripMenuItem1" text="关于"/>
+      <Control name="帮助ToolStripMenuItem1" text="帮助"/>
+      <Control name="btn_start" text="开始"/>
+      <Control name="btn_report" text="报表"/>
+      <Control name="btn_print" text="打印"/>
+      <Control name="btn_zero" text="清零"/>
+      <Control name="btn_next" text="下一阶段"/>
+      <Control name="btn_left" text="左移"/>
+      <Control name="btn_right" text="右移"/>
+      <Control name="btn_zoomin" text="放大"/>
+      <Control name="btn_zoomout" text="缩小"/>
+      <Control name="label5" text="图像编辑"/>
+      <Control name="groupBox1" text="时间范围"/>
+      <Control name="label6" text="开始时间(s)"/>
+      <Control name="chk_time" text="整个时间"/>
+      <Control name="label7" text="结束时间(s)"/>
+      <Control name="groupBox2" text="曲线选择"/>
+      <Control name="groupBox3" text="编辑模式"/>
+      <Control name="rab_interpolation" text="插值法"/>
+      <Control name="rab_set" text="设置值"/>
+      <Control name="label8" text="值"/>
+      <Control name="rab_recurrence" text="递推平均"/>
+      <Control name="label9" text="数量"/>
+      <Control name="rab_none" text="不编辑"/>
+      <Control name="groupBox4" text="计划表"/>
+      <Control name="label4" text="混砂1"/>
+      <Control name="lbl_blender1" text="在线"/>
+      <Control name="label3" text="混砂2"/>
+      <Control name="lbl_blender2" text="离线"/>
+      <Control name="btn_import" text="打开"/>
+      <Control name="btn_export" text="保存"/>
+      <Control name="btn_table" text="表"/>
+      <Control name="btn_chart" text="曲线"/>
+      <Control name="radioButton1" text="砂浓度"/>
+      <Control name="radioButton3" text="液添1"/>
+      <Control name="radioButton4" text="液添2"/>
+      <Control name="radioButton5" text="液添3"/>
+      <Control name="radioButton6" text="干添1"/>
+      <Control name="radioButton2" text="干添2"/>
+      <Control name="btn_send" text="发送"/>
+      <Control name="btn_jobstart" text="开始"/>
+      <Control name="btn_blenderstop" text="停止"/>
+      <Control name="btn_blenderhold" text="保持"/>
+      <Control name="btn_blendernext" text="下一阶段"/>
+      <Control name="rdbtn_auto" text="阶段自动"/>
+      <Control name="rdbtn_hand" text="阶段手动"/>
+      <Control name="label10" text="阶段:"/>
+      <Control name="label2" text="阶段进度"/>
+      <Control name="label1" text="作业总进度"/>
+      <Control name="toolStripStatusLabel2" text="阶段时间："/>
+      <Control name="toolStripStatusLabel3" text="当前时间："/>
+      <Control name="toolStripStatusLabel5" text="设备"/>
+      <Control name="toolStripStatusLabel12" text="记录"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--曲线界面1-->
+    <Name>Frm_Realtrend</Name>
+    <Controls>
+      <Control name="label1" text="油田:"/>
+      <Control name="label2" text="井号:"/>
+      <Control name="label6" text="阶段进度:"/>
+      <Control name="label3" text="段号:"/>
+      <Control name="label4" text="阶段:"/>
+      <Control name="label5" text="作业总进度:"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--曲线界面2-->
+    <Name>Frm_Realtrend2</Name>
+    <Controls>
+      <Control name="label1" text="油田:"/>
+      <Control name="label2" text="井号:"/>
+      <Control name="label6" text="阶段进度:"/>
+      <Control name="label3" text="段号:"/>
+      <Control name="label4" text="阶段:"/>
+      <Control name="label5" text="作业总进度:"/>
+      <Control name="groupBox4" text="混砂"/>
+      <Control name="label8" text="混砂1:"/>
+      <Control name="lbl_blender1" text="在线"/>
+      <Control name="label7" text="混砂2:"/>
+      <Control name="lbl_blender2" text="离线"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--数字界面-->
+    <Name>Frm_Paradigital2</Name>
+    <Controls>
+      <Control name="**" text="**"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--表盘界面-->
+    <Name>Frm_Paraanalog2</Name>
+    <Controls>
+      <Control name="**" text="**"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--追加施工界面-->
+    <Name>Frm_add</Name>
+    <Controls>
+      <Control name="Frm_add" text="追加施工"/>
+      <Control name="btn_OK" text="确定"/>
+      <Control name="btn_del" text="删除"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--新建施工界面-->
+    <Name>Frm_creat</Name>
+    <Controls>
+      <Control name="Frm_creat" text="一般信息"/>
+      <Control name="label1" text="油田名称:"/>
+      <Control name="label2" text="井号:"/>
+      <Control name="label10" text="段号:"/>
+      <Control name="label3" text="施工日期:"/>
+      <Control name="label4" text="客户名称:"/>
+      <Control name="label5" text="客户代表:"/>
+      <Control name="label6" text="施工单位:"/>
+      <Control name="label7" text="施工代表:"/>
+      <Control name="label8" text="施工指挥:"/>
+      <Control name="label9" text="备注:"/>
+      <Control name="btn_OK" text="确定"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--Overide界面-->
+    <Name>Frm_override</Name>
+    <Controls>
+      <Control name="radioButton1" text="支撑剂"/>
+      <Control name="radioButton2" text="液添1"/>
+      <Control name="radioButton3" text="液添2"/>
+      <Control name="radioButton4" text="液添3"/>
+      <Control name="radioButton5" text="干添1"/>
+      <Control name="radioButton6" text="干添2"/>
+      <Control name="label1" text="旧目标值"/>
+      <Control name="label2" text="新目标值"/>
+      <Control name="rdbtn_stage" text="当前阶段"/>
+      <Control name="rdbtn_job" text="整个作业段"/>
+      <Control name="button2" text="取消"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--输出配置界面-->
+    <Name>Frm_Paraset</Name>
+    <Controls>
+      <Control name="Frm_Paraset" text="输出配置"/>
+      <Control name="tabPage1" text="报表"/>
+      <Control name="groupBox2" text="参数列表"/>
+      <Control name="groupBox1" text="串口信息"/>
+      <Control name="groupBox3" text="数据时间间隔"/>
+      <Control name="btn_OK" text="确定"/>
+      <Control name="btn_Cancel" text="取消"/>
+      <Control name="tabPage2" text="串口"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--打印界面-->
+    <Name>Frm_print</Name>
+    <Controls>
+      <Control name="Frm_print" text="打印预览"/>
+      <Control name="lbl_title" text="标题"/>
+      <Control name="label1" text="标题"/>
+      <Control name="btn_refresh" text="刷新"/>
+      <Control name="btn_print" text="打印"/>
+      <Control name="btn_export" text="导出"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--发送界面-->
+    <Name>Frm_send</Name>
+    <Controls>
+      <Control name="Frm_send" text="警告"/>
+      <Control name="label1" text="确定要发送计划表到混砂车吗？"/>
+      <Control name="chb_auto" text="阶段自动"/>
+      <Control name="btn_ok" text="确定"/>
+      <Control name="btn_cancel" text="取消"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--系统设置界面-->
+    <Name>Frm_setting</Name>
+    <Controls>
+      <Control name="Frm_setting" text="系统设置"/>
+      <Control name="groupBox1" text="单位"/>
+      <Control name="rdb_engunit" text="英制"/>
+      <Control name="rdb_metric" text="公制"/>
+      <Control name="groupBox2" text="语言"/>
+      <Control name="rdb_eng" text="English"/>
+      <Control name="rdb_chn" text="中文"/>
+      <Control name="btn_OK" text="确定"/>
+      <Control name="btn_cancel" text="取消"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--参数选择界面-->
+    <Name>Para_choose</Name>
+    <Controls>
+      <Control name="Para_choose" text="参数选择"/>
+      <Control name="tabPage1" text="采集卡"/>
+      <Control name="tabPage2" text="混砂车"/>
+      <Control name="tabPage3" text="电动压裂泵"/>
+      <Control name="tabPage4" text="传统压裂泵"/>
+      <Control name="btn_OK" text="确定"/>
+      <Control name="btn_cancel" text="取消"/>
+      <Control name="label2" text="最小值"/>
+      <Control name="label1" text="最大值"/>
+    </Controls>
+  </Form>
+</Lan>
