@@ -120,7 +120,7 @@ namespace Data_acquisition
                     //读取压力泵的数据
                     value_frac = kep2.kep_read();
                     //读取状态信息和ip地址
-                    value_state=kep3.kep_read();
+                    value_state = kep3.kep_read();
                     readfinish = true;
 
                     //更新进度条
@@ -135,7 +135,9 @@ namespace Data_acquisition
                     ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).wellinfo_refresh();
 
                     //切换阶段时
+                  
                     int temp = Convert.ToInt16(value_blender.GetValue(585));
+                    if (temp == 0) temp = 1;  //0512修改阶段为0的bug
                     if (num_stage != temp)
                     {
                         num_stage = temp;
@@ -710,7 +712,7 @@ namespace Data_acquisition
                 dt_para.Columns.Add(cln13);
                 factor = new double[nodelist.Count + 1];
                 factor_unit = new string[nodelist.Count + 1];
-                offset=new  double[nodelist.Count+1];
+                offset = new double[nodelist.Count + 1];
                 for (int i = 0; i < nodelist.Count; i++)
                 {
                     if (Unit == 1)
@@ -732,11 +734,13 @@ namespace Data_acquisition
                     rw["幅度"] = nodelist[i].Attributes["幅度"].Value;
                     rw["启用快捷键"] = Convert.ToBoolean(nodelist[i].Attributes["启用快捷键"].Value);
 
-                    if (nodelist[i].Attributes["加快捷键"].Value != "" ) {
-                        Offmodel model = new Offmodel(i + 1, Convert.ToBoolean(nodelist[i].Attributes["启用快捷键"].Value),Convert.ToDouble( nodelist[i].Attributes["幅度"].Value));
+                    if (nodelist[i].Attributes["加快捷键"].Value != "")
+                    {
+                        Offmodel model = new Offmodel(i + 1, Convert.ToBoolean(nodelist[i].Attributes["启用快捷键"].Value), Convert.ToDouble(nodelist[i].Attributes["幅度"].Value));
                         Offlist.Add(nodelist[i].Attributes["加快捷键"].Value, model);
                     }
-                    if (nodelist[i].Attributes["减快捷键"].Value != "") {
+                    if (nodelist[i].Attributes["减快捷键"].Value != "")
+                    {
                         Offmodel model = new Offmodel(i + 1, Convert.ToBoolean(nodelist[i].Attributes["启用快捷键"].Value), -Convert.ToDouble(nodelist[i].Attributes["幅度"].Value));
                         Offlist.Add(nodelist[i].Attributes["减快捷键"].Value, model);
                     }
@@ -1531,7 +1535,7 @@ namespace Data_acquisition
             //}
             //xml.Save(path);
             #endregion
-           //0511新增一个结构体限制鼠标区域
+            //0511新增一个结构体限制鼠标区域
 
             _ScreenRect = new RECT();
             _ScreenRect.top = 0;
@@ -1629,7 +1633,7 @@ namespace Data_acquisition
             frm6.Location = new Point(9600, 0);
             frm6.Show();
             frm6.BringToFront();
-            this.Focus(); 
+            this.Focus();
         }
         /// <summary>
         /// 追加模式下将数据填充到Paralist和Loglist
@@ -2399,6 +2403,10 @@ namespace Data_acquisition
                 DataTable tb = db.ExcuteDataTable(sql, par);
                 DataRow tbinfo = tb.Rows[0];
 
+
+
+
+
                 //建立空白工作簿
                 IWorkbook workbook = new HSSFWorkbook();
                 //在工作簿中：建立空白工作表
@@ -2408,7 +2416,7 @@ namespace Data_acquisition
                 //在行中：建立单元格，参数为列号，从0计
                 ICell cell = row.CreateCell(0);
                 //设置单元格内容
-                cell.SetCellValue(wellname + wellnum + "井第" + stage_big + "段");
+                cell.SetCellValue(Pub_func.GetValue("title"));
                 ICellStyle style = workbook.CreateCellStyle();
                 //设置单元格的样式：水平对齐居中
                 style.Alignment = NPOI.SS.UserModel.HorizontalAlignment.CENTER;
@@ -2431,23 +2439,23 @@ namespace Data_acquisition
                 sheet.AddMergedRegion(new CellRangeAddress(0, 0, 0, 10));
 
                 IRow row1 = sheet.CreateRow(1); ICell cell1 = row1.CreateCell(0);
-                cell1.SetCellValue("油田名称：  " + tbinfo[1]);
+                cell1.SetCellValue("油田名称：  " + Pub_func.GetValue("wellname"));
                 IRow row2 = sheet.CreateRow(2); ICell cell2 = row2.CreateCell(0);
-                cell2.SetCellValue("井号：  " + tbinfo[2]);
+                cell2.SetCellValue("井号：  " + Pub_func.GetValue("wellnum"));
                 IRow row3 = sheet.CreateRow(3); ICell cell3 = row3.CreateCell(0);
                 cell3.SetCellValue("施工日期：  " + tbinfo[4]);
                 IRow row4 = sheet.CreateRow(4); ICell cell4 = row4.CreateCell(0);
-                cell4.SetCellValue("客户名称：  " + tbinfo[5]);
+                cell4.SetCellValue("客户名称：  " + Pub_func.GetValue("clientname"));
                 IRow row5 = sheet.CreateRow(5); ICell cell5 = row5.CreateCell(0);
-                cell5.SetCellValue("客户代表：  " + tbinfo[6]);
+                cell5.SetCellValue("客户代表：  " + Pub_func.GetValue("clientrep"));
                 IRow row6 = sheet.CreateRow(6); ICell cell6 = row6.CreateCell(0);
-                cell6.SetCellValue("施工单位：  " + tbinfo[7]);
+                cell6.SetCellValue("施工单位：  " + Pub_func.GetValue("cstunit"));
                 IRow row7 = sheet.CreateRow(7); ICell cell7 = row7.CreateCell(0);
-                cell7.SetCellValue("施工代表：  " + tbinfo[8]);
+                cell7.SetCellValue("施工代表：  " + Pub_func.GetValue("cstrep"));
                 IRow row8 = sheet.CreateRow(8); ICell cell8 = row8.CreateCell(0);
-                cell8.SetCellValue("施工指挥：  " + tbinfo[9]);
+                cell8.SetCellValue("施工指挥：  " + Pub_func.GetValue("cstcomm"));
                 IRow row9 = sheet.CreateRow(9); ICell cell9 = row9.CreateCell(0);
-                cell9.SetCellValue("备注：  " + tbinfo[10]);
+                cell9.SetCellValue("备注：  " + Pub_func.GetValue("remark"));
                 //列标题
                 IRow row10 = sheet.CreateRow(10); row10.Height = 27 * 20;
                 ICell clname1 = row10.CreateCell(0); clname1.SetCellValue("阶段名");
@@ -2496,19 +2504,24 @@ namespace Data_acquisition
                 string sql2 = "select *  from " + Form_Main.tbname;
                 if (report_interval == 60) { sql2 = "select *  from " + Form_Main.tbname + " where (id%60=1)"; }
                 DataTable value = db.ExcuteDataTable(sql2);
-                //0102新增，获得每个阶段的名称信息
+                //0512获取报表信息
+
+                DbManager db3 = new DbManager();
+                db3.ConnStr = "Data Source=localhost;" +
+                                "Initial Catalog=ifracview;User Id=root;Password=hhdq;";
+                string sql3 = "select * from reportsche";
+                DataTable report = db3.ExcuteDataTable(sql3);
+
+                //0512新增，获得每个阶段的名称信息和支撑剂类型
                 string[] stage_name = Form_Main.stageinfo.Split(',');
                 for (int i = 0; i < value.Rows.Count; i++)
                 {
                     string json = value.Rows[i]["value"].ToString();
                     KeyValuePair<string, Datamodel> _data = JsonConvert.DeserializeObject<KeyValuePair<string, Datamodel>>(json);
                     IRow rowtemp = sheet.CreateRow(11 + i);
-                    if (stage_name.Length > 1)
-                    {
-                        int temp_num = Convert.ToInt16(value.Rows[i][1].ToString());
-                        ICell celltemp0 = rowtemp.CreateCell(0); celltemp0.SetCellValue(value.Rows[i][1].ToString() + stage_name[temp_num - 1]);
-                    }
-                    else { ICell celltemp0 = rowtemp.CreateCell(0); celltemp0.SetCellValue(value.Rows[i][1].ToString()); }
+                    int temp_num = Convert.ToInt16(value.Rows[i][1].ToString());
+                    ICell celltemp0 = rowtemp.CreateCell(0); 
+                    celltemp0.SetCellValue(value.Rows[i][1].ToString() + report.Rows[temp_num-1][2].ToString());
                     ICell celltemp1 = rowtemp.CreateCell(1); celltemp1.SetCellValue(_data.Key);
                     //1225增加，报表的自动配置
                     for (int j = 0; j < report_index.Count; j++)
@@ -2525,6 +2538,8 @@ namespace Data_acquisition
                     //ICell celltemp8 = rowtemp.CreateCell(8); celltemp8.SetCellValue(trans_2point(_data.Value.DATA.GetValue(64), 2));
                     //ICell celltemp9 = rowtemp.CreateCell(9); celltemp9.SetCellValue(trans_2point(_data.Value.DATA.GetValue(60), 2));
 
+                    //最后一列添加支撑剂类型
+                    rowtemp.CreateCell(report_index.Count + 2).SetCellValue(report.Rows[temp_num - 1][3].ToString());
                 }
 
 
@@ -2714,9 +2729,10 @@ namespace Data_acquisition
 
         private void Form_Main_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Offlist.ContainsKey(e.KeyChar.ToString().ToUpper())) {
+            if (Offlist.ContainsKey(e.KeyChar.ToString().ToUpper()))
+            {
                 if (Offlist[e.KeyChar.ToString().ToUpper()].active)
-                offset[Offlist[e.KeyChar.ToString().ToUpper()].index] += Offlist[e.KeyChar.ToString().ToUpper()].value;
+                    offset[Offlist[e.KeyChar.ToString().ToUpper()].index] += Offlist[e.KeyChar.ToString().ToUpper()].value;
             }
 
         }
