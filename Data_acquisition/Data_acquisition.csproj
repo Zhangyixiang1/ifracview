@@ -473,6 +473,7 @@
     </Content>
     <Content Include="Config\Calibration.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Config\Frac.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

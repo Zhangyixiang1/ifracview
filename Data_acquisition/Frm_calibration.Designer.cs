@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,9 +39,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_temp1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_value1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,11 +54,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbl_value2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_temp2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -67,11 +68,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lbl_value3 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lbl_temp3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -81,11 +82,11 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.lbl_value4 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lbl_temp4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
@@ -95,11 +96,11 @@
             this.label39 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.lbl_value5 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
+            this.lbl_temp5 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -109,11 +110,11 @@
             this.label48 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lbl_value6 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
+            this.lbl_temp6 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
@@ -123,11 +124,11 @@
             this.label57 = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
+            this.lbl_value7 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
+            this.lbl_temp7 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
@@ -137,11 +138,12 @@
             this.label66 = new System.Windows.Forms.Label();
             this.textBox32 = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
+            this.lbl_value8 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
+            this.lbl_temp8 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -240,15 +242,15 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "当前电流";
             // 
-            // label7
+            // lbl_temp1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(566, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 12);
-            this.label7.TabIndex = 0;
-            this.label7.Tag = "电流值";
-            this.label7.Text = "0.00mA";
+            this.lbl_temp1.AutoSize = true;
+            this.lbl_temp1.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp1.Name = "lbl_temp1";
+            this.lbl_temp1.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp1.TabIndex = 0;
+            this.lbl_temp1.Tag = "电流值";
+            this.lbl_temp1.Text = "0.00mA";
             // 
             // label8
             // 
@@ -259,15 +261,15 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "当前数值";
             // 
-            // label9
+            // lbl_value1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(696, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 12);
-            this.label9.TabIndex = 0;
-            this.label9.Tag = "数值";
-            this.label9.Text = "0.00MPa";
+            this.lbl_value1.AutoSize = true;
+            this.lbl_value1.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value1.Name = "lbl_value1";
+            this.lbl_value1.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value1.TabIndex = 0;
+            this.lbl_value1.Tag = "数值";
+            this.lbl_value1.Text = "0.00MPa";
             // 
             // groupBox1
             // 
@@ -279,11 +281,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.lbl_value1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbl_temp1);
             this.groupBox1.Location = new System.Drawing.Point(7, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(764, 59);
@@ -320,11 +322,11 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.lbl_value2);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.lbl_temp2);
             this.groupBox2.Location = new System.Drawing.Point(7, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(764, 59);
@@ -338,6 +340,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(39, 21);
             this.textBox5.TabIndex = 1;
+            this.textBox5.Tag = "范围下限";
             // 
             // textBox6
             // 
@@ -345,6 +348,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(39, 21);
             this.textBox6.TabIndex = 1;
+            this.textBox6.Tag = "范围上限";
             // 
             // label10
             // 
@@ -361,6 +365,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(39, 21);
             this.textBox7.TabIndex = 1;
+            this.textBox7.Tag = "最大值";
             // 
             // label11
             // 
@@ -387,6 +392,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(39, 21);
             this.textBox8.TabIndex = 1;
+            this.textBox8.Tag = "最小值";
             // 
             // label13
             // 
@@ -398,14 +404,14 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "——";
             // 
-            // label14
+            // lbl_value2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(696, 24);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 12);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "0.00MPa";
+            this.lbl_value2.AutoSize = true;
+            this.lbl_value2.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value2.Name = "lbl_value2";
+            this.lbl_value2.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value2.TabIndex = 0;
+            this.lbl_value2.Text = "0.00MPa";
             // 
             // label15
             // 
@@ -434,14 +440,14 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "当前电流";
             // 
-            // label18
+            // lbl_temp2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(566, 24);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 12);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "0.00mA";
+            this.lbl_temp2.AutoSize = true;
+            this.lbl_temp2.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp2.Name = "lbl_temp2";
+            this.lbl_temp2.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp2.TabIndex = 0;
+            this.lbl_temp2.Text = "0.00mA";
             // 
             // groupBox3
             // 
@@ -453,11 +459,11 @@
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.textBox12);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.lbl_value3);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label27);
+            this.groupBox3.Controls.Add(this.lbl_temp3);
             this.groupBox3.Location = new System.Drawing.Point(7, 142);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(764, 59);
@@ -471,6 +477,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(39, 21);
             this.textBox9.TabIndex = 1;
+            this.textBox9.Tag = "范围下限";
             // 
             // textBox10
             // 
@@ -478,6 +485,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(39, 21);
             this.textBox10.TabIndex = 1;
+            this.textBox10.Tag = "范围上限";
             // 
             // label19
             // 
@@ -494,6 +502,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(39, 21);
             this.textBox11.TabIndex = 1;
+            this.textBox11.Tag = "最大值";
             // 
             // label20
             // 
@@ -520,6 +529,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(39, 21);
             this.textBox12.TabIndex = 1;
+            this.textBox12.Tag = "最小值";
             // 
             // label22
             // 
@@ -531,14 +541,14 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "——";
             // 
-            // label23
+            // lbl_value3
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(696, 24);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(47, 12);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "0.00MPa";
+            this.lbl_value3.AutoSize = true;
+            this.lbl_value3.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value3.Name = "lbl_value3";
+            this.lbl_value3.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value3.TabIndex = 0;
+            this.lbl_value3.Text = "0.00MPa";
             // 
             // label24
             // 
@@ -567,14 +577,14 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "当前电流";
             // 
-            // label27
+            // lbl_temp3
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(566, 24);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(41, 12);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "0.00mA";
+            this.lbl_temp3.AutoSize = true;
+            this.lbl_temp3.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp3.Name = "lbl_temp3";
+            this.lbl_temp3.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp3.TabIndex = 0;
+            this.lbl_temp3.Text = "0.00mA";
             // 
             // groupBox4
             // 
@@ -587,11 +597,11 @@
             this.groupBox4.Controls.Add(this.label30);
             this.groupBox4.Controls.Add(this.textBox16);
             this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Controls.Add(this.label32);
+            this.groupBox4.Controls.Add(this.lbl_value4);
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Controls.Add(this.label36);
+            this.groupBox4.Controls.Add(this.lbl_temp4);
             this.groupBox4.Location = new System.Drawing.Point(7, 207);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(764, 59);
@@ -605,6 +615,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(39, 21);
             this.textBox13.TabIndex = 1;
+            this.textBox13.Tag = "范围下限";
             // 
             // textBox14
             // 
@@ -612,6 +623,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(39, 21);
             this.textBox14.TabIndex = 1;
+            this.textBox14.Tag = "范围上限";
             // 
             // label28
             // 
@@ -628,6 +640,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(39, 21);
             this.textBox15.TabIndex = 1;
+            this.textBox15.Tag = "最大值";
             // 
             // label29
             // 
@@ -654,6 +667,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(39, 21);
             this.textBox16.TabIndex = 1;
+            this.textBox16.Tag = "最小值";
             // 
             // label31
             // 
@@ -665,14 +679,14 @@
             this.label31.TabIndex = 0;
             this.label31.Text = "——";
             // 
-            // label32
+            // lbl_value4
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(696, 24);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(47, 12);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "0.00MPa";
+            this.lbl_value4.AutoSize = true;
+            this.lbl_value4.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value4.Name = "lbl_value4";
+            this.lbl_value4.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value4.TabIndex = 0;
+            this.lbl_value4.Text = "0.00MPa";
             // 
             // label33
             // 
@@ -701,14 +715,14 @@
             this.label35.TabIndex = 0;
             this.label35.Text = "当前电流";
             // 
-            // label36
+            // lbl_temp4
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(566, 24);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(41, 12);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "0.00mA";
+            this.lbl_temp4.AutoSize = true;
+            this.lbl_temp4.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp4.Name = "lbl_temp4";
+            this.lbl_temp4.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp4.TabIndex = 0;
+            this.lbl_temp4.Text = "0.00mA";
             // 
             // groupBox5
             // 
@@ -720,11 +734,11 @@
             this.groupBox5.Controls.Add(this.label39);
             this.groupBox5.Controls.Add(this.textBox20);
             this.groupBox5.Controls.Add(this.label40);
-            this.groupBox5.Controls.Add(this.label41);
+            this.groupBox5.Controls.Add(this.lbl_value5);
             this.groupBox5.Controls.Add(this.label42);
             this.groupBox5.Controls.Add(this.label43);
             this.groupBox5.Controls.Add(this.label44);
-            this.groupBox5.Controls.Add(this.label45);
+            this.groupBox5.Controls.Add(this.lbl_temp5);
             this.groupBox5.Location = new System.Drawing.Point(7, 272);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(764, 59);
@@ -738,6 +752,7 @@
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(39, 21);
             this.textBox17.TabIndex = 1;
+            this.textBox17.Tag = "范围下限";
             // 
             // textBox18
             // 
@@ -745,6 +760,7 @@
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(39, 21);
             this.textBox18.TabIndex = 1;
+            this.textBox18.Tag = "范围上限";
             // 
             // label37
             // 
@@ -761,6 +777,7 @@
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(39, 21);
             this.textBox19.TabIndex = 1;
+            this.textBox19.Tag = "最大值";
             // 
             // label38
             // 
@@ -787,6 +804,7 @@
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(39, 21);
             this.textBox20.TabIndex = 1;
+            this.textBox20.Tag = "最小值";
             // 
             // label40
             // 
@@ -798,14 +816,14 @@
             this.label40.TabIndex = 0;
             this.label40.Text = "——";
             // 
-            // label41
+            // lbl_value5
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(696, 24);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(47, 12);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "0.00MPa";
+            this.lbl_value5.AutoSize = true;
+            this.lbl_value5.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value5.Name = "lbl_value5";
+            this.lbl_value5.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value5.TabIndex = 0;
+            this.lbl_value5.Text = "0.00MPa";
             // 
             // label42
             // 
@@ -834,14 +852,14 @@
             this.label44.TabIndex = 0;
             this.label44.Text = "当前电流";
             // 
-            // label45
+            // lbl_temp5
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(566, 24);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(41, 12);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "0.00mA";
+            this.lbl_temp5.AutoSize = true;
+            this.lbl_temp5.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp5.Name = "lbl_temp5";
+            this.lbl_temp5.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp5.TabIndex = 0;
+            this.lbl_temp5.Text = "0.00mA";
             // 
             // groupBox6
             // 
@@ -854,11 +872,11 @@
             this.groupBox6.Controls.Add(this.label48);
             this.groupBox6.Controls.Add(this.textBox24);
             this.groupBox6.Controls.Add(this.label49);
-            this.groupBox6.Controls.Add(this.label50);
+            this.groupBox6.Controls.Add(this.lbl_value6);
             this.groupBox6.Controls.Add(this.label51);
             this.groupBox6.Controls.Add(this.label52);
             this.groupBox6.Controls.Add(this.label53);
-            this.groupBox6.Controls.Add(this.label54);
+            this.groupBox6.Controls.Add(this.lbl_temp6);
             this.groupBox6.Location = new System.Drawing.Point(7, 337);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(764, 59);
@@ -872,6 +890,7 @@
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(39, 21);
             this.textBox21.TabIndex = 1;
+            this.textBox21.Tag = "范围下限";
             // 
             // textBox22
             // 
@@ -879,6 +898,7 @@
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(39, 21);
             this.textBox22.TabIndex = 1;
+            this.textBox22.Tag = "范围上限";
             // 
             // label46
             // 
@@ -895,6 +915,7 @@
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(39, 21);
             this.textBox23.TabIndex = 1;
+            this.textBox23.Tag = "最大值";
             // 
             // label47
             // 
@@ -921,6 +942,7 @@
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(39, 21);
             this.textBox24.TabIndex = 1;
+            this.textBox24.Tag = "最小值";
             // 
             // label49
             // 
@@ -932,14 +954,14 @@
             this.label49.TabIndex = 0;
             this.label49.Text = "——";
             // 
-            // label50
+            // lbl_value6
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(696, 24);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(47, 12);
-            this.label50.TabIndex = 0;
-            this.label50.Text = "0.00MPa";
+            this.lbl_value6.AutoSize = true;
+            this.lbl_value6.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value6.Name = "lbl_value6";
+            this.lbl_value6.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value6.TabIndex = 0;
+            this.lbl_value6.Text = "0.00MPa";
             // 
             // label51
             // 
@@ -968,14 +990,14 @@
             this.label53.TabIndex = 0;
             this.label53.Text = "当前电流";
             // 
-            // label54
+            // lbl_temp6
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(566, 24);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(41, 12);
-            this.label54.TabIndex = 0;
-            this.label54.Text = "0.00mA";
+            this.lbl_temp6.AutoSize = true;
+            this.lbl_temp6.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp6.Name = "lbl_temp6";
+            this.lbl_temp6.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp6.TabIndex = 0;
+            this.lbl_temp6.Text = "0.00mA";
             // 
             // groupBox7
             // 
@@ -987,11 +1009,11 @@
             this.groupBox7.Controls.Add(this.label57);
             this.groupBox7.Controls.Add(this.textBox28);
             this.groupBox7.Controls.Add(this.label58);
-            this.groupBox7.Controls.Add(this.label59);
+            this.groupBox7.Controls.Add(this.lbl_value7);
             this.groupBox7.Controls.Add(this.label60);
             this.groupBox7.Controls.Add(this.label61);
             this.groupBox7.Controls.Add(this.label62);
-            this.groupBox7.Controls.Add(this.label63);
+            this.groupBox7.Controls.Add(this.lbl_temp7);
             this.groupBox7.Location = new System.Drawing.Point(7, 402);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(764, 59);
@@ -1005,6 +1027,7 @@
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(39, 21);
             this.textBox25.TabIndex = 1;
+            this.textBox25.Tag = "范围下限";
             // 
             // textBox26
             // 
@@ -1012,6 +1035,7 @@
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(39, 21);
             this.textBox26.TabIndex = 1;
+            this.textBox26.Tag = "范围上限";
             // 
             // label55
             // 
@@ -1028,6 +1052,7 @@
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(39, 21);
             this.textBox27.TabIndex = 1;
+            this.textBox27.Tag = "最大值";
             // 
             // label56
             // 
@@ -1054,6 +1079,7 @@
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(39, 21);
             this.textBox28.TabIndex = 1;
+            this.textBox28.Tag = "最小值";
             // 
             // label58
             // 
@@ -1065,14 +1091,14 @@
             this.label58.TabIndex = 0;
             this.label58.Text = "——";
             // 
-            // label59
+            // lbl_value7
             // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(696, 24);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(47, 12);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "0.00MPa";
+            this.lbl_value7.AutoSize = true;
+            this.lbl_value7.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value7.Name = "lbl_value7";
+            this.lbl_value7.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value7.TabIndex = 0;
+            this.lbl_value7.Text = "0.00MPa";
             // 
             // label60
             // 
@@ -1101,14 +1127,14 @@
             this.label62.TabIndex = 0;
             this.label62.Text = "当前电流";
             // 
-            // label63
+            // lbl_temp7
             // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(566, 24);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(41, 12);
-            this.label63.TabIndex = 0;
-            this.label63.Text = "0.00mA";
+            this.lbl_temp7.AutoSize = true;
+            this.lbl_temp7.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp7.Name = "lbl_temp7";
+            this.lbl_temp7.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp7.TabIndex = 0;
+            this.lbl_temp7.Text = "0.00mA";
             // 
             // groupBox8
             // 
@@ -1121,11 +1147,11 @@
             this.groupBox8.Controls.Add(this.label66);
             this.groupBox8.Controls.Add(this.textBox32);
             this.groupBox8.Controls.Add(this.label67);
-            this.groupBox8.Controls.Add(this.label68);
+            this.groupBox8.Controls.Add(this.lbl_value8);
             this.groupBox8.Controls.Add(this.label69);
             this.groupBox8.Controls.Add(this.label70);
             this.groupBox8.Controls.Add(this.label71);
-            this.groupBox8.Controls.Add(this.label72);
+            this.groupBox8.Controls.Add(this.lbl_temp8);
             this.groupBox8.Location = new System.Drawing.Point(7, 467);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(764, 59);
@@ -1139,6 +1165,7 @@
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(39, 21);
             this.textBox29.TabIndex = 1;
+            this.textBox29.Tag = "范围下限";
             // 
             // textBox30
             // 
@@ -1146,6 +1173,7 @@
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(39, 21);
             this.textBox30.TabIndex = 1;
+            this.textBox30.Tag = "范围上限";
             // 
             // label64
             // 
@@ -1162,6 +1190,7 @@
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(39, 21);
             this.textBox31.TabIndex = 1;
+            this.textBox31.Tag = "最大值";
             // 
             // label65
             // 
@@ -1188,6 +1217,7 @@
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(39, 21);
             this.textBox32.TabIndex = 1;
+            this.textBox32.Tag = "最小值";
             // 
             // label67
             // 
@@ -1199,14 +1229,14 @@
             this.label67.TabIndex = 0;
             this.label67.Text = "——";
             // 
-            // label68
+            // lbl_value8
             // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(696, 24);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(47, 12);
-            this.label68.TabIndex = 0;
-            this.label68.Text = "0.00MPa";
+            this.lbl_value8.AutoSize = true;
+            this.lbl_value8.Location = new System.Drawing.Point(696, 24);
+            this.lbl_value8.Name = "lbl_value8";
+            this.lbl_value8.Size = new System.Drawing.Size(47, 12);
+            this.lbl_value8.TabIndex = 0;
+            this.lbl_value8.Text = "0.00MPa";
             // 
             // label69
             // 
@@ -1235,14 +1265,19 @@
             this.label71.TabIndex = 0;
             this.label71.Text = "当前电流";
             // 
-            // label72
+            // lbl_temp8
             // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(566, 24);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(41, 12);
-            this.label72.TabIndex = 0;
-            this.label72.Text = "0.00mA";
+            this.lbl_temp8.AutoSize = true;
+            this.lbl_temp8.Location = new System.Drawing.Point(566, 24);
+            this.lbl_temp8.Name = "lbl_temp8";
+            this.lbl_temp8.Size = new System.Drawing.Size(41, 12);
+            this.lbl_temp8.TabIndex = 0;
+            this.lbl_temp8.Text = "0.00mA";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Frm_calibration
             // 
@@ -1296,9 +1331,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_temp1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_value1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -1311,11 +1346,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_value2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbl_temp2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
@@ -1325,11 +1360,11 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lbl_value3;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbl_temp3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
@@ -1339,11 +1374,11 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lbl_value4;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label lbl_temp4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
@@ -1353,11 +1388,11 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label lbl_value5;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label lbl_temp5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox22;
@@ -1367,11 +1402,11 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lbl_value6;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label lbl_temp6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.TextBox textBox26;
@@ -1381,11 +1416,11 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label lbl_value7;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label lbl_temp7;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.TextBox textBox30;
@@ -1395,10 +1430,11 @@
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.TextBox textBox32;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label lbl_value8;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label lbl_temp8;
+        private System.Windows.Forms.Timer timer1;
     }
 }

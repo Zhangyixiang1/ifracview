@@ -35,7 +35,10 @@ namespace Data_acquisition
     {
 
         #region 变量声明
-        public static Single[] Array_daq; //beckoff参数
+        public static Single[] Array_daq; //beckoff原始参数
+        public static float[] Array_daqtemp;//beckoff校准电流值
+        public static float[] Array_daqcal;//beckoff校准值
+        public static float[] daqk, daqb,daqk1,daqb1;
         public static TcAdsClient tcClient; //beck客户端
         int tcHandle;
         public static Kepware kep1;//混砂车
@@ -133,8 +136,12 @@ namespace Data_acquisition
                         dataStream.Position = 0;
                         tcClient.Read(tcHandle, dataStream, 0, 32);
                         for (int i = 0; i < 8; i++) {
-                            Array_daq[i] = binRead.ReadSingle(); 
+                            Array_daq[i] = binRead.ReadSingle();
+                            //运用公式y=kx+b
+                            test[i+1] = Math.Round( (Array_daq[i] - daqb1[i]) / daqk1[i],2);
                         }
+
+                       
                     }
                     readfinish = true;
 
@@ -461,7 +468,7 @@ namespace Data_acquisition
             {
                 if (lan == "Chinese") { MessageBox.Show("混砂车PLC变量注册失败，请检查kepware相关设置，随后重启软件！"); }
                 else { MessageBox.Show("Register the Blender parameter falied, Please check the kepware setting!"); }
-                Application.Exit();
+               // Application.Exit();
             }
             //注册压裂泵
             kep2 = new Kepware();
@@ -480,7 +487,7 @@ namespace Data_acquisition
             try
             {
                 //注册daq
-                Array_daq = new float[8];
+               
                 tcClient = new TcAdsClient();
                 Ping pin = new Ping();
                 PingReply reply = pin.Send(Pub_func.GetValue("daq"), 100);
@@ -929,6 +936,22 @@ namespace Data_acquisition
                 com.BaudRate = Convert.ToInt16(nodelist[0].SelectSingleNode("@rate").InnerText);
                 //  if (!com.IsOpen) com.Open();
                 th_comout.Start();
+
+                //0513新增，读取dql的配置信息
+
+                XmlDocument xml = new XmlDocument();
+                xml.Load(Application.StartupPath + "\\Config\\Calibration.xml");
+                XmlNodeList list = xml.GetElementsByTagName("item");
+                for (int i = 0; i < list.Count; i++) {
+                    float min0 = Convert.ToSingle(list[i].Attributes["最小值"].Value);
+                    float max0 = Convert.ToSingle(list[i].Attributes["最大值"].Value);
+                    float min1 = Convert.ToSingle(list[i].Attributes["范围下限"].Value);
+                    float max1 = Convert.ToSingle(list[i].Attributes["范围上限"].Value);
+
+                    daqk[i] = (32767 - 0) / (max0 - min0); daqb[i] = 32767 - daqk[i] * max0;
+                    daqk1[i] = (32767 - 0) / (max1 - min1); daqb1[i] = 32767 - daqk1[i] * max1;
+                }
+
             }
             catch (Exception ex)
             {
@@ -1665,6 +1688,13 @@ namespace Data_acquisition
             list_stage = new List<int>();
             report_index = new List<int>();
             series_index = new List<int>();
+            Array_daq = new float[8];
+            Array_daqtemp = new float[8];
+            Array_daqcal = new float[8];
+            daqk = new float[8];
+            daqb = new float[8];
+            daqk1 = new float[8];
+            daqb1 = new float[8];
             xml_load();//读取偏好设置文件
             chart_initial();//初始化图表控件
             Kep_initial();//注册通讯变量
