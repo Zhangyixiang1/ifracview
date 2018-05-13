@@ -48,7 +48,7 @@ namespace Data_acquisition
             //语言切换
             MultiLanguage.LoadLanguage(Application.OpenForms["Frm_Paradigital2"],Form_Main.lan);
         }
-        private void xml_load()
+        public void xml_load()
         {
             try
             {
@@ -69,12 +69,20 @@ namespace Data_acquisition
                         {
                             if (ctr2.Name == node.SelectSingleNode("@name").InnerText)
                             {
-                                ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
-                                ctr2.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
-                                ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
+                                //ctr2.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
+                                //ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tag = node.SelectSingleNode("@index").InnerText;
+                                //0513修改，信息从para读取
                                 ctr2.Tag = node.SelectSingleNode("@index").InnerText;
+                                int index = Convert.ToInt16(ctr2.Tag);
+                                ctr2.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                                ctr2.Tagname_EN = Form_Main.dt_para.Rows[index - 1]["英文名称"].ToString();
+                                ctr2.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                                if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
                                 ctr2.Color = Comm.ReadColor.getcolor(node.SelectSingleNode("@color").InnerText);
-                                if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr2.Tag)];
+
+                                //if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr2.Tag)];
                                 ctr2.refresh();
                             }
 

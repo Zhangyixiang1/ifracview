@@ -48,7 +48,6 @@
             this.paraLine4 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine3 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine2 = new Data_acquisition.Ctrl.ParaLine();
-            this.parashow6 = new Data_acquisition.Ctrl.Parashow();
             this.lbl_totaltime = new System.Windows.Forms.Label();
             this.lbl_stagetime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -348,19 +347,6 @@
             this.paraLine2.Tagname_EN = null;
             this.paraLine2.Unit = "Mpa";
             // 
-            // parashow6
-            // 
-            this.parashow6.BackColor = System.Drawing.Color.Transparent;
-            this.parashow6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.parashow6.Color = System.Drawing.SystemColors.ControlText;
-            this.parashow6.Location = new System.Drawing.Point(2325, 240);
-            this.parashow6.Name = "parashow6";
-            this.parashow6.Size = new System.Drawing.Size(307, 108);
-            this.parashow6.TabIndex = 4;
-            this.parashow6.Tagname = null;
-            this.parashow6.Tagname_EN = null;
-            this.parashow6.Unit = null;
-            // 
             // lbl_totaltime
             // 
             this.lbl_totaltime.AutoSize = true;
@@ -416,7 +402,6 @@
             this.Controls.Add(this.paraLine3);
             this.Controls.Add(this.paraLine2);
             this.Controls.Add(this.zedGraphControl1);
-            this.Controls.Add(this.parashow6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "Frm_Realtrend";
@@ -432,7 +417,6 @@
 
         #endregion
 
-        private Ctrl.Parashow parashow6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

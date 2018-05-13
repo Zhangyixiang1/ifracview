@@ -1,4 +1,5 @@
 ﻿using Data_acquisition.Comm;
+using Data_acquisition.Ctrl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,7 +68,7 @@ namespace Data_acquisition
                     }
                     else
                     {
-                        Form_Main.Offlist[txb_add.Text].active=checkBox1.Checked;
+                        Form_Main.Offlist[txb_add.Text].active = checkBox1.Checked;
                         Form_Main.Offlist[txb_add.Text].value = Convert.ToDouble(txb_value.Text);
                     }
                 }
@@ -143,6 +144,10 @@ namespace Data_acquisition
                 list[i].Attributes["幅度"].Value = dataGridView1.Rows[i].Cells["幅度"].Value.ToString();
             }
             xml.Save(path);
+
+            //界面更新显示信息
+            foreach (Form frm in Application.OpenForms)
+                pre_refresh(frm);
             this.Close();
         }
 
@@ -169,5 +174,77 @@ namespace Data_acquisition
                 }
             }
         }
+        private void pre_refresh(Form frm)
+        {
+
+            foreach (Control ctrl in frm.Controls)
+            {
+                if (ctrl is ParaLine)
+                {
+                    ParaLine ctr = ctrl as ParaLine;
+
+                    int index = Convert.ToInt16(ctr.Tag);
+                    ctr.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                    ctr.Tagname_EN = Form_Main.dt_para.Rows[index - 1]["英文名称"].ToString();
+                    ctr.Min = Form_Main.dt_para.Rows[index - 1]["最小值"].ToString();
+                    ctr.Max = Form_Main.dt_para.Rows[index - 1]["最大值"].ToString();
+                    ctr.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                    if (Form_Main.Unit == 1) ctr.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
+                    ctr.refresh();
+
+                }
+                if (ctrl is Gauge)
+                {
+                    Gauge ctr = ctrl as Gauge;
+
+                    int index = Convert.ToInt16(ctr.Tag);
+                    ctr.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                    //ctr.Tagname_EN = Form_Main.dt_para.Rows[index - 1]["英文名称"].ToString();
+                    ctr.Min = Form_Main.dt_para.Rows[index - 1]["最小值"].ToString();
+                    ctr.Max = Form_Main.dt_para.Rows[index - 1]["最大值"].ToString();
+                    ctr.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                    if (Form_Main.Unit == 1) ctr.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
+
+
+                }
+
+
+                if (ctrl is Parashow)
+                {
+                    Parashow ctrl2 = ctrl as Parashow;
+
+                    int index = Convert.ToInt16(ctrl2.Tag);
+                    ctrl2.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                    ctrl2.Tagname_EN = Form_Main.dt_para.Rows[index - 1]["英文名称"].ToString();
+                    ctrl2.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                    if (Form_Main.Unit == 1) ctrl2.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
+                    ctrl2.refresh();
+                }
+
+                if (ctrl is Parashownew)
+                {
+
+                    Parashownew ctrl2 = ctrl as Parashownew;
+
+                    int index = Convert.ToInt16(ctrl2.Tag);
+                    ctrl2.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                    ctrl2.Tagname_EN = Form_Main.dt_para.Rows[index - 1]["英文名称"].ToString();
+                    ctrl2.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                    if (Form_Main.Unit == 1) ctrl2.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
+                    ctrl2.refresh();
+
+                }
+
+            }
+            //更新坐标轴
+
+            ((Form_Main)Application.OpenForms["Form_Main"]).trend_refresh("0");
+            ((Frm_Realtrend)Application.OpenForms["Frm_Realtrend"]).trend_refresh("0");
+            ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).trend_refresh("1");
+
+
+        }
+
     }
+
 }

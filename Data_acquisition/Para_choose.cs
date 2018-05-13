@@ -235,7 +235,8 @@ namespace Data_acquisition
                     ctr_line.refresh();
                     switch (Frm_name)
                     {
-                        case "Form_Main": ((Form_Main)Application.OpenForms[Frm_name]).trend_refresh(ctr_line.Name, Convert.ToInt16(ctr_line.Tag)); break;
+                       // case "Form_Main": ((Form_Main)Application.OpenForms[Frm_name]).trend_refresh(ctr_line.Name, Convert.ToInt16(ctr_line.Tag)); break;
+                        case "Form_Main": ((Form_Main)Application.OpenForms[Frm_name]).trend_refresh(ctr_line.Name); break;
                         case "Frm_Realtrend": ((Frm_Realtrend)Application.OpenForms[Frm_name]).trend_refresh(ctr_line.Name); break;
                         case "Frm_Realtrend2": ((Frm_Realtrend2)Application.OpenForms[Frm_name]).trend_refresh(ctr_line.Name); break;
                         case "Frm_print":

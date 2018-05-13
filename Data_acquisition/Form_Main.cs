@@ -135,7 +135,7 @@ namespace Data_acquisition
                     ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).wellinfo_refresh();
 
                     //切换阶段时
-                  
+
                     int temp = Convert.ToInt16(value_blender.GetValue(585));
                     if (temp == 0) temp = 1;  //0512修改阶段为0的bug
                     if (num_stage != temp)
@@ -636,6 +636,68 @@ namespace Data_acquisition
                     zedGraphControl1.GraphPane.Y2AxisList[2].Scale.Min = int.Parse(paraLine6.Min);
                     zedGraphControl1.GraphPane.Y2AxisList[2].Scale.Max = int.Parse(paraLine6.Max);
                     break;
+                case "0":
+               
+                    zedGraphControl1.GraphPane.CurveList[4].Label.Text = paraLine1.Tagname;
+                    zedGraphControl1.GraphPane.CurveList[4].Color = paraLine1.Color;
+                    zedGraphControl1.GraphPane.YAxisList[2].MajorTic.Color = paraLine1.Color;
+                    zedGraphControl1.GraphPane.YAxisList[2].MinorTic.Color = paraLine1.Color;
+                    zedGraphControl1.GraphPane.YAxisList[2].Color = paraLine1.Color;
+                    zedGraphControl1.GraphPane.YAxisList[2].Scale.FontSpec.FontColor = paraLine1.Color;
+                    zedGraphControl1.GraphPane.YAxisList[2].Title.Text = paraLine1.Tagname + "(" + paraLine1.Unit + ")";
+                    zedGraphControl1.GraphPane.YAxisList[2].Scale.Min = int.Parse(paraLine1.Min);
+                    zedGraphControl1.GraphPane.YAxisList[2].Scale.Max = int.Parse(paraLine1.Max);
+
+                    zedGraphControl1.GraphPane.CurveList[2].Label.Text = paraLine2.Tagname;
+                    zedGraphControl1.GraphPane.CurveList[2].Color = paraLine2.Color;
+                    zedGraphControl1.GraphPane.YAxisList[1].MajorTic.Color = paraLine2.Color;
+                    zedGraphControl1.GraphPane.YAxisList[1].MinorTic.Color = paraLine2.Color;
+                    zedGraphControl1.GraphPane.YAxisList[1].Color = paraLine2.Color;
+                    zedGraphControl1.GraphPane.YAxisList[1].Scale.FontSpec.FontColor = paraLine2.Color;
+                    zedGraphControl1.GraphPane.YAxisList[1].Title.Text = paraLine2.Tagname + "(" + paraLine2.Unit + ")";
+                    zedGraphControl1.GraphPane.YAxisList[1].Scale.Min = int.Parse(paraLine2.Min);
+                    zedGraphControl1.GraphPane.YAxisList[1].Scale.Max = int.Parse(paraLine2.Max);
+                 
+                    zedGraphControl1.GraphPane.CurveList[0].Label.Text = paraLine3.Tagname;
+                    zedGraphControl1.GraphPane.CurveList[0].Color = paraLine3.Color;
+                    zedGraphControl1.GraphPane.YAxisList[0].MajorTic.Color = paraLine3.Color;
+                    zedGraphControl1.GraphPane.YAxisList[0].MinorTic.Color = paraLine3.Color;
+                    zedGraphControl1.GraphPane.YAxisList[0].Color = paraLine3.Color;
+                    zedGraphControl1.GraphPane.YAxisList[0].Scale.FontSpec.FontColor = paraLine3.Color;
+                    zedGraphControl1.GraphPane.YAxisList[0].Title.Text = paraLine3.Tagname + "(" + paraLine3.Unit + ")";
+                    zedGraphControl1.GraphPane.YAxisList[0].Scale.Min = int.Parse(paraLine3.Min);
+                    zedGraphControl1.GraphPane.YAxisList[0].Scale.Max = int.Parse(paraLine3.Max);
+                  
+                    zedGraphControl1.GraphPane.CurveList[1].Label.Text = paraLine4.Tagname;
+                    zedGraphControl1.GraphPane.CurveList[1].Color = paraLine4.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[0].MajorTic.Color = paraLine4.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[0].MinorTic.Color = paraLine4.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[0].Color = paraLine4.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[0].Scale.FontSpec.FontColor = paraLine4.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[0].Title.Text = paraLine4.Tagname + "(" + paraLine4.Unit + ")";
+                    zedGraphControl1.GraphPane.Y2AxisList[0].Scale.Min = int.Parse(paraLine4.Min);
+                    zedGraphControl1.GraphPane.Y2AxisList[0].Scale.Max = int.Parse(paraLine4.Max);
+                    
+                    zedGraphControl1.GraphPane.CurveList[3].Label.Text = paraLine5.Tagname;
+                    zedGraphControl1.GraphPane.CurveList[3].Color = paraLine5.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[1].MajorTic.Color = paraLine5.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[1].MinorTic.Color = paraLine5.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[1].Color = paraLine5.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[1].Scale.FontSpec.FontColor = paraLine5.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[1].Title.Text = paraLine5.Tagname + "(" + paraLine5.Unit + ")";
+                    zedGraphControl1.GraphPane.Y2AxisList[1].Scale.Min = int.Parse(paraLine5.Min);
+                    zedGraphControl1.GraphPane.Y2AxisList[1].Scale.Max = int.Parse(paraLine5.Max);
+                   
+                    zedGraphControl1.GraphPane.CurveList[5].Label.Text = paraLine6.Tagname;
+                    zedGraphControl1.GraphPane.CurveList[5].Color = paraLine6.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[2].MajorTic.Color = paraLine6.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[2].MinorTic.Color = paraLine6.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[2].Color = paraLine6.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[2].Scale.FontSpec.FontColor = paraLine6.Color;
+                    zedGraphControl1.GraphPane.Y2AxisList[2].Title.Text = paraLine6.Tagname + "(" + paraLine6.Unit + ")";
+                    zedGraphControl1.GraphPane.Y2AxisList[2].Scale.Min = int.Parse(paraLine6.Min);
+                    zedGraphControl1.GraphPane.Y2AxisList[2].Scale.Max = int.Parse(paraLine6.Max);
+                    break;
             }
 
             zedGraphControl1.AxisChange();
@@ -685,7 +747,7 @@ namespace Data_acquisition
         /// <summary>
         /// 读取xml偏好配置文件
         /// </summary>
-        private void xml_load()
+        public void xml_load()
         {
             try
             {
@@ -764,14 +826,22 @@ namespace Data_acquisition
                         {
                             if (ctr.Name == node.SelectSingleNode("@name").InnerText)
                             {
-                                ctr.Tagname = node.SelectSingleNode("@tagname").InnerText;
-                                ctr.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
-                                ctr.Min = node.SelectSingleNode("@min").InnerText;
-                                ctr.Max = node.SelectSingleNode("@max").InnerText;
-                                ctr.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr.Tagname = node.SelectSingleNode("@tagname").InnerText;
+                                //ctr.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
+                                //ctr.Min = node.SelectSingleNode("@min").InnerText;
+                                //ctr.Max = node.SelectSingleNode("@max").InnerText;
+                                //ctr.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //0513修改，信息从para里面读
                                 ctr.Tag = node.SelectSingleNode("@index").InnerText;
+                                int index = Convert.ToInt16(ctr.Tag);
+                                ctr.Tagname = dt_para.Rows[index - 1]["中文名称"].ToString();
+                                ctr.Tagname_EN = dt_para.Rows[index - 1]["英文名称"].ToString();
+                                ctr.Min = dt_para.Rows[index - 1]["最小值"].ToString();
+                                ctr.Max = dt_para.Rows[index - 1]["最大值"].ToString();
+                                ctr.Unit = dt_para.Rows[index - 1]["公制单位"].ToString();
+                                if (Unit == 1) ctr.Unit = dt_para.Rows[index - 1]["英制单位"].ToString();
                                 ctr.Color = Comm.ReadColor.getcolor(node.SelectSingleNode("@color").InnerText);
-                                if (Unit == 1) ctr.Unit = factor_unit[Convert.ToInt16(ctr.Tag)];
+                                //if (Unit == 1) ctr.Unit = factor_unit[Convert.ToInt16(ctr.Tag)];
                                 ctr.refresh();
 
                             }
@@ -792,12 +862,19 @@ namespace Data_acquisition
                         {
                             if (ctr2.Name == node.SelectSingleNode("@name").InnerText)
                             {
-                                ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
-                                ctr2.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
-                                ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
+                                //ctr2.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
+                                //ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //0513修改，信息从para读取
                                 ctr2.Tag = node.SelectSingleNode("@index").InnerText;
+                                int index = Convert.ToInt16(ctr2.Tag);
+                                ctr2.Tagname = dt_para.Rows[index - 1]["中文名称"].ToString();
+                                ctr2.Tagname_EN = dt_para.Rows[index - 1]["英文名称"].ToString();
+                                ctr2.Unit = dt_para.Rows[index - 1]["公制单位"].ToString();
+                                if (Unit == 1) ctr2.Unit = dt_para.Rows[index - 1]["英制单位"].ToString();
+                                //if (Unit == 1) ctr2.Unit = factor_unit[Convert.ToInt16(ctr2.Tag)];
                                 ctr2.Color = Comm.ReadColor.getcolor(node.SelectSingleNode("@color").InnerText);
-                                if (Unit == 1) ctr2.Unit = factor_unit[Convert.ToInt16(ctr2.Tag)];
+
                                 ctr2.refresh();
                             }
 
@@ -2520,8 +2597,8 @@ namespace Data_acquisition
                     KeyValuePair<string, Datamodel> _data = JsonConvert.DeserializeObject<KeyValuePair<string, Datamodel>>(json);
                     IRow rowtemp = sheet.CreateRow(11 + i);
                     int temp_num = Convert.ToInt16(value.Rows[i][1].ToString());
-                    ICell celltemp0 = rowtemp.CreateCell(0); 
-                    celltemp0.SetCellValue(value.Rows[i][1].ToString() + report.Rows[temp_num-1][2].ToString());
+                    ICell celltemp0 = rowtemp.CreateCell(0);
+                    celltemp0.SetCellValue(value.Rows[i][1].ToString() + report.Rows[temp_num - 1][2].ToString());
                     ICell celltemp1 = rowtemp.CreateCell(1); celltemp1.SetCellValue(_data.Key);
                     //1225增加，报表的自动配置
                     for (int j = 0; j < report_index.Count; j++)

@@ -63,7 +63,7 @@ namespace Data_acquisition
             }
         }
 
-        private void xml_load()
+        public void xml_load()
         {
             try
             {
@@ -84,12 +84,20 @@ namespace Data_acquisition
                         {
                             if (ctr2.Name == node.SelectSingleNode("@name").InnerText)
                             {
-                                ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
-                                ctr2.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
-                                ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
+                                //ctr2.Tagname_EN = node.SelectSingleNode("@tagname_en").InnerText;
+                                //ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tag = node.SelectSingleNode("@index").InnerText;
+                                //0513修改，信息从para读取
                                 ctr2.Tag = node.SelectSingleNode("@index").InnerText;
+                                int index = Convert.ToInt16(ctr2.Tag);
+                                ctr2.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                                ctr2.Tagname_EN = Form_Main.dt_para.Rows[index - 1]["英文名称"].ToString();
+                                ctr2.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                                if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
                                 ctr2.Color = Comm.ReadColor.getcolor(node.SelectSingleNode("@color").InnerText);
-                                if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr2.Tag)];
+
+                                //if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr2.Tag)];
                                 ctr2.refresh();
                             }
 
@@ -108,23 +116,36 @@ namespace Data_acquisition
                         {
                             if (ctr2.Name == node.SelectSingleNode("@name").InnerText)
                             {
-                                ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
-                                ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tagname = node.SelectSingleNode("@tagname").InnerText;
+                                //ctr2.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //ctr2.Tag = node.SelectSingleNode("@index").InnerText;
+                                //ctr2.Min = node.SelectSingleNode("@min").InnerText;
+                                //ctr2.Max = node.SelectSingleNode("@max").InnerText;
                                 ctr2.Tag = node.SelectSingleNode("@index").InnerText;
-                                ctr2.Min = node.SelectSingleNode("@min").InnerText;
-                                ctr2.Max = node.SelectSingleNode("@max").InnerText;
-                                if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr2.Tag)];
+                                int index = Convert.ToInt16(ctr2.Tag);
+                                ctr2.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                                ctr2.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                                ctr2.Min = Form_Main.dt_para.Rows[index - 1]["最小值"].ToString();
+                                ctr2.Max = Form_Main.dt_para.Rows[index - 1]["最大值"].ToString();
+                                if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
+                                //if (Form_Main.Unit == 1) ctr2.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr2.Tag)];
                                 ctr2.refresh();
                             }
                             //初始化大表盘的参数
                             if (node.SelectSingleNode("@name").InnerText == "gauge0")
                             {
-                                gauge0.Tagname = node.SelectSingleNode("@tagname").InnerText;
-                                gauge0.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //gauge0.Tagname = node.SelectSingleNode("@tagname").InnerText;
+                                //gauge0.Unit = node.SelectSingleNode("@unit").InnerText;
+                                //gauge0.Tag = node.SelectSingleNode("@index").InnerText;
+                                //gauge0.Min = node.SelectSingleNode("@min").InnerText;
+                                //gauge0.Max = node.SelectSingleNode("@max").InnerText;
+                                //if (Form_Main.Unit == 1) gauge0.Unit = Form_Main.factor_unit[Convert.ToInt16(gauge0.Tag)];
                                 gauge0.Tag = node.SelectSingleNode("@index").InnerText;
-                                gauge0.Min = node.SelectSingleNode("@min").InnerText;
-                                gauge0.Max = node.SelectSingleNode("@max").InnerText;
-                                if (Form_Main.Unit == 1) gauge0.Unit = Form_Main.factor_unit[Convert.ToInt16(gauge0.Tag)];
+                                int index = Convert.ToInt16(gauge0.Tag);
+                                gauge0.Tagname = Form_Main.dt_para.Rows[index - 1]["中文名称"].ToString();
+                                gauge0.Unit = Form_Main.dt_para.Rows[index - 1]["公制单位"].ToString();
+                                gauge0.Min = Form_Main.dt_para.Rows[index - 1]["最小值"].ToString();
+                                gauge0.Max = Form_Main.dt_para.Rows[index - 1]["最大值"].ToString();
                                 gauge0.refresh();
 
                             }
