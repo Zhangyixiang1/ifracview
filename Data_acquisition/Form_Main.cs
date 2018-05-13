@@ -24,6 +24,8 @@ using NPOI.SS.Util;
 using Data_acquisiton;
 using System.IO.Ports;
 using System.Runtime.InteropServices;
+using TwinCAT.Ads;
+using System.Net.NetworkInformation;
 namespace Data_acquisition
 {
     /// <summary>
@@ -33,6 +35,9 @@ namespace Data_acquisition
     {
 
         #region 变量声明
+        public static Single[] Array_daq; //beckoff参数
+        public static TcAdsClient tcClient; //beck客户端
+        int tcHandle;
         public static Kepware kep1;//混砂车
         public static Kepware kep2;//压裂泵
         public static Kepware kep3;//系统状态量
@@ -121,6 +126,16 @@ namespace Data_acquisition
                     value_frac = kep2.kep_read();
                     //读取状态信息和ip地址
                     value_state = kep3.kep_read();
+                    //读取daq参数
+                    if (tcClient.IsConnected)
+                    {    AdsStream dataStream = new AdsStream(500);
+                        BinaryReader binRead = new BinaryReader(dataStream);
+                        dataStream.Position = 0;
+                        tcClient.Read(tcHandle, dataStream, 0, 32);
+                        for (int i = 0; i < 8; i++) {
+                            Array_daq[i] = binRead.ReadSingle(); 
+                        }
+                    }
                     readfinish = true;
 
                     //更新进度条
@@ -438,6 +453,7 @@ namespace Data_acquisition
         /// </summary>
         private void Kep_initial()
         {
+            
             //先注册混砂车
             kep1 = new Kepware();
             string path = Application.StartupPath + "\\Config\\Blender.txt";
@@ -461,6 +477,27 @@ namespace Data_acquisition
             path = Application.StartupPath + "\\Config\\System.txt";
             kep3.kep_initial(path, "S");
 
+            try
+            {
+                //注册daq
+                Array_daq = new float[8];
+                tcClient = new TcAdsClient();
+                Ping pin = new Ping();
+                PingReply reply = pin.Send(Pub_func.GetValue("daq"), 100);
+                if (reply.Status == IPStatus.Success)
+                {
+                    tcClient.Connect(Pub_func.GetValue("daq") + ".1.1", 851);
+                    tcHandle = tcClient.CreateVariableHandle("GVL.AI_Arrayout");
+
+                }
+                else { MessageBox.Show("无法连接到DAQ请检查网络设置！"); }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+           
         }
 
         /// <summary>
@@ -637,7 +674,7 @@ namespace Data_acquisition
                     zedGraphControl1.GraphPane.Y2AxisList[2].Scale.Max = int.Parse(paraLine6.Max);
                     break;
                 case "0":
-               
+
                     zedGraphControl1.GraphPane.CurveList[4].Label.Text = paraLine1.Tagname;
                     zedGraphControl1.GraphPane.CurveList[4].Color = paraLine1.Color;
                     zedGraphControl1.GraphPane.YAxisList[2].MajorTic.Color = paraLine1.Color;
@@ -657,7 +694,7 @@ namespace Data_acquisition
                     zedGraphControl1.GraphPane.YAxisList[1].Title.Text = paraLine2.Tagname + "(" + paraLine2.Unit + ")";
                     zedGraphControl1.GraphPane.YAxisList[1].Scale.Min = int.Parse(paraLine2.Min);
                     zedGraphControl1.GraphPane.YAxisList[1].Scale.Max = int.Parse(paraLine2.Max);
-                 
+
                     zedGraphControl1.GraphPane.CurveList[0].Label.Text = paraLine3.Tagname;
                     zedGraphControl1.GraphPane.CurveList[0].Color = paraLine3.Color;
                     zedGraphControl1.GraphPane.YAxisList[0].MajorTic.Color = paraLine3.Color;
@@ -667,7 +704,7 @@ namespace Data_acquisition
                     zedGraphControl1.GraphPane.YAxisList[0].Title.Text = paraLine3.Tagname + "(" + paraLine3.Unit + ")";
                     zedGraphControl1.GraphPane.YAxisList[0].Scale.Min = int.Parse(paraLine3.Min);
                     zedGraphControl1.GraphPane.YAxisList[0].Scale.Max = int.Parse(paraLine3.Max);
-                  
+
                     zedGraphControl1.GraphPane.CurveList[1].Label.Text = paraLine4.Tagname;
                     zedGraphControl1.GraphPane.CurveList[1].Color = paraLine4.Color;
                     zedGraphControl1.GraphPane.Y2AxisList[0].MajorTic.Color = paraLine4.Color;
@@ -677,7 +714,7 @@ namespace Data_acquisition
                     zedGraphControl1.GraphPane.Y2AxisList[0].Title.Text = paraLine4.Tagname + "(" + paraLine4.Unit + ")";
                     zedGraphControl1.GraphPane.Y2AxisList[0].Scale.Min = int.Parse(paraLine4.Min);
                     zedGraphControl1.GraphPane.Y2AxisList[0].Scale.Max = int.Parse(paraLine4.Max);
-                    
+
                     zedGraphControl1.GraphPane.CurveList[3].Label.Text = paraLine5.Tagname;
                     zedGraphControl1.GraphPane.CurveList[3].Color = paraLine5.Color;
                     zedGraphControl1.GraphPane.Y2AxisList[1].MajorTic.Color = paraLine5.Color;
@@ -687,7 +724,7 @@ namespace Data_acquisition
                     zedGraphControl1.GraphPane.Y2AxisList[1].Title.Text = paraLine5.Tagname + "(" + paraLine5.Unit + ")";
                     zedGraphControl1.GraphPane.Y2AxisList[1].Scale.Min = int.Parse(paraLine5.Min);
                     zedGraphControl1.GraphPane.Y2AxisList[1].Scale.Max = int.Parse(paraLine5.Max);
-                   
+
                     zedGraphControl1.GraphPane.CurveList[5].Label.Text = paraLine6.Tagname;
                     zedGraphControl1.GraphPane.CurveList[5].Color = paraLine6.Color;
                     zedGraphControl1.GraphPane.Y2AxisList[2].MajorTic.Color = paraLine6.Color;
@@ -1791,7 +1828,7 @@ namespace Data_acquisition
             if (Convert.ToBoolean(value_state.GetValue(12))) tssl_F6.BackColor = Color.Red;
             if (Convert.ToBoolean(value_state.GetValue(14))) tssl_F7.BackColor = Color.Red;
             if (Convert.ToBoolean(value_state.GetValue(16))) tssl_F8.BackColor = Color.Red;
-
+            if (!tcClient.IsConnected) tssl_DAQ.BackColor = Color.Red;
         }
         /// <summary>
         /// 记录定时器
@@ -2825,6 +2862,12 @@ namespace Data_acquisition
             public int top;
             public int right;
             public int bottom;
+        }
+
+        private void 参数校准ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_calibration frm = new Frm_calibration();
+            frm.ShowDialog();
         }
     }
 

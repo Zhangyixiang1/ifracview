@@ -155,6 +155,11 @@
       <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="TwinCAT.Ads, Version=4.2.109.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TwinCAT.Ads.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ZedGraph, Version=5.1.0.621, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\0301\Data_acquisition\bin\x86\Debug\ZedGraph.dll</HintPath>
@@ -212,6 +217,12 @@
     </Compile>
     <Compile Include="DAL\DbManager.cs" />
     <Compile Include="DAL\ExcelHelper.cs" />
+    <Compile Include="Frm_calibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_calibration.Designer.cs">
+      <DependentUpon>Frm_calibration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Chnset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +372,9 @@
     <EmbeddedResource Include="Ctrl\Parashownew.resx">
       <DependentUpon>Parashownew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_calibration.resx">
+      <DependentUpon>Frm_calibration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Chnset.resx">
       <DependentUpon>Frm_Chnset.cs</DependentUpon>
     </EmbeddedResource>
@@ -455,6 +469,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\Blender.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Calibration.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Config\Frac.txt">
