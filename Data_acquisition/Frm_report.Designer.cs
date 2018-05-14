@@ -258,7 +258,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Frm_report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "施工指挥";
+            this.Text = "报表格式";
             this.Load += new System.EventHandler(this.Frm_report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

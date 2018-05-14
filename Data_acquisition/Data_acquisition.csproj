@@ -191,6 +191,12 @@
     <Compile Include="Ctrl\Gauge_mid.Designer.cs">
       <DependentUpon>Gauge_mid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ctrl\level.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl\level.Designer.cs">
+      <DependentUpon>level.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ctrl\Meter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -359,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ctrl\Gauge_mid.resx">
       <DependentUpon>Gauge_mid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl\level.resx">
+      <DependentUpon>level.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ctrl\Meter.resx">
       <DependentUpon>Meter.cs</DependentUpon>

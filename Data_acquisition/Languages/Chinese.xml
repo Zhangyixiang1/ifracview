@@ -13,7 +13,8 @@
       <Control name="系统设置ToolStripMenuItem1" text="系统设置"/>
       <Control name="通道设置ToolStripMenuItem" text="输出配置"/>
       <Control name="图像编辑ToolStripMenuItem1" text="图像编辑"/>
-      <Control name="参数设置ToolStripMenuItem" text="参数设置"/>
+      <Control name="参数设置ToolStripMenuItem" text="参数设置"/>  
+      <Control name="参数校准ToolStripMenuItem1" text="参数校准"/>
       <Control name="视图ToolStripMenuItem1" text="视图"/>
       <Control name="视图1ToolStripMenuItem1" text="视图1"/>
       <Control name="视图2ToolStripMenuItem1" text="视图2"/>

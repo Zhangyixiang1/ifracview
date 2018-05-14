@@ -213,8 +213,8 @@ namespace Data_acquisition
             //液添4暂时没有数据
             dataGridView1.Rows[index].Cells[0].Value = "液添4";
             dataGridView1.Rows[index].Cells[1].Value = "0.0" + " m3"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " m3";
-            dataGridView1.DefaultCellStyle.BackColor = Color.White;
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
+           // dataGridView1.DefaultCellStyle.BackColor = Color.White;
+           // dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
             dataGridView1.ClearSelection();
             timer1.Enabled = true;
         }
@@ -229,6 +229,9 @@ namespace Data_acquisition
                 int percent2 = Convert.ToInt16(Form_Main.value_blender.GetValue(631));
                 radProgressBar1.Value1 = percent1; radProgressBar1.Text = percent1 + "%";
                 radProgressBar2.Value1 = percent1; radProgressBar2.Text = percent2 + "%";
+                //刷新液位
+                label74.Text = trans_point(Form_Main.value_blender.GetValue(632)); ;
+                
                 //刷新grdiview信息
                 ////吸入
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(8)) + " m3/min";//速率
