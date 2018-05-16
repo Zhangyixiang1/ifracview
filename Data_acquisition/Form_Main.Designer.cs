@@ -494,7 +494,8 @@
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(40, 40);
             this.btn_next.TabIndex = 14;
-            this.btn_next.Text = "<html><p>下一</p><p>阶段</p></html>";
+            this.btn_next.Text = " 下一阶段";
+            this.btn_next.TextWrap = true;
             this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // timer_now
@@ -526,7 +527,7 @@
             this.pnl_setting.Controls.Add(this.groupBox3);
             this.pnl_setting.Controls.Add(this.groupBox2);
             this.pnl_setting.Controls.Add(this.groupBox1);
-            this.pnl_setting.Location = new System.Drawing.Point(1272, 120);
+            this.pnl_setting.Location = new System.Drawing.Point(1233, 103);
             this.pnl_setting.Name = "pnl_setting";
             this.pnl_setting.Size = new System.Drawing.Size(312, 354);
             this.pnl_setting.TabIndex = 17;
@@ -618,7 +619,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(151, 71);
+            this.label9.Location = new System.Drawing.Point(93, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 12);
             this.label9.TabIndex = 6;
@@ -626,9 +627,9 @@
             // 
             // txb_recurrence
             // 
-            this.txb_recurrence.Location = new System.Drawing.Point(188, 64);
+            this.txb_recurrence.Location = new System.Drawing.Point(126, 64);
             this.txb_recurrence.Name = "txb_recurrence";
-            this.txb_recurrence.Size = new System.Drawing.Size(100, 21);
+            this.txb_recurrence.Size = new System.Drawing.Size(56, 21);
             this.txb_recurrence.TabIndex = 5;
             this.txb_recurrence.Text = "7";
             // 
@@ -636,7 +637,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(151, 46);
+            this.label8.Location = new System.Drawing.Point(93, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(17, 12);
             this.label8.TabIndex = 6;
@@ -644,9 +645,9 @@
             // 
             // txb_set
             // 
-            this.txb_set.Location = new System.Drawing.Point(188, 39);
+            this.txb_set.Location = new System.Drawing.Point(126, 39);
             this.txb_set.Name = "txb_set";
-            this.txb_set.Size = new System.Drawing.Size(100, 21);
+            this.txb_set.Size = new System.Drawing.Size(56, 21);
             this.txb_set.TabIndex = 5;
             // 
             // rab_none
@@ -803,28 +804,28 @@
             // 新建施工ToolStripMenuItem
             // 
             this.新建施工ToolStripMenuItem.Name = "新建施工ToolStripMenuItem";
-            this.新建施工ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.新建施工ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新建施工ToolStripMenuItem.Text = "新建施工";
             this.新建施工ToolStripMenuItem.Click += new System.EventHandler(this.新建施工ToolStripMenuItem_Click);
             // 
             // 追加施工ToolStripMenuItem
             // 
             this.追加施工ToolStripMenuItem.Name = "追加施工ToolStripMenuItem";
-            this.追加施工ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.追加施工ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.追加施工ToolStripMenuItem.Text = "追加施工";
             this.追加施工ToolStripMenuItem.Click += new System.EventHandler(this.追加施工ToolStripMenuItem_Click);
             // 
             // 结束施工ToolStripMenuItem
             // 
             this.结束施工ToolStripMenuItem.Name = "结束施工ToolStripMenuItem";
-            this.结束施工ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.结束施工ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.结束施工ToolStripMenuItem.Text = "结束施工";
             this.结束施工ToolStripMenuItem.Click += new System.EventHandler(this.结束施工ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem2
             // 
             this.退出ToolStripMenuItem2.Name = "退出ToolStripMenuItem2";
-            this.退出ToolStripMenuItem2.Size = new System.Drawing.Size(124, 22);
+            this.退出ToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.退出ToolStripMenuItem2.Text = "退出";
             this.退出ToolStripMenuItem2.Click += new System.EventHandler(this.退出ToolStripMenuItem2_Click);
             // 
@@ -950,7 +951,7 @@
             this.tssl_F8,
             this.toolStripStatusLabel12,
             this.tssl_log});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1048);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1058);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1920, 22);
             this.statusStrip1.TabIndex = 24;
@@ -2112,7 +2113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1920, 1070);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnl_setting);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.statusStrip1);

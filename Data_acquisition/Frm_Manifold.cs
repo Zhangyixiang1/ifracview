@@ -35,21 +35,23 @@ namespace Data_acquisition
             //myPane.Title.Text = " ";
             myPane.Title.IsVisible = false;
             //x轴
-            myPane.XAxis.Title.Text = "时间(分钟)";
+            myPane.XAxis.Title.Text = "时间";
+            myPane.XAxis.Type = AxisType.Date;
+            myPane.XAxis.Scale.Format = "HH:mm:ss";
             myPane.XAxis.MajorGrid.Color = Color.White;
             myPane.XAxis.Scale.FontSpec.FontColor = Color.White;
             myPane.XAxis.Scale.FontSpec.Size = 15;
             myPane.XAxis.Title.FontSpec.Size = 10;
             myPane.XAxis.Title.FontSpec.FontColor = Color.White;
-            myPane.XAxis.Scale.Min = 0; //X轴最小值0
-            myPane.XAxis.Scale.Max = 30; //X轴最大30
+            myPane.XAxis.Scale.Min = DateTime.Now.ToOADate();
+            myPane.XAxis.Scale.Max = DateTime.Now.AddHours(1).ToOADate();
             myPane.XAxis.MajorTic.IsInside = false;
             myPane.XAxis.MinorTic.IsInside = false;
             myPane.XAxis.MajorTic.IsOpposite = false;
             myPane.XAxis.MinorTic.IsOpposite = false;
             myPane.XAxis.MajorTic.Color = Color.White;
             myPane.XAxis.MinorTic.Color = Color.White;
-            myPane.XAxis.Scale.MajorStep = 5;//X轴大步长为5，也就是显示文字的大间隔
+         //   myPane.XAxis.Scale.MajorStep = 5;//X轴大步长为5，也就是显示文字的大间隔
             //y轴
             myPane.YAxis.MajorTic.IsInside = false;
             myPane.YAxis.MajorGrid.Color = Color.White;
@@ -58,7 +60,7 @@ namespace Data_acquisition
             myPane.Y2Axis.MajorGrid.Color = Color.White;
             myPane.Y2Axis.MinorTic.IsInside = false;
 
-            // 添加6条曲线
+            // 添加3条曲线
             PointPairList List1 = new PointPairList();
             PointPairList List2 = new PointPairList();
             PointPairList List3 = new PointPairList();
@@ -95,7 +97,7 @@ namespace Data_acquisition
             // Show the x axis grid
             myPane.XAxis.MajorGrid.IsVisible = true;
 
-            // 6条y轴的颜色，文字大小等相关属性
+            // 3条y轴的颜色，文字大小等相关属性
             myPane.YAxis.Scale.FontSpec.FontColor = Color.Red;
             myPane.YAxis.Scale.FontSpec.Size = 15;
             myPane.YAxis.Title.FontSpec.FontColor = Color.Red;
@@ -212,7 +214,7 @@ namespace Data_acquisition
             index = dataGridView1.Rows.Add();
             //液添4暂时没有数据
             dataGridView1.Rows[index].Cells[0].Value = "液添4";
-            dataGridView1.Rows[index].Cells[1].Value = "0.0" + " m3"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " m3";
+            dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
            // dataGridView1.DefaultCellStyle.BackColor = Color.White;
            // dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
             dataGridView1.ClearSelection();
@@ -230,8 +232,8 @@ namespace Data_acquisition
                 radProgressBar1.Value1 = percent1; radProgressBar1.Text = percent1 + "%";
                 radProgressBar2.Value1 = percent1; radProgressBar2.Text = percent2 + "%";
                 //刷新液位
-                label74.Text = trans_point(Form_Main.value_blender.GetValue(632)); ;
-                
+               // label74.Text = trans_point(Form_Main.value_blender.GetValue(632)); ;
+                level1.Refresh(Convert.ToDouble(Form_Main.value_blender.GetValue(632)));
                 //刷新grdiview信息
                 ////吸入
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(8)) + " m3/min";//速率
@@ -249,14 +251,34 @@ namespace Data_acquisition
                 dataGridView1.Rows[3].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(22)) + " kg";//阶段
                 dataGridView1.Rows[3].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(50)) + " kg";//总量
                 //液添1
-                dataGridView1.Rows[4].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(17)) + " m3";//阶段
-                dataGridView1.Rows[4].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(45)) + " m3";//总量
+                dataGridView1.Rows[4].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(17)) + " L";//阶段
+                dataGridView1.Rows[4].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(45)) + " L";//总量
                 //液添2
-                dataGridView1.Rows[5].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(18)) + " m3";//阶段
-                dataGridView1.Rows[5].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(46)) + " m3";//总量
+                dataGridView1.Rows[5].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(18)) + " L";//阶段
+                dataGridView1.Rows[5].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(46)) + " L";//总量
                 //液添3
-                dataGridView1.Rows[6].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(19)) + " m3";//阶段
-                dataGridView1.Rows[6].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(47)) + " m3";//总量
+                dataGridView1.Rows[6].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(19)) + " L";//阶段
+                dataGridView1.Rows[6].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(47)) + " L";//总量
+                //刷新曲线的值
+
+             CurveList list=zedGraphControl1.GraphPane.CurveList;
+                //0井口油压 1排出流量 2砂浓度
+             double x = DateTime.Now.ToOADate();
+             list[0].AddPoint(new PointPair(x,Form_Main.Paralist.Last().Value.DATA[31]));
+             list[1].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[34]));
+             list[2].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[35]));
+                //大于1消失，轴移动
+             if (list[0].Points.Count > 3600) {
+                 DateTime ts = DateTime.FromOADate(zedGraphControl1.GraphPane.XAxis.Scale.Min);
+                 DateTime te = DateTime.FromOADate(zedGraphControl1.GraphPane.XAxis.Scale.Max);
+                 zedGraphControl1.GraphPane.XAxis.Scale.Min = ts.AddSeconds(1).ToOADate();
+                 zedGraphControl1.GraphPane.XAxis.Scale.Max = te.AddSeconds(1).ToOADate();
+             }
+             if (list[0].Points.Count > 4000) foreach (CurveItem line in list) {
+                 line.RemovePoint(0);
+             }
+             zedGraphControl1.AxisChange();
+             zedGraphControl1.Invalidate();
             }
             catch 
             {
@@ -278,7 +300,7 @@ namespace Data_acquisition
                         if (lbl.Tag != null)
                         {
                             if (lbl.Tag.ToString() == "HH")
-                                lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.00");
+                                lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.0");
                         }
                     }
                     else if (ctr is Panel)
@@ -306,5 +328,153 @@ namespace Data_acquisition
             return data.ToString("#0.0");
 
         }
+
+        /// <summary>
+        /// 更新井号信息
+        /// </summary>
+        public void wellinfo_refresh()
+        {
+            if (lbl_wellinfo.InvokeRequired) { lbl_wellinfo.Invoke(new Action(() => lbl_wellinfo.Text = Form_Main.wellname)); }
+            else { lbl_wellinfo.Text = Form_Main.wellname; }
+
+            if (lbl_wellnum.InvokeRequired) { lbl_wellnum.Invoke(new Action(() => lbl_wellnum.Text = Form_Main.wellnum)); }
+            else { lbl_wellnum.Text = Form_Main.wellnum; }
+
+            if (lbl_stagebig.InvokeRequired) { lbl_stagebig.Invoke(new Action(() => lbl_stagebig.Text = Form_Main.stage_big)); }
+            else { lbl_stagebig.Text = Form_Main.stage_big; }
+
+            if (lbl_stage.InvokeRequired) { lbl_stage.Invoke(new Action(() => lbl_stage.Text = Form_Main.num_stage + "/" + Form_Main.num_totalstage)); }
+            else { lbl_stage.Text = Form_Main.num_stage + "/" + Form_Main.num_totalstage; }
+
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel4.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel30_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel30.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel20_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel20.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel21_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel21.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel1.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel2.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel11.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel12.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel13.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel14.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel7.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel8.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel9.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel10.ClientRectangle,
+     Color.White, 1, ButtonBorderStyle.Solid, //左边
+     Color.White, 1, ButtonBorderStyle.Solid, //上边
+     Color.White, 1, ButtonBorderStyle.Solid, //右边
+     Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+   
+
     }
 }

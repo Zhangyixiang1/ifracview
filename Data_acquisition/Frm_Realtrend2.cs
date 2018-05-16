@@ -28,6 +28,8 @@ namespace Data_acquisition
         }
         public void grid_refresh(DataTable dt)
         {
+            
+
             //DbManager db = new DbManager();
             //db.ConnStr = "Data Source=localhost;" +
             //        "Initial Catalog=ifracview;User Id=root;Password=hhdq;";
@@ -562,7 +564,7 @@ namespace Data_acquisition
                 grd2.Rows[3].Cells[0].Value = "液添3"; grd2.Rows[4].Cells[0].Value = "干添1"; grd2.Rows[5].Cells[0].Value = "干添2";
                 grd2.Columns[1].HeaderText = "控制模式"; grd2.Columns[2].HeaderText = "目标浓度(x/m3)";
                 grd2.Columns[3].HeaderText = "当前浓度(x/m3)"; grd2.Columns[4].HeaderText = "当前流量(x/min)";
-                grd2.Columns[5].HeaderText = "阶段总量(m3 or kg)"; grd2.Columns[6].HeaderText = "总量(m3 or kg)";
+                grd2.Columns[5].HeaderText = "阶段总量(L or kg)"; grd2.Columns[6].HeaderText = "总量(L or kg)";
             }
             else if (Form_Main.lan == "English")
             {

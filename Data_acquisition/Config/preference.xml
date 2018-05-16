@@ -6,7 +6,7 @@
     <Controlsline>
       <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" />
       <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" />
-      <Control name="paraLine3" tagname="井口密度" tagname_en="Density(WH)" min="0" max="200" unit="g/cc" index="33" color="0,0,255" />
+      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0.0083" max="100" unit="kg/m3" index="35" color="0,0,255" />
       <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="30" unit="m3/min" index="34" color="0,255,0" />
       <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" />
       <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" />
@@ -21,7 +21,7 @@
       <Control name="parashow7" tagname="泵7排量" tagname_en="Pump7 Rate" unit="m3/min" index="133" color="0,0,255" />
       <Control name="parashow8" tagname="泵8排量" tagname_en="Pump8 Rate" unit="m3/min" index="138" color="0,0,255" />
       <Control name="parashow9" tagname="井口油压" tagname_en="Tubing Pressure(WH)" unit="MPa" index="31" color="255,0,0" />
-      <Control name="parashow10" tagname="井口套压" tagname_en="Casing Pressure(WH)" unit="MPa" index="32" color="255,0,0" />
+      <Control name="parashow10" tagname="实际砂浓度" tagname_en="Proppant Concentration" unit="kg/m3" index="35" color="255,0,0" />
       <Control name="parashow11" tagname="井口密度" tagname_en="Density(WH)" unit="g/cc" index="33" color="255,0,0" />
       <Control name="parashow12" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" unit="m3/min" index="34" color="255,0,0" />
       <Control name="parashow13" tagname="输砂速率" tagname_en="Proppant Rate" unit="ton/min" index="46" color="0,128,0" />
@@ -291,8 +291,7 @@
   <Form>
     <!--输出设置-->
     <Name>Frm_Paraset</Name>
-    <Set report="31,32,33" series="31,32,33,34" interval="1" port="COM1" rate="9600" mode="true">
+    <Set report="31,32,33" series="31,32,33,34" interval="60" port="COM1" rate="9600" mode="False">
     </Set>
   </Form>
- 
 </root>
