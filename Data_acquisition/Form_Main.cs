@@ -160,39 +160,39 @@ namespace Data_acquisition
                     ((Frm_Manifold)Application.OpenForms["Frm_Manifold"]).wellinfo_refresh();
                     //切换阶段时,0516修改暂时屏蔽与混砂车的阶段信号获取
 
-                    //int temp = Convert.ToInt16(value_blender.GetValue(585));
-                    //if (temp == 0) temp = 1;  //0512修改阶段为0的bug
-                    //if (num_stage != temp)
-                    //{
-                    //    num_stage = temp;
-                    //    //阶段量清零
-                    //    //for (int i = 54; i <= 67; i++)
-                    //    //{
-                    //    //    test[i] = 0;
-                    //    //}
-                    //    //if (!iscnndatabase) return;
-                    //    // num_stage++;
+                    int temp = Convert.ToInt16(value_blender.GetValue(585));
+                    if (temp == 0) temp = 1;  //0512修改阶段为0的bug
+                    if (num_stage != temp)
+                    {
+                        num_stage = temp;
+                        //阶段量清零
+                        for (int i = 54; i <= 67; i++)
+                        {
+                            test[i] = 0;
+                        }
+                        if (!iscnndatabase) return;
+                        // num_stage++;
 
-                    //    //泵的阶段暂存量重新赋值
+                        //泵的阶段暂存量重新赋值
 
                     //    //for (int i = 1; i <= 8; i++)
                     //    //{
                     //    //    volume_temp[i] = test[105 + (i - 1) * 5];
                     //    //}
 
-                    //    //阶段时间清零
-                    //    time_stage = Convert.ToDateTime("00:00:00");
-                    //    //计划表选取更新
-                    //    if (dataGridView1.Rows.Count >= num_stage)
-                    //    {
-                    //        dataGridView1.ClearSelection();
-                    //        dataGridView1.Rows[num_stage - 1].Selected = true;
-                    //    }
-                    //    //阶段号更新
-                    //    this.wellinfo_refresh();
-                    //    ((Frm_Realtrend)Application.OpenForms["Frm_Realtrend"]).wellinfo_refresh();
-                    //    ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).wellinfo_refresh();
-                    //}
+                         //阶段时间清零
+                         time_stage = Convert.ToDateTime("00:00:00");
+                         //计划表选取更新
+                         if (dataGridView1.Rows.Count >= num_stage)
+                         {
+                             dataGridView1.ClearSelection();
+                             dataGridView1.Rows[num_stage - 1].Selected = true;
+                         }
+                         //阶段号更新
+                         this.wellinfo_refresh();
+                         ((Frm_Realtrend)Application.OpenForms["Frm_Realtrend"]).wellinfo_refresh();
+                         ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).wellinfo_refresh();
+                    }
 
 
                     Paralist.Add(DateTime.Now.ToString(), new Datamodel((int)count, test));
@@ -1587,10 +1587,10 @@ namespace Data_acquisition
             //{
             //    test[i] = Convert.ToDouble(value_blender.GetValue(i - 30));
             //}
-            test[64] = test[61] + test[62] + test[63];//液添阶段总量
-            test[65] = Convert.ToDouble(value_blender.GetValue(35));//干添1阶段总量
-            test[66] = Convert.ToDouble(value_blender.GetValue(36));//干添2阶段总量
-            test[67] = test[65] + test[66];//干添阶段总量
+            //test[64] = test[61] + test[62] + test[63];//液添阶段总量
+            //test[65] = Convert.ToDouble(value_blender.GetValue(35));//干添1阶段总量
+            //test[66] = Convert.ToDouble(value_blender.GetValue(36));//干添2阶段总量
+            //test[67] = test[65] + test[66];//干添阶段总量
             ////井口排出总量,来自beff尚未采集，先取混砂车
             // test[68] = test[70];
             for (int i = 69; i <= 77; i++)
@@ -1816,7 +1816,7 @@ namespace Data_acquisition
             frm5.Visible = false;
 
             Frm_Manifold frm6 = new Frm_Manifold();
-            frm6.Location = new Point(0, 0);
+            frm6.Location = new Point(9600, 0);
             frm6.Show();
             frm6.BringToFront();
             this.Focus();
@@ -2253,7 +2253,7 @@ namespace Data_acquisition
 
             }
             test[141] = 0; test[142] = 0; test[143] = 0;
-
+            kep1.KepItems.Item(20).Write(true);
         }
 
         private void btn_blenderstop_Click(object sender, EventArgs e)
@@ -2719,7 +2719,7 @@ namespace Data_acquisition
                 DataTable report = db3.ExcuteDataTable(sql3);
 
                 //0512新增，获得每个阶段的名称信息和支撑剂类型
-                string[] stage_name = Form_Main.stageinfo.Split(',');
+             //   string[] stage_name = Form_Main.stageinfo.Split(',');
                 for (int i = 0; i < value.Rows.Count; i++)
                 {
                     string json = value.Rows[i]["value"].ToString();

@@ -67,19 +67,23 @@ namespace Data_acquisition
                     Array err;
                     int id;
                     Form_Main.kep1.KepGroup.AsyncWrite(handle.Length - 1, ref handle, ref value, out err, 1, out id);
+                
                     GC.Collect();
                     progressBar1.Value = i;
-                    stageinfo.Append(dr.Cells[1].ToString()+",");
+               //     stageinfo.Append(dr.Cells[1].ToString()+",");
                 }
+                //0517修改，排出总量清零
+
+                Form_Main.kep1.KepItems.Item(20).Write(true);
                 //发送总阶段数到PLC
                 Form_Main.kep1.KepItems.Item(588).Write(dataGridView1.Rows.Count);
                 //发送成功后将阶段信息保存到数据库
-                Form_Main.stageinfo=stageinfo.ToString();
-                DbManager db = new DbManager();
-                db.ConnStr = "Data Source=localhost;" +
-                "Initial Catalog=ifracview;User Id=root;Password=hhdq;";
-                string sql = "update wellinfo set stageinfo=" + "'" + stageinfo.ToString()+"'"+" where id="+Form_Main.wellinfoID;
-                db.ExecuteNonquery(sql);
+               // Form_Main.stageinfo=stageinfo.ToString();
+                //DbManager db = new DbManager();
+                //db.ConnStr = "Data Source=localhost;" +
+                //"Initial Catalog=ifracview;User Id=root;Password=hhdq;";
+                //string sql = "update wellinfo set stageinfo=" + "'" + stageinfo.ToString()+"'"+" where id="+Form_Main.wellinfoID;
+                //db.ExecuteNonquery(sql);
                 this.Close();
 
                 //同步计划数据，先删除表中数据，再重新插入

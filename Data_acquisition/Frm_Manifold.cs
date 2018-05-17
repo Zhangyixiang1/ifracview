@@ -26,7 +26,7 @@ namespace Data_acquisition
             myPane.Chart.Border.Color = Color.Gray;
             myPane.IsFontsScaled = false;
             //myPane.Border.IsVisible=false;
-           // myPane.Legend.IsVisible = false;
+            // myPane.Legend.IsVisible = false;
             myPane.Border.Width = 1;
             myPane.Border.Color = Color.White;
             //lengend
@@ -51,7 +51,7 @@ namespace Data_acquisition
             myPane.XAxis.MinorTic.IsOpposite = false;
             myPane.XAxis.MajorTic.Color = Color.White;
             myPane.XAxis.MinorTic.Color = Color.White;
-         //   myPane.XAxis.Scale.MajorStep = 5;//X轴大步长为5，也就是显示文字的大间隔
+            //   myPane.XAxis.Scale.MajorStep = 5;//X轴大步长为5，也就是显示文字的大间隔
             //y轴
             myPane.YAxis.MajorTic.IsInside = false;
             myPane.YAxis.MajorGrid.Color = Color.White;
@@ -64,7 +64,7 @@ namespace Data_acquisition
             PointPairList List1 = new PointPairList();
             PointPairList List2 = new PointPairList();
             PointPairList List3 = new PointPairList();
-            
+
 
             // 第1条线的标号为3
             LineItem myCurve = myPane.AddCurve("井口油压",
@@ -80,7 +80,7 @@ namespace Data_acquisition
             // Fill the symbols with white
             // myCurve.Symbol.Fill = new Fill(Color.White);
             // Associate this curve with the Y2 axis
-           
+            myCurve.YAxisIndex = 1;
 
             // 第3条线的标号为2
             myCurve = myPane.AddCurve("砂浓度",
@@ -89,9 +89,9 @@ namespace Data_acquisition
             // Fill the symbols with white
             //   myCurve.Symbol.Fill = new Fill(Color.White);
             // Associate this curve with the second Y axis
-            myCurve.YAxisIndex = 1;
+            myCurve.YAxisIndex = 2;
 
-            
+
 
 
             // Show the x axis grid
@@ -106,6 +106,9 @@ namespace Data_acquisition
             // turn off the opposite tics so the Y tics don't show up on the Y2 axis
             myPane.YAxis.MajorTic.IsOpposite = false;
             myPane.YAxis.MajorTic.Color = Color.Red;
+            myPane.YAxis.Scale.Max = 120;
+            myPane.YAxis.Scale.Min = 0;
+            myPane.YAxis.Scale.MajorStep = 30;
             myPane.YAxis.MinorTic.IsOpposite = false;
             myPane.YAxis.MinorTic.Color = Color.Red;
             // Don't display the Y zero line
@@ -152,11 +155,13 @@ namespace Data_acquisition
             yAxis3.MajorTic.Color = Color.White;
             yAxis3.MinorTic.IsOpposite = false;
             yAxis3.MinorTic.Color = Color.White;
+            yAxis3.Scale.Max = 30;
+            yAxis3.Scale.Min = 0;
             // Align the Y2 axis labels so they are flush to the axis
             yAxis3.Scale.Align = AlignP.Inside;
             //yAxis3.Scale.Max = int.Parse(paraLine2.Max);
             //yAxis3.Scale.Min = int.Parse(paraLine2.Min);
-
+            yAxis3.Scale.MagAuto = false;
 
             // Create a third Y Axis, red
             YAxis yAxis5 = new YAxis();
@@ -173,13 +178,15 @@ namespace Data_acquisition
             yAxis5.MajorTic.Color = Color.Yellow;
             yAxis5.MinorTic.IsOpposite = false;
             yAxis5.MinorTic.Color = Color.Yellow;
+            yAxis5.Scale.Max = 10000;
+            yAxis5.Scale.Min = 0;
             // Align the Y2 axis labels so they are flush to the axis
             yAxis5.Scale.Align = AlignP.Inside;
             //yAxis5.Scale.Max = int.Parse(paraLine1.Max);
             //yAxis5.Scale.Min = int.Parse(paraLine1.Min);
+            yAxis5.Scale.MagAuto = false;
 
 
-          
 
             //新增，y轴不显示名称及零线
             foreach (YAxis y in myPane.YAxisList)
@@ -215,8 +222,8 @@ namespace Data_acquisition
             //液添4暂时没有数据
             dataGridView1.Rows[index].Cells[0].Value = "液添4";
             dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
-           // dataGridView1.DefaultCellStyle.BackColor = Color.White;
-           // dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
+            // dataGridView1.DefaultCellStyle.BackColor = Color.White;
+            // dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
             dataGridView1.ClearSelection();
             timer1.Enabled = true;
         }
@@ -229,63 +236,69 @@ namespace Data_acquisition
                 //刷新阶段信息和添加剂信息
                 int percent1 = Convert.ToInt16(Form_Main.value_blender.GetValue(589));
                 int percent2 = Convert.ToInt16(Form_Main.value_blender.GetValue(631));
+                if (percent1 > 100) percent1 = 100;
+                if (percent2 > 100) percent2 = 100;
                 radProgressBar1.Value1 = percent1; radProgressBar1.Text = percent1 + "%";
-                radProgressBar2.Value1 = percent1; radProgressBar2.Text = percent2 + "%";
+                radProgressBar2.Value1 = percent2; radProgressBar2.Text = percent2 + "%";
                 //刷新液位
-               // label74.Text = trans_point(Form_Main.value_blender.GetValue(632)); ;
+                // lbl_level.Text = trans_point(Form_Main.value_blender.GetValue(632))+"%"; 
                 level1.Refresh(Convert.ToDouble(Form_Main.value_blender.GetValue(632)));
                 //刷新grdiview信息
                 ////吸入
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(8)) + " m3/min";//速率
                 //dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(39)) + " m3";//总量
                 //泵累计
-                dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(9)) + " m3";//阶段
-                dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(40)) + " m3";//总量
+                //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(9)) + " m3";//阶段
+                //dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(40)) + " m3";//总量
+                dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[142]) + " m3";//阶段
+                dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[143]) + " m3";//总量
                 //支撑剂
-                dataGridView1.Rows[1].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(16)) + " kg";//阶段
-                dataGridView1.Rows[1].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(44)) + " kg";//总量
+                dataGridView1.Rows[1].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[60]) + " kg";//阶段
+                dataGridView1.Rows[1].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[74]) + " kg";//总量
                 //干添1
-                dataGridView1.Rows[2].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(21)) + " kg";//阶段
-                dataGridView1.Rows[2].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(49)) + " kg";//总量
+                dataGridView1.Rows[2].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[65]) + " kg";//阶段
+                dataGridView1.Rows[2].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[79]) + " kg";//总量
                 //干添2
-                dataGridView1.Rows[3].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(22)) + " kg";//阶段
-                dataGridView1.Rows[3].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(50)) + " kg";//总量
+                dataGridView1.Rows[3].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[66]) + " kg";//阶段
+                dataGridView1.Rows[3].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[80]) + " kg";//总量
                 //液添1
-                dataGridView1.Rows[4].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(17)) + " L";//阶段
-                dataGridView1.Rows[4].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(45)) + " L";//总量
+                dataGridView1.Rows[4].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[61]) + " L";//阶段
+                dataGridView1.Rows[4].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[75]) + " L";//总量
                 //液添2
-                dataGridView1.Rows[5].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(18)) + " L";//阶段
-                dataGridView1.Rows[5].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(46)) + " L";//总量
+                dataGridView1.Rows[5].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[62]) + " L";//阶段
+                dataGridView1.Rows[5].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[76]) + " L";//总量
                 //液添3
-                dataGridView1.Rows[6].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(19)) + " L";//阶段
-                dataGridView1.Rows[6].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(47)) + " L";//总量
+                dataGridView1.Rows[6].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[63]) + " L";//阶段
+                dataGridView1.Rows[6].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[77]) + " L";//总量
                 //刷新曲线的值
 
-             CurveList list=zedGraphControl1.GraphPane.CurveList;
+                CurveList list = zedGraphControl1.GraphPane.CurveList;
                 //0井口油压 1排出流量 2砂浓度
-             double x = DateTime.Now.ToOADate();
-             list[0].AddPoint(new PointPair(x,Form_Main.Paralist.Last().Value.DATA[31]));
-             list[1].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[34]));
-             list[2].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[35]));
+                double x = DateTime.Now.ToOADate();
+                list[0].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[31]));
+                list[1].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[34]));
+                list[2].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[35]));
                 //大于1消失，轴移动
-             if (list[0].Points.Count > 3600) {
-                 DateTime ts = DateTime.FromOADate(zedGraphControl1.GraphPane.XAxis.Scale.Min);
-                 DateTime te = DateTime.FromOADate(zedGraphControl1.GraphPane.XAxis.Scale.Max);
-                 zedGraphControl1.GraphPane.XAxis.Scale.Min = ts.AddSeconds(1).ToOADate();
-                 zedGraphControl1.GraphPane.XAxis.Scale.Max = te.AddSeconds(1).ToOADate();
-             }
-             if (list[0].Points.Count > 4000) foreach (CurveItem line in list) {
-                 line.RemovePoint(0);
-             }
-             zedGraphControl1.AxisChange();
-             zedGraphControl1.Invalidate();
+                if (list[0].Points.Count > 3600)
+                {
+                    DateTime ts = DateTime.FromOADate(zedGraphControl1.GraphPane.XAxis.Scale.Min);
+                    DateTime te = DateTime.FromOADate(zedGraphControl1.GraphPane.XAxis.Scale.Max);
+                    zedGraphControl1.GraphPane.XAxis.Scale.Min = ts.AddSeconds(1).ToOADate();
+                    zedGraphControl1.GraphPane.XAxis.Scale.Max = te.AddSeconds(1).ToOADate();
+                }
+                if (list[0].Points.Count > 4000) foreach (CurveItem line in list)
+                    {
+                        line.RemovePoint(0);
+                    }
+                zedGraphControl1.AxisChange();
+                zedGraphControl1.Invalidate();
             }
-            catch 
+            catch
             {
-                
-              
+
+
             }
-           
+
 
         }
         private void refresh(Control container)
@@ -300,7 +313,8 @@ namespace Data_acquisition
                         if (lbl.Tag != null)
                         {
                             if (lbl.Tag.ToString() == "HH")
-                                lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.0");
+                                if (lbl.TabIndex == 37) { lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.00"); }
+                                else { lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.0"); }
                         }
                     }
                     else if (ctr is Panel)
@@ -474,7 +488,7 @@ namespace Data_acquisition
      Color.White, 1, ButtonBorderStyle.Solid, //右边
      Color.White, 1, ButtonBorderStyle.Solid);//底边
         }
-   
+
 
     }
 }
