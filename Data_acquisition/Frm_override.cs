@@ -12,7 +12,7 @@ namespace Data_acquisition
 {
     public partial class Frm_override : Form
     {
-        int index;
+        int index=1;
         public Frm_override()
         {
             InitializeComponent();
@@ -54,6 +54,7 @@ namespace Data_acquisition
             //语言切换
             if (Form_Main.lan == "Chinese") MultiLanguage.LoadLanguage(this, "Chinese");
             else if (Form_Main.lan == "English") MultiLanguage.LoadLanguage(this, "English");
+           
         }
     }
 }

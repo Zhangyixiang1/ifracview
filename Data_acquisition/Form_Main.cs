@@ -83,7 +83,7 @@ namespace Data_acquisition
         public static string stageinfo; //保存每个阶段的名字
         public static Thread th_comout; //串口输出线程
         public static SerialPort com = new SerialPort();
-
+        public static bool isSync;// 阶段是否与混砂橇同步
         [DllImport("user32.dll")]
         static extern bool ClipCursor(ref  RECT rect);
         RECT _ScreenRect;

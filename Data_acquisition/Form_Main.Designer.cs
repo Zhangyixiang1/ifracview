@@ -804,28 +804,28 @@
             // 新建施工ToolStripMenuItem
             // 
             this.新建施工ToolStripMenuItem.Name = "新建施工ToolStripMenuItem";
-            this.新建施工ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新建施工ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.新建施工ToolStripMenuItem.Text = "新建施工";
             this.新建施工ToolStripMenuItem.Click += new System.EventHandler(this.新建施工ToolStripMenuItem_Click);
             // 
             // 追加施工ToolStripMenuItem
             // 
             this.追加施工ToolStripMenuItem.Name = "追加施工ToolStripMenuItem";
-            this.追加施工ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.追加施工ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.追加施工ToolStripMenuItem.Text = "追加施工";
             this.追加施工ToolStripMenuItem.Click += new System.EventHandler(this.追加施工ToolStripMenuItem_Click);
             // 
             // 结束施工ToolStripMenuItem
             // 
             this.结束施工ToolStripMenuItem.Name = "结束施工ToolStripMenuItem";
-            this.结束施工ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.结束施工ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.结束施工ToolStripMenuItem.Text = "结束施工";
             this.结束施工ToolStripMenuItem.Click += new System.EventHandler(this.结束施工ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem2
             // 
             this.退出ToolStripMenuItem2.Name = "退出ToolStripMenuItem2";
-            this.退出ToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem2.Size = new System.Drawing.Size(124, 22);
             this.退出ToolStripMenuItem2.Text = "退出";
             this.退出ToolStripMenuItem2.Click += new System.EventHandler(this.退出ToolStripMenuItem2_Click);
             // 
@@ -844,35 +844,35 @@
             // 系统设置ToolStripMenuItem1
             // 
             this.系统设置ToolStripMenuItem1.Name = "系统设置ToolStripMenuItem1";
-            this.系统设置ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.系统设置ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.系统设置ToolStripMenuItem1.Text = "系统设置";
             this.系统设置ToolStripMenuItem1.Click += new System.EventHandler(this.系统设置ToolStripMenuItem1_Click);
             // 
             // 通道设置ToolStripMenuItem
             // 
             this.通道设置ToolStripMenuItem.Name = "通道设置ToolStripMenuItem";
-            this.通道设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.通道设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.通道设置ToolStripMenuItem.Text = "输出配置";
             this.通道设置ToolStripMenuItem.Click += new System.EventHandler(this.通道设置ToolStripMenuItem_Click);
             // 
             // 图像编辑ToolStripMenuItem1
             // 
             this.图像编辑ToolStripMenuItem1.Name = "图像编辑ToolStripMenuItem1";
-            this.图像编辑ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.图像编辑ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.图像编辑ToolStripMenuItem1.Text = "图像编辑";
             this.图像编辑ToolStripMenuItem1.Click += new System.EventHandler(this.图像编辑ToolStripMenuItem_Click);
             // 
             // 参数设置ToolStripMenuItem
             // 
             this.参数设置ToolStripMenuItem.Name = "参数设置ToolStripMenuItem";
-            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.参数设置ToolStripMenuItem.Text = "参数设置";
             this.参数设置ToolStripMenuItem.Click += new System.EventHandler(this.参数设置ToolStripMenuItem_Click);
             // 
             // 参数校准ToolStripMenuItem1
             // 
             this.参数校准ToolStripMenuItem1.Name = "参数校准ToolStripMenuItem1";
-            this.参数校准ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.参数校准ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.参数校准ToolStripMenuItem1.Text = "参数校准";
             this.参数校准ToolStripMenuItem1.Click += new System.EventHandler(this.参数校准ToolStripMenuItem1_Click);
             // 
@@ -951,7 +951,7 @@
             this.tssl_F8,
             this.toolStripStatusLabel12,
             this.tssl_log});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1058);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1040);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1920, 22);
             this.statusStrip1.TabIndex = 24;
@@ -2113,7 +2113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1062);
             this.Controls.Add(this.pnl_setting);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.statusStrip1);

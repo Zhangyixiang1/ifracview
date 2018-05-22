@@ -294,4 +294,10 @@
     <Set report="31,32,33" series="31,32,33,34" interval="60" port="COM1" rate="9600" mode="False">
     </Set>
   </Form>
+  <Form>
+    <!--创建施工界面-->
+    <Name>Frm_creat</Name>
+    <Set wellname="" wellnum="" clientname="" clientrep="" cstunit="" cstrep="" cstcomm="" wellpre="0" wellflow="0" wellden="0">
+    </Set>
+  </Form>
 </root>
