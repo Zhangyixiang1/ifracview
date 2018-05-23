@@ -84,11 +84,14 @@ namespace Data_acquisition
 
                     //0522修改，保存最后一次输入值到xml文件，启动下一个界面
                     xmlsave();
+
                     //阶段同步按钮
                     if (checkBox1.Checked) Form_Main.isSync = true;
                     else Form_Main.isSync = false;
-
-
+                    //保存井口数据来源
+                    Form_Main.wellDataIndex[0] = cmb_wellpre.SelectedIndex;
+                    Form_Main.wellDataIndex[1] = cmb_wellflow.SelectedIndex;
+                    Form_Main.wellDataIndex[2] = cmb_wellden.SelectedIndex;
                     Frm_Chnset frm = new Frm_Chnset();
                     frm.ShowDialog();
                     this.Close();
@@ -148,13 +151,15 @@ namespace Data_acquisition
             XmlDocument doc = new XmlDocument();
             string path = Application.StartupPath + "\\Config\\preference.xml";
             doc.Load(path);
-            XmlNodeList list = doc.SelectNodes("Form[Name='Frm_creat']//Set");
+            XmlNode root = doc.DocumentElement;
+            XmlNodeList list = root.SelectNodes("Form[Name='Frm_creat']//Set");
             list[0].Attributes["wellname"].Value = txt_wellname.Text;
             list[0].Attributes["wellnum"].Value = txt_wellnum.Text;
             list[0].Attributes["clientname"].Value = txt_clientname.Text;
             list[0].Attributes["clientrep"].Value = txt_representname.Text;
             list[0].Attributes["cstunit"].Value = txt_constructionname.Text;
             list[0].Attributes["cstrep"].Value = txt_cstrepname.Text;
+            list[0].Attributes["cstrcomm"].Value = txt_leadername.Text;
             list[0].Attributes["wellpre"].Value = cmb_wellpre.SelectedIndex.ToString();
             list[0].Attributes["wellflow"].Value = cmb_wellflow.SelectedIndex.ToString();
             list[0].Attributes["wellden"].Value = cmb_wellden.SelectedIndex.ToString();

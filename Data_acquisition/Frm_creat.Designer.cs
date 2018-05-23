@@ -30,39 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txb_f8 = new System.Windows.Forms.TextBox();
-            this.txb_f7 = new System.Windows.Forms.TextBox();
-            this.txb_f6 = new System.Windows.Forms.TextBox();
-            this.txb_f5 = new System.Windows.Forms.TextBox();
-            this.txb_f4 = new System.Windows.Forms.TextBox();
-            this.txb_f3 = new System.Windows.Forms.TextBox();
-            this.txb_f2 = new System.Windows.Forms.TextBox();
-            this.txb_f1 = new System.Windows.Forms.TextBox();
-            this.txb_b = new System.Windows.Forms.TextBox();
-            this.txb_daq = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_confirm = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cmb_wellpre = new System.Windows.Forms.ComboBox();
-            this.cmb_wellflow = new System.Windows.Forms.ComboBox();
-            this.cmb_wellden = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,14 +51,47 @@
             this.txt_wellnum = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_wellname = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_OK = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmb_wellden = new System.Windows.Forms.ComboBox();
+            this.cmb_wellflow = new System.Windows.Forms.ComboBox();
+            this.cmb_wellpre = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txb_f8 = new System.Windows.Forms.TextBox();
+            this.btn_confirm = new System.Windows.Forms.Button();
+            this.txb_f7 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txb_f6 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txb_f5 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txb_f4 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txb_f3 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txb_f2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txb_f1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txb_b = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txb_daq = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -114,322 +114,6 @@
             this.tabPage1.Size = new System.Drawing.Size(454, 346);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "一般信息";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.btn_OK);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(454, 346);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "通讯相关";
-            // 
-            // txb_f8
-            // 
-            this.txb_f8.Location = new System.Drawing.Point(74, 265);
-            this.txb_f8.Name = "txb_f8";
-            this.txb_f8.Size = new System.Drawing.Size(124, 21);
-            this.txb_f8.TabIndex = 23;
-            // 
-            // txb_f7
-            // 
-            this.txb_f7.Location = new System.Drawing.Point(74, 237);
-            this.txb_f7.Name = "txb_f7";
-            this.txb_f7.Size = new System.Drawing.Size(124, 21);
-            this.txb_f7.TabIndex = 21;
-            // 
-            // txb_f6
-            // 
-            this.txb_f6.Location = new System.Drawing.Point(74, 209);
-            this.txb_f6.Name = "txb_f6";
-            this.txb_f6.Size = new System.Drawing.Size(124, 21);
-            this.txb_f6.TabIndex = 20;
-            // 
-            // txb_f5
-            // 
-            this.txb_f5.Location = new System.Drawing.Point(74, 181);
-            this.txb_f5.Name = "txb_f5";
-            this.txb_f5.Size = new System.Drawing.Size(124, 21);
-            this.txb_f5.TabIndex = 19;
-            // 
-            // txb_f4
-            // 
-            this.txb_f4.Location = new System.Drawing.Point(74, 153);
-            this.txb_f4.Name = "txb_f4";
-            this.txb_f4.Size = new System.Drawing.Size(124, 21);
-            this.txb_f4.TabIndex = 18;
-            // 
-            // txb_f3
-            // 
-            this.txb_f3.Location = new System.Drawing.Point(74, 125);
-            this.txb_f3.Name = "txb_f3";
-            this.txb_f3.Size = new System.Drawing.Size(124, 21);
-            this.txb_f3.TabIndex = 17;
-            // 
-            // txb_f2
-            // 
-            this.txb_f2.Location = new System.Drawing.Point(74, 97);
-            this.txb_f2.Name = "txb_f2";
-            this.txb_f2.Size = new System.Drawing.Size(124, 21);
-            this.txb_f2.TabIndex = 16;
-            // 
-            // txb_f1
-            // 
-            this.txb_f1.Location = new System.Drawing.Point(74, 69);
-            this.txb_f1.Name = "txb_f1";
-            this.txb_f1.Size = new System.Drawing.Size(124, 21);
-            this.txb_f1.TabIndex = 15;
-            // 
-            // txb_b
-            // 
-            this.txb_b.Location = new System.Drawing.Point(74, 41);
-            this.txb_b.Name = "txb_b";
-            this.txb_b.Size = new System.Drawing.Size(124, 21);
-            this.txb_b.TabIndex = 22;
-            // 
-            // txb_daq
-            // 
-            this.txb_daq.Location = new System.Drawing.Point(74, 13);
-            this.txb_daq.Name = "txb_daq";
-            this.txb_daq.Size = new System.Drawing.Size(124, 21);
-            this.txb_daq.TabIndex = 14;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 269);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 12);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "泵8";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 241);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 12);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "泵7";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 213);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 12);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "泵6";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 185);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 12);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "泵5";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 157);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 12);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "泵4";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(15, 129);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 12);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "泵3";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(23, 12);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "泵2";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(15, 73);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(23, 12);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "泵1";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 45);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(41, 12);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "混砂车";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 17);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(23, 12);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "DAQ";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 20);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(137, 12);
-            this.label21.TabIndex = 24;
-            this.label21.Text = "阶段号是否与混砂橇同步";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(158, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txb_f8);
-            this.groupBox3.Controls.Add(this.btn_confirm);
-            this.groupBox3.Controls.Add(this.txb_f7);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.txb_f6);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.txb_f5);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.txb_f4);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.txb_f3);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.txb_f2);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.txb_f1);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txb_b);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.txb_daq);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(6, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 330);
-            this.groupBox3.TabIndex = 26;
-            this.groupBox3.TabStop = false;
-            // 
-            // btn_confirm
-            // 
-            this.btn_confirm.Location = new System.Drawing.Point(6, 300);
-            this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(75, 23);
-            this.btn_confirm.TabIndex = 0;
-            this.btn_confirm.Text = "应用";
-            this.btn_confirm.UseVisualStyleBackColor = true;
-            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Location = new System.Drawing.Point(225, 136);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 44);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cmb_wellden);
-            this.groupBox2.Controls.Add(this.cmb_wellflow);
-            this.groupBox2.Controls.Add(this.cmb_wellpre);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Location = new System.Drawing.Point(225, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(216, 113);
-            this.groupBox2.TabIndex = 27;
-            this.groupBox2.TabStop = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 17);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(53, 12);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "井口油压";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 45);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(53, 12);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "井口流量";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 73);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(53, 12);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "井口密度";
-            // 
-            // cmb_wellpre
-            // 
-            this.cmb_wellpre.FormattingEnabled = true;
-            this.cmb_wellpre.Items.AddRange(new object[] {
-            "传感器",
-            "压裂泵"});
-            this.cmb_wellpre.Location = new System.Drawing.Point(79, 13);
-            this.cmb_wellpre.Name = "cmb_wellpre";
-            this.cmb_wellpre.Size = new System.Drawing.Size(121, 20);
-            this.cmb_wellpre.TabIndex = 2;
-            // 
-            // cmb_wellflow
-            // 
-            this.cmb_wellflow.FormattingEnabled = true;
-            this.cmb_wellflow.Items.AddRange(new object[] {
-            "传感器",
-            "压裂泵",
-            "混砂橇"});
-            this.cmb_wellflow.Location = new System.Drawing.Point(79, 41);
-            this.cmb_wellflow.Name = "cmb_wellflow";
-            this.cmb_wellflow.Size = new System.Drawing.Size(121, 20);
-            this.cmb_wellflow.TabIndex = 2;
-            // 
-            // cmb_wellden
-            // 
-            this.cmb_wellden.FormattingEnabled = true;
-            this.cmb_wellden.Items.AddRange(new object[] {
-            "传感器",
-            "混砂橇"});
-            this.cmb_wellden.Location = new System.Drawing.Point(79, 69);
-            this.cmb_wellden.Name = "cmb_wellden";
-            this.cmb_wellden.Size = new System.Drawing.Size(121, 20);
-            this.cmb_wellden.TabIndex = 2;
             // 
             // groupBox4
             // 
@@ -619,6 +303,20 @@
             this.txt_wellname.Size = new System.Drawing.Size(156, 21);
             this.txt_wellname.TabIndex = 36;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.btn_OK);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(454, 346);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "通讯相关";
+            // 
             // btn_OK
             // 
             this.btn_OK.Location = new System.Drawing.Point(366, 306);
@@ -628,6 +326,315 @@
             this.btn_OK.Text = "确认";
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cmb_wellden);
+            this.groupBox2.Controls.Add(this.cmb_wellflow);
+            this.groupBox2.Controls.Add(this.cmb_wellpre);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Location = new System.Drawing.Point(225, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(216, 113);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            // 
+            // cmb_wellden
+            // 
+            this.cmb_wellden.FormattingEnabled = true;
+            this.cmb_wellden.Items.AddRange(new object[] {
+            "传感器",
+            "混砂橇"});
+            this.cmb_wellden.Location = new System.Drawing.Point(79, 69);
+            this.cmb_wellden.Name = "cmb_wellden";
+            this.cmb_wellden.Size = new System.Drawing.Size(121, 20);
+            this.cmb_wellden.TabIndex = 2;
+            // 
+            // cmb_wellflow
+            // 
+            this.cmb_wellflow.FormattingEnabled = true;
+            this.cmb_wellflow.Items.AddRange(new object[] {
+            "传感器",
+            "压裂泵",
+            "混砂橇"});
+            this.cmb_wellflow.Location = new System.Drawing.Point(79, 41);
+            this.cmb_wellflow.Name = "cmb_wellflow";
+            this.cmb_wellflow.Size = new System.Drawing.Size(121, 20);
+            this.cmb_wellflow.TabIndex = 2;
+            // 
+            // cmb_wellpre
+            // 
+            this.cmb_wellpre.FormattingEnabled = true;
+            this.cmb_wellpre.Items.AddRange(new object[] {
+            "传感器",
+            "压裂泵1",
+            "压力泵2",
+            "压裂泵3",
+            "压裂泵4",
+            "压裂泵5",
+            "压力泵6",
+            "压力泵7",
+            "压力泵8"});
+            this.cmb_wellpre.Location = new System.Drawing.Point(79, 13);
+            this.cmb_wellpre.Name = "cmb_wellpre";
+            this.cmb_wellpre.Size = new System.Drawing.Size(121, 20);
+            this.cmb_wellpre.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 73);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(53, 12);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "井口密度";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 45);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(53, 12);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "井口流量";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(7, 17);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 12);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "井口油压";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Location = new System.Drawing.Point(225, 136);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 44);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(158, 19);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 25;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(137, 12);
+            this.label21.TabIndex = 24;
+            this.label21.Text = "阶段号是否与混砂橇同步";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txb_f8);
+            this.groupBox3.Controls.Add(this.btn_confirm);
+            this.groupBox3.Controls.Add(this.txb_f7);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.txb_f6);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.txb_f5);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.txb_f4);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.txb_f3);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.txb_f2);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.txb_f1);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.txb_b);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.txb_daq);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 330);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            // 
+            // txb_f8
+            // 
+            this.txb_f8.Location = new System.Drawing.Point(74, 265);
+            this.txb_f8.Name = "txb_f8";
+            this.txb_f8.Size = new System.Drawing.Size(124, 21);
+            this.txb_f8.TabIndex = 23;
+            // 
+            // btn_confirm
+            // 
+            this.btn_confirm.Location = new System.Drawing.Point(6, 300);
+            this.btn_confirm.Name = "btn_confirm";
+            this.btn_confirm.Size = new System.Drawing.Size(75, 23);
+            this.btn_confirm.TabIndex = 0;
+            this.btn_confirm.Text = "应用";
+            this.btn_confirm.UseVisualStyleBackColor = true;
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
+            // 
+            // txb_f7
+            // 
+            this.txb_f7.Location = new System.Drawing.Point(74, 237);
+            this.txb_f7.Name = "txb_f7";
+            this.txb_f7.Size = new System.Drawing.Size(124, 21);
+            this.txb_f7.TabIndex = 21;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(23, 12);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "DAQ";
+            // 
+            // txb_f6
+            // 
+            this.txb_f6.Location = new System.Drawing.Point(74, 209);
+            this.txb_f6.Name = "txb_f6";
+            this.txb_f6.Size = new System.Drawing.Size(124, 21);
+            this.txb_f6.TabIndex = 20;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 45);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 12);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "混砂车";
+            // 
+            // txb_f5
+            // 
+            this.txb_f5.Location = new System.Drawing.Point(74, 181);
+            this.txb_f5.Name = "txb_f5";
+            this.txb_f5.Size = new System.Drawing.Size(124, 21);
+            this.txb_f5.TabIndex = 19;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 73);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(23, 12);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "泵1";
+            // 
+            // txb_f4
+            // 
+            this.txb_f4.Location = new System.Drawing.Point(74, 153);
+            this.txb_f4.Name = "txb_f4";
+            this.txb_f4.Size = new System.Drawing.Size(124, 21);
+            this.txb_f4.TabIndex = 18;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 101);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(23, 12);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "泵2";
+            // 
+            // txb_f3
+            // 
+            this.txb_f3.Location = new System.Drawing.Point(74, 125);
+            this.txb_f3.Name = "txb_f3";
+            this.txb_f3.Size = new System.Drawing.Size(124, 21);
+            this.txb_f3.TabIndex = 17;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(15, 129);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(23, 12);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "泵3";
+            // 
+            // txb_f2
+            // 
+            this.txb_f2.Location = new System.Drawing.Point(74, 97);
+            this.txb_f2.Name = "txb_f2";
+            this.txb_f2.Size = new System.Drawing.Size(124, 21);
+            this.txb_f2.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(15, 157);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 12);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "泵4";
+            // 
+            // txb_f1
+            // 
+            this.txb_f1.Location = new System.Drawing.Point(74, 69);
+            this.txb_f1.Name = "txb_f1";
+            this.txb_f1.Size = new System.Drawing.Size(124, 21);
+            this.txb_f1.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(15, 185);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(23, 12);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "泵5";
+            // 
+            // txb_b
+            // 
+            this.txb_b.Location = new System.Drawing.Point(74, 41);
+            this.txb_b.Name = "txb_b";
+            this.txb_b.Size = new System.Drawing.Size(124, 21);
+            this.txb_b.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 213);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 12);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "泵6";
+            // 
+            // txb_daq
+            // 
+            this.txb_daq.Location = new System.Drawing.Point(74, 13);
+            this.txb_daq.Name = "txb_daq";
+            this.txb_daq.Size = new System.Drawing.Size(124, 21);
+            this.txb_daq.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 241);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 12);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "泵7";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 269);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 12);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "泵8";
             // 
             // Frm_creat
             // 
@@ -642,15 +649,15 @@
             this.Load += new System.EventHandler(this.Frm_creat_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }

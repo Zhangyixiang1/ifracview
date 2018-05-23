@@ -84,6 +84,7 @@ namespace Data_acquisition
         public static Thread th_comout; //串口输出线程
         public static SerialPort com = new SerialPort();
         public static bool isSync;// 阶段是否与混砂橇同步
+        public static int[] wellDataIndex;// 井口数据来源,0井口油压，1井口流量，2井口密度
         [DllImport("user32.dll")]
         static extern bool ClipCursor(ref  RECT rect);
         RECT _ScreenRect;
@@ -102,6 +103,7 @@ namespace Data_acquisition
             this.Location = new Point(0, 0);
             lan = Pub_func.GetValue("Language");    //当前语言 
             Unit = Convert.ToInt16(Pub_func.GetValue("Unit"));  //当前单位制
+            wellDataIndex = new int[3];
         }
 
         /// <summary>
@@ -991,6 +993,15 @@ namespace Data_acquisition
                     daqk1[i] = (32767 - 0) / (max1 - min1); daqb1[i] = 32767 - daqk1[i] * max1;
                 }
 
+                //0523新增，读取井口数据来源的配置
+                XmlDocument xml2 = new XmlDocument();
+                xml2.Load(Application.StartupPath + "\\Config\\preference.xml");
+                XmlNode root2 = xml2.DocumentElement;
+                XmlNodeList list2 = root2.SelectNodes("Form[Name='Frm_creat']//Set");
+                wellDataIndex[0] = Convert.ToInt16(list2[0].Attributes["wellpre"].Value);  //井口油压
+                wellDataIndex[1] = Convert.ToInt16(list2[0].Attributes["wellflow"].Value);  //井口流量
+                wellDataIndex[2] = Convert.ToInt16(list2[0].Attributes["wellden"].Value);  //井口密度
+
             }
             catch (Exception ex)
             {
@@ -1557,12 +1568,39 @@ namespace Data_acquisition
         /// </summary>
         private void Blender_read()
         {
-
-            //读取混砂车数据,阶段统计量上位机计算
-            for (int i = 31; i <= 49; i++)
-            {
-                test[i] = Convert.ToDouble(value_blender.GetValue(i - 30));
+            //0523增加，判断井口数据来源
+            //井口油压
+            switch (wellDataIndex[0]) {
+                case 0: test[31] = test[1]; break;
+                case 1: test[31] = test[101]; break;
+                case 2: test[31] = test[106]; break;
+                case 3: test[31] = test[111]; break;
+                case 4: test[31] = test[116]; break;
+                case 5: test[31] = test[121]; break;
+                case 6: test[31] = test[126]; break;
+                case 7: test[31] = test[131]; break;
+                case 8: test[31] = test[136]; break;
             }
+            //井口套压
+            test[32]=test[2];
+            //井口密度
+            if (wellDataIndex[2] == 0) test[33] = test[3];
+            else test[33] = test[35];
+            //井口流量
+            switch (wellDataIndex[1])
+            {
+                case 0: test[34] = test[4]; break;
+                case 1: test[34] = test[141]; break;
+                case 2: test[34] = test[39]; break;
+               
+            }
+
+
+                //读取混砂车数据,阶段统计量上位机计算
+                for (int i = 35; i <= 49; i++)
+                {
+                    test[i] = Convert.ToDouble(value_blender.GetValue(i - 30));
+                }
 
             test[50] = test[47] + test[48] + test[49]; //液添当前总流量
             test[51] = Convert.ToDouble(value_blender.GetValue(21));//干添1流量
@@ -1638,25 +1676,25 @@ namespace Data_acquisition
 
             //井口变量模拟
             //井口油压用冒泡算法取最大值
-            double[] sort = { test[101], test[106], test[111], test[116], test[126], test[131], test[136] };
-            for (int i = 0; i < 7; i++)
-            {
-                for (int j = i + 1; j < 7; j++)
-                {
-                    double temp;
-                    if (sort[i] > sort[j])
-                    {
-                        temp = sort[i];
-                        sort[i] = sort[j];
-                        sort[j] = temp;
-                    }
-                }
-            }
+            //double[] sort = { test[101], test[106], test[111], test[116], test[126], test[131], test[136] };
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    for (int j = i + 1; j < 7; j++)
+            //    {
+            //        double temp;
+            //        if (sort[i] > sort[j])
+            //        {
+            //            temp = sort[i];
+            //            sort[i] = sort[j];
+            //            sort[j] = temp;
+            //        }
+            //    }
+            //}
 
-            test[31] = sort[6];   //井口油压取最大值
-            test[34] = test[141]; //井口排出流量 
-            test[54] = test[142]; //井口排出阶段量
-            test[68] = test[143]; //井口排出总量
+            //test[31] = sort[6];   //井口油压取最大值
+            //test[34] = test[141]; //井口排出流量 
+            //test[54] = test[142]; //井口排出阶段量
+            //test[68] = test[143]; //井口排出总量
         }
         /// <summary>
         /// 串口输出函数
