@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,8 +160,8 @@
             this.indicator_hold = new System.Windows.Forms.PictureBox();
             this.btn_blendernext = new Telerik.WinControls.UI.RadButton();
             this.btn_send = new Telerik.WinControls.UI.RadButton();
-            this.rdbtn_auto = new System.Windows.Forms.RadioButton();
-            this.rdbtn_hand = new System.Windows.Forms.RadioButton();
+            this.rdbtn_ifrac = new System.Windows.Forms.RadioButton();
+            this.rdbtn_blender = new System.Windows.Forms.RadioButton();
             this.lbl_stage2 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -189,6 +189,7 @@
             this.timer_color = new System.Windows.Forms.Timer(this.components);
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.breezeTheme1 = new Telerik.WinControls.Themes.BreezeTheme();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.parashow16 = new Data_acquisition.Ctrl.Parashow();
             this.parashow15 = new Data_acquisition.Ctrl.Parashow();
             this.parashow14 = new Data_acquisition.Ctrl.Parashow();
@@ -211,6 +212,8 @@
             this.paraLine4 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine3 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine2 = new Data_acquisition.Ctrl.ParaLine();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_print)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_left)).BeginInit();
@@ -249,6 +252,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_export)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_override)).BeginInit();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -844,35 +848,35 @@
             // 系统设置ToolStripMenuItem1
             // 
             this.系统设置ToolStripMenuItem1.Name = "系统设置ToolStripMenuItem1";
-            this.系统设置ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.系统设置ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.系统设置ToolStripMenuItem1.Text = "系统设置";
             this.系统设置ToolStripMenuItem1.Click += new System.EventHandler(this.系统设置ToolStripMenuItem1_Click);
             // 
             // 通道设置ToolStripMenuItem
             // 
             this.通道设置ToolStripMenuItem.Name = "通道设置ToolStripMenuItem";
-            this.通道设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.通道设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.通道设置ToolStripMenuItem.Text = "输出配置";
             this.通道设置ToolStripMenuItem.Click += new System.EventHandler(this.通道设置ToolStripMenuItem_Click);
             // 
             // 图像编辑ToolStripMenuItem1
             // 
             this.图像编辑ToolStripMenuItem1.Name = "图像编辑ToolStripMenuItem1";
-            this.图像编辑ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.图像编辑ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.图像编辑ToolStripMenuItem1.Text = "图像编辑";
             this.图像编辑ToolStripMenuItem1.Click += new System.EventHandler(this.图像编辑ToolStripMenuItem_Click);
             // 
             // 参数设置ToolStripMenuItem
             // 
             this.参数设置ToolStripMenuItem.Name = "参数设置ToolStripMenuItem";
-            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.参数设置ToolStripMenuItem.Text = "参数设置";
             this.参数设置ToolStripMenuItem.Click += new System.EventHandler(this.参数设置ToolStripMenuItem_Click);
             // 
             // 参数校准ToolStripMenuItem1
             // 
             this.参数校准ToolStripMenuItem1.Name = "参数校准ToolStripMenuItem1";
-            this.参数校准ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.参数校准ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.参数校准ToolStripMenuItem1.Text = "参数校准";
             this.参数校准ToolStripMenuItem1.Click += new System.EventHandler(this.参数校准ToolStripMenuItem1_Click);
             // 
@@ -951,7 +955,7 @@
             this.tssl_F8,
             this.toolStripStatusLabel12,
             this.tssl_log});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1040);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1058);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1920, 22);
             this.statusStrip1.TabIndex = 24;
@@ -1108,14 +1112,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1135,31 +1139,31 @@
             this.Column6,
             this.Column13,
             this.Column10});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(44, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1670, 295);
@@ -1168,8 +1172,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 10F);
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 10F);
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column1.HeaderText = "阶段号";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -1381,31 +1385,30 @@
             this.btn_send.Text = "发送";
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
-            // rdbtn_auto
+            // rdbtn_ifrac
             // 
-            this.rdbtn_auto.AutoCheck = false;
-            this.rdbtn_auto.AutoSize = true;
-            this.rdbtn_auto.Checked = true;
-            this.rdbtn_auto.Font = new System.Drawing.Font("宋体", 10F);
-            this.rdbtn_auto.Location = new System.Drawing.Point(880, 394);
-            this.rdbtn_auto.Name = "rdbtn_auto";
-            this.rdbtn_auto.Size = new System.Drawing.Size(81, 18);
-            this.rdbtn_auto.TabIndex = 20;
-            this.rdbtn_auto.TabStop = true;
-            this.rdbtn_auto.Text = "阶段自动";
-            this.rdbtn_auto.UseVisualStyleBackColor = true;
+            this.rdbtn_ifrac.AutoSize = true;
+            this.rdbtn_ifrac.Checked = true;
+            this.rdbtn_ifrac.Font = new System.Drawing.Font("宋体", 10F);
+            this.rdbtn_ifrac.ForeColor = System.Drawing.Color.White;
+            this.rdbtn_ifrac.Location = new System.Drawing.Point(10, 25);
+            this.rdbtn_ifrac.Name = "rdbtn_ifrac";
+            this.rdbtn_ifrac.Size = new System.Drawing.Size(14, 13);
+            this.rdbtn_ifrac.TabIndex = 20;
+            this.rdbtn_ifrac.TabStop = true;
+            this.rdbtn_ifrac.UseVisualStyleBackColor = true;
+            this.rdbtn_ifrac.CheckedChanged += new System.EventHandler(this.rdbtn_ifrac_CheckedChanged);
             // 
-            // rdbtn_hand
+            // rdbtn_blender
             // 
-            this.rdbtn_hand.AutoCheck = false;
-            this.rdbtn_hand.AutoSize = true;
-            this.rdbtn_hand.Font = new System.Drawing.Font("宋体", 10F);
-            this.rdbtn_hand.Location = new System.Drawing.Point(979, 394);
-            this.rdbtn_hand.Name = "rdbtn_hand";
-            this.rdbtn_hand.Size = new System.Drawing.Size(81, 18);
-            this.rdbtn_hand.TabIndex = 20;
-            this.rdbtn_hand.Text = "阶段手动";
-            this.rdbtn_hand.UseVisualStyleBackColor = true;
+            this.rdbtn_blender.AutoSize = true;
+            this.rdbtn_blender.Font = new System.Drawing.Font("宋体", 10F);
+            this.rdbtn_blender.ForeColor = System.Drawing.Color.White;
+            this.rdbtn_blender.Location = new System.Drawing.Point(116, 25);
+            this.rdbtn_blender.Name = "rdbtn_blender";
+            this.rdbtn_blender.Size = new System.Drawing.Size(14, 13);
+            this.rdbtn_blender.TabIndex = 20;
+            this.rdbtn_blender.UseVisualStyleBackColor = true;
             // 
             // lbl_stage2
             // 
@@ -1512,6 +1515,7 @@
             this.groupBox4.Controls.Add(this.btn_table);
             this.groupBox4.Controls.Add(this.btn_export);
             this.groupBox4.Controls.Add(this.btn_import);
+            this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.lbl_blender2);
             this.groupBox4.Controls.Add(this.lbl_blender1);
             this.groupBox4.Controls.Add(this.label3);
@@ -1521,8 +1525,6 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.lbl_stage2);
-            this.groupBox4.Controls.Add(this.rdbtn_hand);
-            this.groupBox4.Controls.Add(this.rdbtn_auto);
             this.groupBox4.Controls.Add(this.btn_send);
             this.groupBox4.Controls.Add(this.btn_override);
             this.groupBox4.Controls.Add(this.btn_blendernext);
@@ -1646,38 +1648,38 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.Black;
             this.chart1.BorderlineWidth = 0;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LabelStyle.Interval = 40D;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.Interval = 20D;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea1.AxisX.Minimum = 0D;
-            chartArea1.AxisX.Title = "净液量(m3)";
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea1.AxisY.Title = "砂浓度(kg/m3)";
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.Black;
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LabelStyle.Interval = 40D;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.Interval = 20D;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisX.Title = "净液量(m3)";
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            chartArea2.AxisY.Title = "砂浓度(kg/m3)";
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.Black;
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(57, 5);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.DeepSkyBlue;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.DeepSkyBlue;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1624, 283);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -1797,6 +1799,21 @@
             this.zedGraphControl1.TabIndex = 26;
             this.zedGraphControl1.ContextMenuBuilder += new ZedGraph.ZedGraphControl.ContextMenuBuilderEventHandler(this.zedGraphControl1_ContextMenuBuilder);
             this.zedGraphControl1.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zedGraphControl1_PointValueEvent);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.rdbtn_ifrac);
+            this.groupBox5.Controls.Add(this.rdbtn_blender);
+            this.groupBox5.Font = new System.Drawing.Font("宋体", 10F);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(841, 374);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 52);
+            this.groupBox5.TabIndex = 32;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "控制权限";
             // 
             // parashow16
             // 
@@ -2108,12 +2125,30 @@
             this.paraLine2.Tagname_EN = null;
             this.paraLine2.Unit = "Mpa";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(31, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 14);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "上位机";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(136, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 14);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "混砂橇";
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1920, 1062);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnl_setting);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.statusStrip1);
@@ -2212,6 +2247,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_export)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_override)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2333,8 +2370,8 @@
         private Telerik.WinControls.UI.RadButton btn_blenderhold;
         private Telerik.WinControls.UI.RadButton btn_blendernext;
         private Telerik.WinControls.UI.RadButton btn_send;
-        public System.Windows.Forms.RadioButton rdbtn_auto;
-        public System.Windows.Forms.RadioButton rdbtn_hand;
+        public System.Windows.Forms.RadioButton rdbtn_ifrac;
+        public System.Windows.Forms.RadioButton rdbtn_blender;
         private System.Windows.Forms.Label lbl_stage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -2393,5 +2430,8 @@
         private Telerik.WinControls.Themes.BreezeTheme breezeTheme1;
         private System.Windows.Forms.ToolStripMenuItem 参数设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 参数校准ToolStripMenuItem1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

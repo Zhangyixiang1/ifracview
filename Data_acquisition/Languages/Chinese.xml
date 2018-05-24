@@ -64,8 +64,8 @@
       <Control name="btn_blenderstop" text="停止"/>
       <Control name="btn_blenderhold" text="保持"/>
       <Control name="btn_blendernext" text="下一阶段"/>
-      <Control name="rdbtn_auto" text="阶段自动"/>
-      <Control name="rdbtn_hand" text="阶段手动"/>
+      <Control name="label11" text="上位机"/>
+      <Control name="label12" text="混砂橇"/>
       <Control name="label10" text="阶段:"/>
       <Control name="label2" text="阶段进度"/>
       <Control name="label1" text="作业总进度"/>

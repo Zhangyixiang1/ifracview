@@ -48,7 +48,6 @@
             this.txb_cstrep = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_OK = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,26 +214,15 @@
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(75, 23);
             this.btn_OK.TabIndex = 4;
-            this.btn_OK.Text = "确定";
+            this.btn_OK.Text = "下一步";
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Location = new System.Drawing.Point(97, 249);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel.TabIndex = 4;
-            this.btn_cancel.Text = "取消";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // Frm_report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 284);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txb_remark);
@@ -288,6 +276,5 @@
         private System.Windows.Forms.TextBox txb_cstrep;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_OK;
-        private System.Windows.Forms.Button btn_cancel;
     }
 }

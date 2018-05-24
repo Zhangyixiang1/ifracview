@@ -37,6 +37,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.rdbtn_stander = new System.Windows.Forms.RadioButton();
             this.rdbrn_fracpro = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -54,7 +55,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_OK = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,6 +164,17 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "数据时间间隔";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(107, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "格式";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // rdbtn_stander
             // 
@@ -347,16 +358,6 @@
             this.btn_OK.Text = "确定";
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(107, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "格式";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Paraset
             // 

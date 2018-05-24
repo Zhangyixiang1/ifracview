@@ -30,16 +30,16 @@ namespace Data_acquisition
                 {
                     ((Form_Main)Application.OpenForms["Form_Main"]).btn_next.Enabled = true; Form_Main.kep1.KepItems.Item(587).Write(false);
                     Form_Main.stage_auto = false;
-                    ((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_hand.Checked = true;
-                    ((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_auto.Checked = false;
+                    //((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_hand.Checked = true;
+                    //((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_auto.Checked = false;
                 }
                 else
                 {
                     ((Form_Main)Application.OpenForms["Form_Main"]).btn_next.Enabled = false; Form_Main.kep1.KepItems.Item(587).Write(true);
 
                     Form_Main.stage_auto = true;
-                    ((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_auto.Checked = true;
-                    ((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_hand.Checked = false;
+                    //((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_auto.Checked = true;
+                    //((Form_Main)Application.OpenForms["Form_Main"]).rdbtn_hand.Checked = false;
                 }
 
                 progressBar1.Maximum = dataGridView1.Rows.Count;

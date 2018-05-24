@@ -177,7 +177,7 @@
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(75, 23);
             this.btn_ok.TabIndex = 4;
-            this.btn_ok.Text = "下一步";
+            this.btn_ok.Text = "确定";
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 

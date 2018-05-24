@@ -86,7 +86,9 @@ namespace Data_acquisition
                     xmlsave();
 
                     //阶段同步按钮
-                    if (checkBox1.Checked) Form_Main.isSync = true;
+                    if (checkBox1.Checked) { Form_Main.isSync = true; 
+
+                    }
                     else Form_Main.isSync = false;
                     //保存井口数据来源
                     Form_Main.wellDataIndex[0] = cmb_wellpre.SelectedIndex;
@@ -139,7 +141,7 @@ namespace Data_acquisition
             txt_representname.Text = list[0].Attributes["clientrep"].Value;
             txt_constructionname.Text = list[0].Attributes["cstunit"].Value;
             txt_cstrepname.Text = list[0].Attributes["cstrep"].Value;
-
+            txt_leadername.Text = list[0].Attributes["cstcomm"].Value;
             cmb_wellpre.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellpre"].Value);
             cmb_wellflow.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellflow"].Value);
             cmb_wellden.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellden"].Value);
@@ -159,7 +161,7 @@ namespace Data_acquisition
             list[0].Attributes["clientrep"].Value = txt_representname.Text;
             list[0].Attributes["cstunit"].Value = txt_constructionname.Text;
             list[0].Attributes["cstrep"].Value = txt_cstrepname.Text;
-            list[0].Attributes["cstrcomm"].Value = txt_leadername.Text;
+            list[0].Attributes["cstcomm"].Value = txt_leadername.Text;
             list[0].Attributes["wellpre"].Value = cmb_wellpre.SelectedIndex.ToString();
             list[0].Attributes["wellflow"].Value = cmb_wellflow.SelectedIndex.ToString();
             list[0].Attributes["wellden"].Value = cmb_wellden.SelectedIndex.ToString();
