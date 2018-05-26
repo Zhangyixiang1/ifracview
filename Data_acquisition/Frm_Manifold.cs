@@ -75,7 +75,7 @@ namespace Data_acquisition
 
             //第2条线的标号为4
             myCurve = myPane.AddCurve("排出流量",
-               List2, Color.White, SymbolType.None);
+               List2, Color.FromArgb(0,255,0), SymbolType.None);
             myCurve.Line.Width = 1;
             // Fill the symbols with white
             // myCurve.Symbol.Fill = new Fill(Color.White);
@@ -84,7 +84,7 @@ namespace Data_acquisition
 
             // 第3条线的标号为2
             myCurve = myPane.AddCurve("砂浓度",
-               List3, Color.Yellow, SymbolType.None);
+               List3, Color.FromArgb(255,128,128), SymbolType.None);
             myCurve.Line.Width = 1;
             // Fill the symbols with white
             //   myCurve.Symbol.Fill = new Fill(Color.White);
@@ -143,18 +143,18 @@ namespace Data_acquisition
             // Create a second Y Axis, Yellow
             YAxis yAxis3 = new YAxis();
             myPane.YAxisList.Add(yAxis3);
-            yAxis3.Scale.FontSpec.FontColor = Color.White;
+            yAxis3.Scale.FontSpec.FontColor = Color.FromArgb(0, 255, 0);
             yAxis3.Scale.FontSpec.Size = 15;
-            yAxis3.Title.FontSpec.FontColor = Color.White;
+            yAxis3.Title.FontSpec.FontColor = Color.FromArgb(0, 255, 0);
             yAxis3.Title.FontSpec.Size = 15;
-            yAxis3.Color = Color.White;
+            yAxis3.Color = Color.FromArgb(0, 255, 0);
             // turn off the opposite tics so the Y2 tics don't show up on the Y axis
             yAxis3.MajorTic.IsInside = false;
             yAxis3.MinorTic.IsInside = false;
             yAxis3.MajorTic.IsOpposite = false;
-            yAxis3.MajorTic.Color = Color.White;
+            yAxis3.MajorTic.Color = Color.FromArgb(0, 255, 0);
             yAxis3.MinorTic.IsOpposite = false;
-            yAxis3.MinorTic.Color = Color.White;
+            yAxis3.MinorTic.Color = Color.FromArgb(0, 255, 0);
             yAxis3.Scale.Max = 30;
             yAxis3.Scale.Min = 0;
             // Align the Y2 axis labels so they are flush to the axis
@@ -166,18 +166,18 @@ namespace Data_acquisition
             // Create a third Y Axis, red
             YAxis yAxis5 = new YAxis();
             myPane.YAxisList.Add(yAxis5);
-            yAxis5.Scale.FontSpec.FontColor = Color.Yellow;
+            yAxis5.Scale.FontSpec.FontColor = Color.FromArgb(255, 128, 128);
             yAxis5.Scale.FontSpec.Size = 15;
-            yAxis5.Title.FontSpec.FontColor = Color.Yellow;
+            yAxis5.Title.FontSpec.FontColor = Color.FromArgb(255, 128, 128);
             yAxis5.Title.FontSpec.Size = 15;
-            yAxis5.Color = Color.Yellow;
+            yAxis5.Color = Color.FromArgb(255, 128, 128);
             // turn off the opposite tics so the Y2 tics don't show up on the Y axis
             yAxis5.MajorTic.IsInside = false;
             yAxis5.MinorTic.IsInside = false;
             yAxis5.MajorTic.IsOpposite = false;
-            yAxis5.MajorTic.Color = Color.Yellow;
+            yAxis5.MajorTic.Color = Color.FromArgb(255, 128, 128);
             yAxis5.MinorTic.IsOpposite = false;
-            yAxis5.MinorTic.Color = Color.Yellow;
+            yAxis5.MinorTic.Color = Color.FromArgb(255, 128, 128);
             yAxis5.Scale.Max = 10000;
             yAxis5.Scale.Min = 0;
             // Align the Y2 axis labels so they are flush to the axis
@@ -203,7 +203,7 @@ namespace Data_acquisition
 
             zedGraphControl1.AxisChange();
             int index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "泵累计";
+            dataGridView1.Rows[index].Cells[0].Value = "排出总量";
             //index = dataGridView1.Rows.Add();
             //dataGridView1.Rows[index].Cells[0].Value = "排出";
             index = dataGridView1.Rows.Add();
@@ -234,12 +234,15 @@ namespace Data_acquisition
             {
                 refresh(this);
                 //刷新阶段信息和添加剂信息
-                int percent1 = Convert.ToInt16(Form_Main.value_blender.GetValue(589));
-                int percent2 = Convert.ToInt16(Form_Main.value_blender.GetValue(631));
-                if (percent1 > 100) percent1 = 100;
-                if (percent2 > 100) percent2 = 100;
-                radProgressBar1.Value1 = percent1; radProgressBar1.Text = percent1 + "%";
-                radProgressBar2.Value1 = percent2; radProgressBar2.Text = percent2 + "%";
+                //if (Form_Main.isSync)
+                {
+                    int percent1 = Convert.ToInt16(Form_Main.value_blender.GetValue(589));
+                    int percent2 = Convert.ToInt16(Form_Main.value_blender.GetValue(631));
+                    if (percent1 > 100) percent1 = 100;
+                    if (percent2 > 100) percent2 = 100;
+                    radProgressBar1.Value1 = percent1; radProgressBar1.Text = percent1 + "%";
+                    radProgressBar2.Value1 = percent2; radProgressBar2.Text = percent2 + "%";
+                }
                 //刷新液位
                 // lbl_level.Text = trans_point(Form_Main.value_blender.GetValue(632))+"%"; 
                 level1.Refresh(Convert.ToDouble(Form_Main.value_blender.GetValue(632)));
@@ -247,11 +250,11 @@ namespace Data_acquisition
                 ////吸入
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(8)) + " m3/min";//速率
                 //dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(39)) + " m3";//总量
-                //泵累计
+                //井口排出量
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(9)) + " m3";//阶段
                 //dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(40)) + " m3";//总量
-                dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[142]) + " m3";//阶段
-                dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[143]) + " m3";//总量
+                dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[54]) + " m3";//阶段
+                dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[68]) + " m3";//总量
                 //支撑剂
                 dataGridView1.Rows[1].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[60]) + " kg";//阶段
                 dataGridView1.Rows[1].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[74]) + " kg";//总量

@@ -86,8 +86,15 @@ namespace Data_acquisition
                     xmlsave();
 
                     //阶段同步按钮
-                    if (checkBox1.Checked) { Form_Main.isSync = true; 
+                    if (checkBox1.Checked)
+                    {
+                        Form_Main.isSync = true;
 
+                        if (!Form_Main.isRights)
+                        {
+                            MessageBox.Show("操作权限在混砂撬，阶段记录模式切换到手动！");
+                            Form_Main.isSync = false;
+                        }
                     }
                     else Form_Main.isSync = false;
                     //保存井口数据来源
@@ -125,6 +132,9 @@ namespace Data_acquisition
             txb_f7.Text = Form_Main.value_state.GetValue(13).ToString().Substring(0, Form_Main.value_state.GetValue(13).ToString().Length - 4);
             txb_f8.Text = Form_Main.value_state.GetValue(15).ToString().Substring(0, Form_Main.value_state.GetValue(15).ToString().Length - 4);
             txb_b.Text = Form_Main.value_state.GetValue(17).ToString().Substring(0, Form_Main.value_state.GetValue(17).ToString().Length - 4);
+            //判断通讯，同步按钮是否可钩选
+            if (Convert.ToBoolean(Form_Main.value_state.GetValue(18)))
+                checkBox1.Enabled = false;
         }
 
         //读取xml
@@ -187,6 +197,6 @@ namespace Data_acquisition
             tabPage2.Select();
         }
 
-       
+
     }
 }

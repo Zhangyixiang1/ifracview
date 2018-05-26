@@ -43,6 +43,7 @@
             this.paraLine4 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine3 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine2 = new Data_acquisition.Ctrl.ParaLine();
+            this.btn_confirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -72,7 +73,7 @@
             // 
             // btn_print
             // 
-            this.btn_print.Location = new System.Drawing.Point(1731, 233);
+            this.btn_print.Location = new System.Drawing.Point(1731, 236);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(161, 67);
             this.btn_print.TabIndex = 25;
@@ -85,7 +86,7 @@
             this.textBox1.Location = new System.Drawing.Point(1731, 94);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 47);
+            this.textBox1.Size = new System.Drawing.Size(106, 47);
             this.textBox1.TabIndex = 26;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -100,7 +101,7 @@
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(1731, 160);
+            this.btn_refresh.Location = new System.Drawing.Point(1731, 163);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(161, 67);
             this.btn_refresh.TabIndex = 25;
@@ -110,7 +111,7 @@
             // 
             // btn_export
             // 
-            this.btn_export.Location = new System.Drawing.Point(1731, 306);
+            this.btn_export.Location = new System.Drawing.Point(1731, 309);
             this.btn_export.Name = "btn_export";
             this.btn_export.Size = new System.Drawing.Size(161, 67);
             this.btn_export.TabIndex = 25;
@@ -148,7 +149,7 @@
             this.paraLine6.fontcolor = System.Drawing.Color.Black;
             this.paraLine6.Line_Enabled = true;
             this.paraLine6.Location = new System.Drawing.Point(1540, 12);
-            this.paraLine6.Max = "1000";
+            this.paraLine6.Max = "100000";
             this.paraLine6.Min = "0";
             this.paraLine6.Name = "paraLine6";
             this.paraLine6.Size = new System.Drawing.Size(174, 50);
@@ -207,8 +208,8 @@
             this.paraLine3.Name = "paraLine3";
             this.paraLine3.Size = new System.Drawing.Size(174, 50);
             this.paraLine3.TabIndex = 20;
-            this.paraLine3.Tag = "39";
-            this.paraLine3.Tagname = "排出排量";
+            this.paraLine3.Tag = "34";
+            this.paraLine3.Tagname = "井口排出排量";
             this.paraLine3.Tagname_EN = "Discharge Rate(WH)";
             this.paraLine3.Unit = "m3/min";
             // 
@@ -230,11 +231,23 @@
             this.paraLine2.Tagname_EN = "Casing Pressure(WH)";
             this.paraLine2.Unit = "Mpa";
             // 
+            // btn_confirm
+            // 
+            this.btn_confirm.Location = new System.Drawing.Point(1843, 118);
+            this.btn_confirm.Name = "btn_confirm";
+            this.btn_confirm.Size = new System.Drawing.Size(57, 23);
+            this.btn_confirm.TabIndex = 28;
+            this.btn_confirm.Text = "应用";
+            this.btn_confirm.UseVisualStyleBackColor = true;
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
+            // 
             // Frm_print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1042);
+            this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_refresh);
@@ -274,5 +287,6 @@
         private System.Windows.Forms.Button btn_export;
         private System.Drawing.Printing.PrintDocument printDocument1;
         public System.Windows.Forms.Button btn_refresh;
+        private System.Windows.Forms.Button btn_confirm;
     }
 }

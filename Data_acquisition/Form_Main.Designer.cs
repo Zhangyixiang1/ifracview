@@ -160,8 +160,6 @@
             this.indicator_hold = new System.Windows.Forms.PictureBox();
             this.btn_blendernext = new Telerik.WinControls.UI.RadButton();
             this.btn_send = new Telerik.WinControls.UI.RadButton();
-            this.rdbtn_ifrac = new System.Windows.Forms.RadioButton();
-            this.rdbtn_blender = new System.Windows.Forms.RadioButton();
             this.lbl_stage2 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -180,6 +178,9 @@
             this.btn_chart = new Telerik.WinControls.UI.RadButton();
             this.btn_table = new Telerik.WinControls.UI.RadButton();
             this.btn_export = new Telerik.WinControls.UI.RadButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.lbl_blender2 = new System.Windows.Forms.Label();
             this.lbl_blender1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -189,7 +190,8 @@
             this.timer_color = new System.Windows.Forms.Timer(this.components);
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.breezeTheme1 = new Telerik.WinControls.Themes.BreezeTheme();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_blender = new System.Windows.Forms.Button();
+            this.btn_ifrac = new System.Windows.Forms.Button();
             this.parashow16 = new Data_acquisition.Ctrl.Parashow();
             this.parashow15 = new Data_acquisition.Ctrl.Parashow();
             this.parashow14 = new Data_acquisition.Ctrl.Parashow();
@@ -212,8 +214,6 @@
             this.paraLine4 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine3 = new Data_acquisition.Ctrl.ParaLine();
             this.paraLine2 = new Data_acquisition.Ctrl.ParaLine();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_print)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_left)).BeginInit();
@@ -251,8 +251,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_export)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_override)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_override)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -955,7 +955,7 @@
             this.tssl_F8,
             this.toolStripStatusLabel12,
             this.tssl_log});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1058);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1048);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1920, 22);
             this.statusStrip1.TabIndex = 24;
@@ -1385,31 +1385,6 @@
             this.btn_send.Text = "发送";
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
-            // rdbtn_ifrac
-            // 
-            this.rdbtn_ifrac.AutoSize = true;
-            this.rdbtn_ifrac.Checked = true;
-            this.rdbtn_ifrac.Font = new System.Drawing.Font("宋体", 10F);
-            this.rdbtn_ifrac.ForeColor = System.Drawing.Color.White;
-            this.rdbtn_ifrac.Location = new System.Drawing.Point(10, 25);
-            this.rdbtn_ifrac.Name = "rdbtn_ifrac";
-            this.rdbtn_ifrac.Size = new System.Drawing.Size(14, 13);
-            this.rdbtn_ifrac.TabIndex = 20;
-            this.rdbtn_ifrac.TabStop = true;
-            this.rdbtn_ifrac.UseVisualStyleBackColor = true;
-            this.rdbtn_ifrac.CheckedChanged += new System.EventHandler(this.rdbtn_ifrac_CheckedChanged);
-            // 
-            // rdbtn_blender
-            // 
-            this.rdbtn_blender.AutoSize = true;
-            this.rdbtn_blender.Font = new System.Drawing.Font("宋体", 10F);
-            this.rdbtn_blender.ForeColor = System.Drawing.Color.White;
-            this.rdbtn_blender.Location = new System.Drawing.Point(116, 25);
-            this.rdbtn_blender.Name = "rdbtn_blender";
-            this.rdbtn_blender.Size = new System.Drawing.Size(14, 13);
-            this.rdbtn_blender.TabIndex = 20;
-            this.rdbtn_blender.UseVisualStyleBackColor = true;
-            // 
             // lbl_stage2
             // 
             this.lbl_stage2.AutoSize = true;
@@ -1491,7 +1466,11 @@
             ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
             ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
             ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor4 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
             ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
@@ -1719,6 +1698,39 @@
             this.btn_export.Text = "保存";
             this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btn_ifrac);
+            this.groupBox5.Controls.Add(this.btn_blender);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Font = new System.Drawing.Font("宋体", 10F);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(841, 374);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 52);
+            this.groupBox5.TabIndex = 32;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "控制权限";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(136, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 14);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "混砂橇";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(31, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 14);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "上位机";
+            // 
             // lbl_blender2
             // 
             this.lbl_blender2.AutoSize = true;
@@ -1800,20 +1812,23 @@
             this.zedGraphControl1.ContextMenuBuilder += new ZedGraph.ZedGraphControl.ContextMenuBuilderEventHandler(this.zedGraphControl1_ContextMenuBuilder);
             this.zedGraphControl1.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zedGraphControl1_PointValueEvent);
             // 
-            // groupBox5
+            // btn_blender
             // 
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.rdbtn_ifrac);
-            this.groupBox5.Controls.Add(this.rdbtn_blender);
-            this.groupBox5.Font = new System.Drawing.Font("宋体", 10F);
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(841, 374);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 52);
-            this.groupBox5.TabIndex = 32;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "控制权限";
+            this.btn_blender.BackColor = System.Drawing.Color.Gray;
+            this.btn_blender.Location = new System.Drawing.Point(115, 24);
+            this.btn_blender.Name = "btn_blender";
+            this.btn_blender.Size = new System.Drawing.Size(15, 15);
+            this.btn_blender.TabIndex = 33;
+            this.btn_blender.UseVisualStyleBackColor = false;
+            // 
+            // btn_ifrac
+            // 
+            this.btn_ifrac.BackColor = System.Drawing.Color.Gray;
+            this.btn_ifrac.Location = new System.Drawing.Point(6, 24);
+            this.btn_ifrac.Name = "btn_ifrac";
+            this.btn_ifrac.Size = new System.Drawing.Size(15, 15);
+            this.btn_ifrac.TabIndex = 33;
+            this.btn_ifrac.UseVisualStyleBackColor = false;
             // 
             // parashow16
             // 
@@ -2125,30 +2140,12 @@
             this.paraLine2.Tagname_EN = null;
             this.paraLine2.Unit = "Mpa";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(31, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 14);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "上位机";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(136, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 14);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "混砂橇";
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1070);
             this.Controls.Add(this.pnl_setting);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.statusStrip1);
@@ -2246,9 +2243,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_export)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_override)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_override)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2370,8 +2367,6 @@
         private Telerik.WinControls.UI.RadButton btn_blenderhold;
         private Telerik.WinControls.UI.RadButton btn_blendernext;
         private Telerik.WinControls.UI.RadButton btn_send;
-        public System.Windows.Forms.RadioButton rdbtn_ifrac;
-        public System.Windows.Forms.RadioButton rdbtn_blender;
         private System.Windows.Forms.Label lbl_stage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -2433,5 +2428,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_ifrac;
+        private System.Windows.Forms.Button btn_blender;
     }
 }

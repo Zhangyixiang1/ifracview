@@ -1376,7 +1376,7 @@ namespace Data_acquisition
         /// </summary>
         public void wellinfo_refresh()
         {
-            if (lan == "Chineses")
+            if (lan == "Chinese")
             {
                 lbl_stage.Text = wellname + wellnum + "第" + stage_big + "段  " + "阶段:" + num_stage;
             }
@@ -1944,10 +1944,15 @@ namespace Data_acquisition
             lbl_now.Text = DateTime.Now.ToString();
             //0512添加，增加连接状态信号显示
             if (Convert.ToBoolean(value_state.GetValue(18))) tssl_B.BackColor = Color.Red;
+            else tssl_B.BackColor = Color.Lime;
             if (Convert.ToBoolean(value_state.GetValue(2))) tssl_F1.BackColor = Color.Red;
+            else tssl_F1.BackColor = Color.Lime;
             if (Convert.ToBoolean(value_state.GetValue(4))) tssl_F2.BackColor = Color.Red;
+            else tssl_F2.BackColor = Color.Lime;
             if (Convert.ToBoolean(value_state.GetValue(6))) tssl_F3.BackColor = Color.Red;
+            else tssl_F3.BackColor = Color.Lime;
             if (Convert.ToBoolean(value_state.GetValue(8))) tssl_F4.BackColor = Color.Red;
+            else tssl_F4.BackColor = Color.Lime;
             if (Convert.ToBoolean(value_state.GetValue(10))) tssl_F5.BackColor = Color.Red;
             if (Convert.ToBoolean(value_state.GetValue(12))) tssl_F6.BackColor = Color.Red;
             if (Convert.ToBoolean(value_state.GetValue(14))) tssl_F7.BackColor = Color.Red;
@@ -2347,33 +2352,33 @@ namespace Data_acquisition
             if (isSync) kep1.KepItems.Item(586).Write(true);
             else
             {
-                //阶段时间清零
-                time_stage = Convert.ToDateTime("00:00:00");
-                //阶段量清零
-                for (int i = 54; i <= 67; i++)
-                {
-                    test[i] = 0;
-                }
-                for (int i = 0; i < 8; i++)
-                {
+                ////阶段时间清零
+                //time_stage = Convert.ToDateTime("00:00:00");
+                ////阶段量清零
+                //for (int i = 54; i <= 67; i++)
+                //{
+                //    test[i] = 0;
+                //}
+                //for (int i = 0; i < 8; i++)
+                //{
 
-                    test[104 + 5 * i] = 0; //泵阶段排量
-                }
-                num_stage++;
-                time_stage = Convert.ToDateTime("00:00:00");
-                //计划表选取更新
-                if (dataGridView1.Rows.Count >= num_stage)
-                {
-                    dataGridView1.ClearSelection();
-                    dataGridView1.Rows[num_stage - 1].Selected = true;
+                //    test[104 + 5 * i] = 0; //泵阶段排量
+                //}
+                //num_stage++;
+                //time_stage = Convert.ToDateTime("00:00:00");
+                ////计划表选取更新
+                //if (dataGridView1.Rows.Count >= num_stage)
+                //{
+                //    dataGridView1.ClearSelection();
+                //    dataGridView1.Rows[num_stage - 1].Selected = true;
 
-                    ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).dataGridView1.ClearSelection();
-                    ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).dataGridView1.Rows[num_stage - 1].Selected = true;
-                }
-                //阶段号更新
-                this.wellinfo_refresh();
-                ((Frm_Realtrend)Application.OpenForms["Frm_Realtrend"]).lbl_stage.Text = Form_Main.num_stage + "/" + Form_Main.num_totalstage;
-                ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).lbl_stage.Text = Form_Main.num_stage + "/" + Form_Main.num_totalstage;
+                //    ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).dataGridView1.ClearSelection();
+                //    ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).dataGridView1.Rows[num_stage - 1].Selected = true;
+                //}
+                ////阶段号更新
+                //this.wellinfo_refresh();
+                //((Frm_Realtrend)Application.OpenForms["Frm_Realtrend"]).lbl_stage.Text = Form_Main.num_stage + "/" + Form_Main.num_totalstage;
+                //((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).lbl_stage.Text = Form_Main.num_stage + "/" + Form_Main.num_totalstage;
 
             }
         }
@@ -2526,19 +2531,102 @@ namespace Data_acquisition
                 //0515增加保护，混砂车通讯中断时控制命令无效
                 if (Convert.ToBoolean(value_state.GetValue(18)))
                 {
+                    btn_blenderhold.ForeColor = Color.Gray;
                     btn_blenderhold.Enabled = false;
+                    btn_blendernext.ForeColor = Color.Gray;
                     btn_blendernext.Enabled = false;
+                    btn_blenderstop.ForeColor = Color.Gray;
                     btn_blenderstop.Enabled = false;
+                    btn_send.ForeColor = Color.Gray;
                     btn_send.Enabled = false;
+                    btn_jobstart.ForeColor = Color.Gray;
                     btn_jobstart.Enabled = false;
+                    btn_override.ForeColor = Color.Gray;
                     btn_override.Enabled = false;
 
-                    rdbtn_ifrac.Enabled = false;
-                    rdbtn_blender.Enabled = false;
+                    label11.ForeColor = Color.Gray;
+                    label12.ForeColor = Color.Gray;    
+                    btn_ifrac.BackColor = Color.Gray;
+                    btn_blender.BackColor = Color.Gray;
                 }
-                //0524增加， 如果同步阶段号，上位机下一阶段命令无效
-                if (isSync) btn_next.Enabled = false;
 
+                else {
+                    //通讯正常时判断权限
+                    if (isRights)
+                    {
+                        btn_blenderhold.ForeColor = Color.White;
+                        btn_blenderhold.Enabled = true;
+                        btn_blendernext.ForeColor = Color.White;
+                        btn_blendernext.Enabled = true;
+                        btn_blenderstop.ForeColor = Color.White;
+                        btn_blenderstop.Enabled = true;
+                        btn_send.ForeColor = Color.White;
+                        btn_send.Enabled = true;
+                        btn_jobstart.ForeColor = Color.White;
+                        btn_jobstart.Enabled = true;
+                        btn_override.ForeColor = Color.White;
+                        btn_override.Enabled = true;
+                    }
+
+                    else {
+                        btn_blenderhold.ForeColor = Color.Gray;
+                        btn_blenderhold.Enabled = false;
+                        btn_blendernext.ForeColor = Color.Gray;
+                        btn_blendernext.Enabled = false;
+                        btn_blenderstop.ForeColor = Color.Gray;
+                        btn_blenderstop.Enabled = false;
+                        btn_send.ForeColor = Color.Gray;
+                        btn_send.Enabled = false;
+                        btn_jobstart.ForeColor = Color.Gray;
+                        btn_jobstart.Enabled = false;
+                        btn_override.ForeColor = Color.Gray;
+                        btn_override.Enabled = false;
+                                       
+                    }
+
+
+                    label11.ForeColor = Color.White;
+                    label12.ForeColor = Color.White;
+                   
+
+                    //显示控制权限
+                  
+                    if ((bool)value_blender.GetValue(23))
+                    {
+                        isRights = true;
+                  
+                        btn_ifrac.BackColor = Color.Lime;
+                        btn_blender.BackColor = Color.Gray;
+
+                    }
+                    else {
+                        isRights = false;
+                        btn_blender.BackColor = Color.Lime;
+                        btn_ifrac.BackColor = Color.Gray;
+                    }
+
+
+                    if (iscnndatabase && isRights && !(bool)value_blender.GetValue(23))
+                    {
+                        //isRights = false;
+                        //MessageBox.Show("权限切换到混砂撬，阶段同步取消切换到手动模式！");
+                        //isSync = false;
+                       
+                    }
+                }
+
+
+                //0524增加， 如果同步阶段号，上位机下一阶段命令无效
+                if (isSync)
+                {
+                    btn_next.ForeColor = Color.Gray;
+                    btn_next.Enabled = false;
+                }
+                else {
+                    btn_next.ForeColor = Color.White;
+                    btn_next.Enabled = true;
+                
+                }
                 if (readfinish)
                 {
 
@@ -2558,6 +2646,7 @@ namespace Data_acquisition
                 //}
                 //else { rdbtn_auto.Checked = true; rdbtn_hand.Checked = false; }
 
+               
             }
             catch (Exception)
             {
@@ -2576,6 +2665,7 @@ namespace Data_acquisition
             if (isfracmode)
             {
                 SaveFileDialog sflg = new SaveFileDialog();
+               
                 sflg.Filter = "Csv(*.csv)|*.csv";
                 if (sflg.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
                 {
@@ -3061,29 +3151,7 @@ namespace Data_acquisition
             frm.ShowDialog();
         }
 
-        private void rdbtn_ifrac_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdbtn_blender.Checked)
-            {
-                isRights = false;
-                kep1.KepItems.Item(23).Write(false);
-                btn_blenderhold.Enabled = false;
-                btn_blendernext.Enabled = false;
-                btn_blenderstop.Enabled = false;
-                btn_jobstart.Enabled = false;
-                btn_override.Enabled = false;
-            }
-            else if (rdbtn_ifrac.Checked)
-            {
-                isRights = true;
-                kep1.KepItems.Item(23).Write(true);
-                btn_blenderhold.Enabled = true;
-                btn_blendernext.Enabled = true;
-                btn_blenderstop.Enabled = true;
-                btn_jobstart.Enabled = true;
-                btn_override.Enabled = true;
-            }
-        }
+     
 
 
     }

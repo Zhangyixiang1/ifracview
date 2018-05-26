@@ -60,15 +60,15 @@ namespace Data_acquisition
         private void btn_OK_Click(object sender, EventArgs e)
         {
             //保存报表抬头
-            //Pub_func.SetValue("title", txb_title.Text);
-            //Pub_func.SetValue("wellname", txb_wellname.Text);
-            //Pub_func.SetValue("wellnum", txb_wellnum.Text);
-            //Pub_func.SetValue("clientname", txb_clientname.Text);
-            //Pub_func.SetValue("clientrep", txb_clientrep.Text);
-            //Pub_func.SetValue("cstunit", txb_cstunit.Text);
-            //Pub_func.SetValue("cstrep", txb_cstrep.Text);
-            //Pub_func.SetValue("cstcomm", txb_cstcomm.Text);
-            //Pub_func.SetValue("remark", txb_remark.Text);
+            Pub_func.SetValue("title", txb_title.Text);
+            Pub_func.SetValue("wellname", txb_wellname.Text);
+            Pub_func.SetValue("wellnum", txb_wellnum.Text);
+            Pub_func.SetValue("clientname", txb_clientname.Text);
+            Pub_func.SetValue("clientrep", txb_clientrep.Text);
+            Pub_func.SetValue("cstunit", txb_cstunit.Text);
+            Pub_func.SetValue("cstrep", txb_cstrep.Text);
+            Pub_func.SetValue("cstcomm", txb_cstcomm.Text);
+            Pub_func.SetValue("remark", txb_remark.Text);
 
             //保存阶段信息
             MySqlCommandBuilder bul = new MySqlCommandBuilder(da);

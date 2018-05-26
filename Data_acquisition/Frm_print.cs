@@ -561,5 +561,15 @@ namespace Data_acquisition
             e.Graphics.DrawImage(img, new Rectangle(0, 0, e.PageBounds.Width, e.PageBounds.Height), new Rectangle(0, 0, img.Width, img.Height), GraphicsUnit.Pixel);
         }
 
+        private void btn_confirm_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text)) return;
+           
+            
+                lbl_title.Text = textBox1.Text.Trim();
+
+            
+        }
+
     }
 }
