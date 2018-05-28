@@ -77,6 +77,10 @@ namespace Data_acquisition
                 Form_Main.kep1.KepItems.Item(20).Write(true);
                 //发送总阶段数到PLC
                 Form_Main.kep1.KepItems.Item(588).Write(dataGridView1.Rows.Count);
+                //0526修改，发送成功后记录已发送
+                Form_Main.isSend = true;
+
+
                 //发送成功后将阶段信息保存到数据库
                // Form_Main.stageinfo=stageinfo.ToString();
                 //DbManager db = new DbManager();

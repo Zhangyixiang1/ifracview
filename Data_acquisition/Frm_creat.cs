@@ -101,6 +101,7 @@ namespace Data_acquisition
                     Form_Main.wellDataIndex[0] = cmb_wellpre.SelectedIndex;
                     Form_Main.wellDataIndex[1] = cmb_wellflow.SelectedIndex;
                     Form_Main.wellDataIndex[2] = cmb_wellden.SelectedIndex;
+                    Form_Main.wellDataIndex[3] = cmb_wellpipe.SelectedIndex;
                     Frm_Chnset frm = new Frm_Chnset();
                     frm.ShowDialog();
                     this.Close();
@@ -175,6 +176,7 @@ namespace Data_acquisition
             list[0].Attributes["wellpre"].Value = cmb_wellpre.SelectedIndex.ToString();
             list[0].Attributes["wellflow"].Value = cmb_wellflow.SelectedIndex.ToString();
             list[0].Attributes["wellden"].Value = cmb_wellden.SelectedIndex.ToString();
+            list[0].Attributes["wellpipe"].Value = cmb_wellpipe.SelectedIndex.ToString();
             doc.Save(path);
         }
 

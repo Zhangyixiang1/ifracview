@@ -20,6 +20,7 @@ namespace Data_acquisition
 
         private void Frm_calibration_Load(object sender, EventArgs e)
         {
+            
             XmlDocument doc = new XmlDocument();
             doc.Load(path);
             XmlNodeList list = doc.GetElementsByTagName("item");

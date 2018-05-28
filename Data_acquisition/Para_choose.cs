@@ -87,7 +87,11 @@ namespace Data_acquisition
 
         private void Para_choose_Load(object sender, EventArgs e)
         {
-
+            //0528增加，对应标号响应的tabpage被激活
+            int index = Convert.ToInt16(tag_num);
+            if (index >= 31 && index <= 100) tabControl1.SelectedTab = tabPage2;
+            if (index >= 101 && index <= 150) tabControl1.SelectedTab = tabPage3;
+            if (index >= 151 && index <= 200) tabControl1.SelectedTab = tabPage4;
             btn_color.BackColor = tag_color;
             backgroundWorker1.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
             backgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
@@ -127,15 +131,15 @@ namespace Data_acquisition
                 btn.Size = new Size(120, 38);
                 btn.Click += btnClick;
                 //数据采集卡
-                if (i >= 0 && i < 30)
-                {
-                    btn.Location = new Point(x + 131 * (i % 4), y + 45 * (i / 4));
-                    if (tabPage1.InvokeRequired)
-                    {
+                //if (i >= 0 && i < 30)
+                //{
+                //    btn.Location = new Point(x + 131 * (i % 4), y + 45 * (i / 4));
+                //    if (tabPage1.InvokeRequired)
+                //    {
 
-                        tabPage1.Invoke(new Action(() => { this.tabPage1.Controls.Add(btn); }));
-                    }
-                }
+                //        tabPage1.Invoke(new Action(() => { this.tabPage1.Controls.Add(btn); }));
+                //    }
+                //}
                 //混砂车
                 if (i >= 30 && i < 100)
                 {
@@ -170,6 +174,7 @@ namespace Data_acquisition
                     btn_s = btn; btn_s.BackColor = Color.Gray;
                 }
             }
+
 
         }
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

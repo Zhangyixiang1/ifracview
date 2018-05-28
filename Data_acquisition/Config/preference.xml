@@ -6,8 +6,8 @@
     <Controlsline>
       <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" />
       <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" />
-      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0.0083" max="100" unit="kg/m3" index="35" color="0,0,255" />
-      <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="30" unit="m3/min" index="34" color="0,255,0" />
+      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0" max="300" unit="kg/m3" index="35" color="255,128,128" />
+      <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="20" unit="m3/min" index="34" color="0,255,0" />
       <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" />
       <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" />
     </Controlsline>
@@ -220,9 +220,9 @@
       <Control name="parashownew1" tagname="输砂阶段总量" tagname_en="Proppant Stage Total" unit="ton" index="60" color="128,64,0" />
       <Control name="parashownew2" tagname="输砂总量" tagname_en="Proppant Total" unit="ton" index="74" color="128,64,0" />
       <Control name="parashownew3" tagname="液添1流量" tagname_en="Chem1 Rate" unit="LPM" index="47" color="0,128,128" />
-      <Control name="parashownew4" tagname="泵总排量" tagname_en="Pumps Rate" unit="m3/min" index="141" color="128,0,128" />
-      <Control name="parashownew5" tagname="泵总阶段累计" tagname_en="Pumps Stage Total" unit="m3" index="142" color="128,0,128" />
-      <Control name="parashownew6" tagname="泵总累计" tagname_en="Pumps Total" unit="m3" index="143" color="128,0,128" />
+      <Control name="parashownew4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" unit="m3/min" index="34" color="128,0,128" />
+      <Control name="parashownew5" tagname="井口排出阶段总量" tagname_en="Discharge Stage Total(WH)" unit="m3" index="54" color="128,0,128" />
+      <Control name="parashownew6" tagname="井口排出总量" tagname_en="Discharge Total(WH)" unit="m3" index="68" color="128,0,128" />
       <Control name="parashownew7" tagname="井口密度" tagname_en="Density(WH)" unit="g/cc" index="33" color="255,0,0" />
       <Control name="parashownew8" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" unit="m3/min" index="34" color="255,0,0" />
       <Control name="parashownew9" tagname="井口套压" tagname_en="Casing Pressure(WH)" unit="MPa" index="32" color="255,0,0" />
@@ -270,7 +270,7 @@
     <Controlsline>
       <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" />
       <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" />
-      <Control name="paraLine3" tagname="井口密度" tagname_en="Density(WH)" min="0" max="200" unit="g/cc" index="33" color="255,128,128" />
+      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0" max="300" unit="kg/m3" index="35" color="255,128,128" />
       <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="20" unit="m3/min" index="34" color="0,255,0" />
       <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" />
       <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" />
@@ -291,13 +291,13 @@
   <Form>
     <!--输出设置-->
     <Name>Frm_Paraset</Name>
-    <Set report="31,32,33" series="31,32,33,34" interval="60" port="COM1" rate="9600" mode="False">
+    <Set report="34,35,40,42,52,43,45" series="31,32,33,34" interval="1" port="COM1" rate="9600" mode="False">
     </Set>
   </Form>
   <Form>
     <!--创建施工界面-->
     <Name>Frm_creat</Name>
-    <Set wellname="" wellnum="" clientname="" clientrep="" cstunit="" cstrep="" cstcomm="" wellpre="0" wellflow="0" wellden="0">
+    <Set wellname="页岩气测试中心" wellnum="001" clientname="中石油" clientrep="张三" cstunit="宏华" cstrep="李四" cstcomm="王五" wellpre="1" wellflow="2" wellden="1" wellpipe="2">
     </Set>
   </Form>
 </root>

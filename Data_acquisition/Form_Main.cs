@@ -40,7 +40,7 @@ namespace Data_acquisition
         public static float[] Array_daqcal;//beckoff校准值
         public static float[] daqk, daqb, daqk1, daqb1;
         public static TcAdsClient tcClient; //beck客户端
-        int tcHandle;
+        int tcHandle; //beckoff的参数句柄
         public static Kepware kep1;//混砂车
         public static Kepware kep2;//压裂泵
         public static Kepware kep3;//系统状态量
@@ -86,6 +86,8 @@ namespace Data_acquisition
         public static bool isSync;// 阶段是否与混砂橇同步
         public static bool isRights;//操作权限，1为上位机，0为混砂橇
         public static int[] wellDataIndex;// 井口数据来源,0井口油压，1井口流量，2井口密度
+        public static bool isSend; //是否发送计划表，默认为false
+
         [DllImport("user32.dll")]
         static extern bool ClipCursor(ref  RECT rect);
         RECT _ScreenRect;
@@ -104,7 +106,7 @@ namespace Data_acquisition
             this.Location = new Point(0, 0);
             lan = Pub_func.GetValue("Language");    //当前语言 
             Unit = Convert.ToInt16(Pub_func.GetValue("Unit"));  //当前单位制
-            wellDataIndex = new int[3];
+            wellDataIndex = new int[4];
         }
 
         /// <summary>
@@ -1571,27 +1573,45 @@ namespace Data_acquisition
             switch (wellDataIndex[0])
             {
                 case 0: test[31] = test[1]; break;
-                case 1: test[31] = test[101]; break;
-                case 2: test[31] = test[106]; break;
-                case 3: test[31] = test[111]; break;
-                case 4: test[31] = test[116]; break;
-                case 5: test[31] = test[121]; break;
-                case 6: test[31] = test[126]; break;
-                case 7: test[31] = test[131]; break;
-                case 8: test[31] = test[136]; break;
+                case 1: test[31] = test[2]; break;
+                case 2: test[31] = test[3]; break;
+                case 3: test[31] = test[4]; break;
+                case 4: test[31] = test[101]; break;
+                case 5: test[31] = test[106]; break;
+                case 6: test[31] = test[111]; break;
+                case 7: test[31] = test[116]; break;
+                case 8: test[31] = test[121]; break;
+                case 9: test[31] = test[126]; break;
+                case 10: test[31] = test[131]; break;
+                case 11: test[31] = test[136]; break;
             }
             //井口套压
-            test[32] = test[2];
+            switch (wellDataIndex[3])
+            {
+                case 0: test[32] = test[1]; break;
+                case 1: test[32] = test[2]; break;
+                case 2: test[32] = test[3]; break;
+                case 3: test[32] = test[4]; break;
+               
+            }
+
             //井口密度
-            if (wellDataIndex[2] == 0) test[33] = test[3];
-            else test[33] = test[35];
+            switch (wellDataIndex[2])
+            {
+                case 0: test[33] = test[5]; break;
+                case 1: test[33] = test[6]; break;
+                case 2: test[33] = test[7]; break;
+                case 3: test[33] = test[8]; break;
+                case 4: test[33] = test[35]; break;
+            }
+ 
             //井口流量
             switch (wellDataIndex[1])
             {
-                case 0: test[34] = test[4]; break;
-                case 1: test[34] = test[141]; break;
-                case 2: test[34] = test[39]; break;
-
+                case 0: test[34] = test[9]; break;
+                case 1: test[34] = test[10]; break;
+                case 2: test[34] = test[141]; break;
+                case 3: test[34] = test[39]; break;
             }
 
             //读取混砂车数据
@@ -1785,10 +1805,10 @@ namespace Data_acquisition
             Array_daq = new float[8];
             Array_daqtemp = new float[8];
             Array_daqcal = new float[8];
-            daqk = new float[8];
-            daqb = new float[8];
-            daqk1 = new float[8];
-            daqb1 = new float[8];
+            daqk = new float[10];
+            daqb = new float[10];
+            daqk1 = new float[10];
+            daqb1 = new float[10];
             xml_load();//读取偏好设置文件
             chart_initial();//初始化图表控件
             Kep_initial();//注册通讯变量
@@ -2057,6 +2077,10 @@ namespace Data_acquisition
 
         private void btn_send_Click(object sender, EventArgs e)
         {
+            if (isSend) {
+                MessageBox.Show("警告！计划表此前已经发送！");
+            }
+            
             if (dataGridView1.Rows.Count < 2)
             {
                 if (lan == "Chinese") MessageBox.Show("请现导入计划表！");
@@ -2240,6 +2264,8 @@ namespace Data_acquisition
             if (result == DialogResult.OK)
             {
                 run = false;
+                isSend = false;  //计划表发送记录复位
+                isSync = false; //阶段同步信号复位
                 //主界面显示参数恢复到默认值
                 timer_log.Enabled = false;
                 btn_start.Text = "开始";

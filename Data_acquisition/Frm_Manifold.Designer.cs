@@ -81,21 +81,6 @@
             this.label65 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label49 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -241,15 +226,27 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.radProgressBar1 = new Telerik.WinControls.UI.RadProgressBar();
             this.radProgressBar2 = new Telerik.WinControls.UI.RadProgressBar();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
@@ -318,6 +315,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -918,147 +918,6 @@
             this.panel4.Size = new System.Drawing.Size(543, 577);
             this.panel4.TabIndex = 48;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.shapeContainer4);
-            this.panel15.Location = new System.Drawing.Point(402, 103);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(62, 20);
-            this.panel15.TabIndex = 77;
-            // 
-            // shapeContainer4
-            // 
-            this.shapeContainer4.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer4.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer4.Name = "shapeContainer4";
-            this.shapeContainer4.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape7,
-            this.lineShape8,
-            this.lineShape9});
-            this.shapeContainer4.Size = new System.Drawing.Size(60, 18);
-            this.shapeContainer4.TabIndex = 0;
-            this.shapeContainer4.TabStop = false;
-            // 
-            // lineShape7
-            // 
-            this.lineShape7.Name = "lineShape3";
-            this.lineShape7.X1 = 40;
-            this.lineShape7.X2 = 60;
-            this.lineShape7.Y1 = 20;
-            this.lineShape7.Y2 = 0;
-            // 
-            // lineShape8
-            // 
-            this.lineShape8.Name = "lineShape2";
-            this.lineShape8.X1 = 20;
-            this.lineShape8.X2 = 40;
-            this.lineShape8.Y1 = 20;
-            this.lineShape8.Y2 = 0;
-            // 
-            // lineShape9
-            // 
-            this.lineShape9.Name = "lineShape1";
-            this.lineShape9.X1 = 0;
-            this.lineShape9.X2 = 20;
-            this.lineShape9.Y1 = 20;
-            this.lineShape9.Y2 = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.shapeContainer2);
-            this.panel5.Location = new System.Drawing.Point(402, 72);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(62, 20);
-            this.panel5.TabIndex = 77;
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape4,
-            this.lineShape5,
-            this.lineShape6});
-            this.shapeContainer2.Size = new System.Drawing.Size(60, 18);
-            this.shapeContainer2.TabIndex = 0;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.Name = "lineShape3";
-            this.lineShape4.X1 = 40;
-            this.lineShape4.X2 = 60;
-            this.lineShape4.Y1 = 20;
-            this.lineShape4.Y2 = 0;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.Name = "lineShape2";
-            this.lineShape5.X1 = 20;
-            this.lineShape5.X2 = 40;
-            this.lineShape5.Y1 = 20;
-            this.lineShape5.Y2 = 0;
-            // 
-            // lineShape6
-            // 
-            this.lineShape6.Name = "lineShape1";
-            this.lineShape6.X1 = 0;
-            this.lineShape6.X2 = 20;
-            this.lineShape6.Y1 = 20;
-            this.lineShape6.Y2 = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.shapeContainer1);
-            this.panel3.Location = new System.Drawing.Point(402, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(62, 20);
-            this.panel3.TabIndex = 77;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape3,
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(60, 18);
-            this.shapeContainer1.TabIndex = 0;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 40;
-            this.lineShape3.X2 = 60;
-            this.lineShape3.Y1 = 20;
-            this.lineShape3.Y2 = 0;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 20;
-            this.lineShape2.X2 = 40;
-            this.lineShape2.Y1 = 20;
-            this.lineShape2.Y2 = 0;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 0;
-            this.lineShape1.X2 = 20;
-            this.lineShape1.Y1 = 20;
-            this.lineShape1.Y2 = 0;
             // 
             // label49
             // 
@@ -2715,6 +2574,147 @@
             ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
             ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).Text = "0%";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.shapeContainer1);
+            this.panel3.Location = new System.Drawing.Point(402, 41);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(62, 20);
+            this.panel3.TabIndex = 77;
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape3,
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(60, 18);
+            this.shapeContainer1.TabIndex = 0;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 40;
+            this.lineShape3.X2 = 60;
+            this.lineShape3.Y1 = 20;
+            this.lineShape3.Y2 = 0;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 20;
+            this.lineShape2.X2 = 40;
+            this.lineShape2.Y1 = 20;
+            this.lineShape2.Y2 = 0;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 0;
+            this.lineShape1.X2 = 20;
+            this.lineShape1.Y1 = 20;
+            this.lineShape1.Y2 = 0;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.shapeContainer4);
+            this.panel15.Location = new System.Drawing.Point(402, 103);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(62, 20);
+            this.panel15.TabIndex = 77;
+            // 
+            // shapeContainer4
+            // 
+            this.shapeContainer4.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer4.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer4.Name = "shapeContainer4";
+            this.shapeContainer4.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape7,
+            this.lineShape8,
+            this.lineShape9});
+            this.shapeContainer4.Size = new System.Drawing.Size(60, 18);
+            this.shapeContainer4.TabIndex = 0;
+            this.shapeContainer4.TabStop = false;
+            // 
+            // lineShape7
+            // 
+            this.lineShape7.Name = "lineShape3";
+            this.lineShape7.X1 = 40;
+            this.lineShape7.X2 = 60;
+            this.lineShape7.Y1 = 20;
+            this.lineShape7.Y2 = 0;
+            // 
+            // lineShape8
+            // 
+            this.lineShape8.Name = "lineShape2";
+            this.lineShape8.X1 = 20;
+            this.lineShape8.X2 = 40;
+            this.lineShape8.Y1 = 20;
+            this.lineShape8.Y2 = 0;
+            // 
+            // lineShape9
+            // 
+            this.lineShape9.Name = "lineShape1";
+            this.lineShape9.X1 = 0;
+            this.lineShape9.X2 = 20;
+            this.lineShape9.Y1 = 20;
+            this.lineShape9.Y2 = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.shapeContainer2);
+            this.panel5.Location = new System.Drawing.Point(402, 72);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(62, 20);
+            this.panel5.TabIndex = 77;
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape4,
+            this.lineShape5,
+            this.lineShape6});
+            this.shapeContainer2.Size = new System.Drawing.Size(60, 18);
+            this.shapeContainer2.TabIndex = 0;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.Name = "lineShape3";
+            this.lineShape4.X1 = 40;
+            this.lineShape4.X2 = 60;
+            this.lineShape4.Y1 = 20;
+            this.lineShape4.Y2 = 0;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.Name = "lineShape2";
+            this.lineShape5.X1 = 20;
+            this.lineShape5.X2 = 40;
+            this.lineShape5.Y1 = 20;
+            this.lineShape5.Y2 = 0;
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.Name = "lineShape1";
+            this.lineShape6.X1 = 0;
+            this.lineShape6.X2 = 20;
+            this.lineShape6.Y1 = 20;
+            this.lineShape6.Y2 = 0;
+            // 
             // Frm_Manifold
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2825,9 +2825,6 @@
             this.panel13.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
@@ -2903,6 +2900,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3097,6 +3097,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private Ctrl.level level1;
+        private System.Windows.Forms.Label lbl_level;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label6;
+        public Telerik.WinControls.UI.RadProgressBar radProgressBar1;
+        public Telerik.WinControls.UI.RadProgressBar radProgressBar2;
         private System.Windows.Forms.Panel panel15;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer4;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
@@ -3112,13 +3119,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.Label lbl_level;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label6;
-        public Telerik.WinControls.UI.RadProgressBar radProgressBar1;
-        public Telerik.WinControls.UI.RadProgressBar radProgressBar2;
 
     }
 }
