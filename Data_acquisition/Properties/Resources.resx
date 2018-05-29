@@ -160,6 +160,9 @@
   <data name="Valve" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Valve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="蛟龙" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\蛟龙1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Valve_R" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Valve_R1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,10 +187,13 @@
   <data name="BMP111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BMP111.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arrow5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrows2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrows21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="蛟龙1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\蛟龙2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

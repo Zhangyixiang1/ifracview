@@ -234,7 +234,7 @@ namespace Data_acquisition
             {
                 refresh(this);
                 //刷新阶段信息和添加剂信息
-                //if (Form_Main.isSync)
+                if (Form_Main.isSync)
                 {
                     int percent1 = Convert.ToInt16(Form_Main.value_blender.GetValue(589));
                     int percent2 = Convert.ToInt16(Form_Main.value_blender.GetValue(631));
@@ -490,6 +490,16 @@ namespace Data_acquisition
      Color.White, 1, ButtonBorderStyle.Solid, //上边
      Color.White, 1, ButtonBorderStyle.Solid, //右边
      Color.White, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel3.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
         }
 
 

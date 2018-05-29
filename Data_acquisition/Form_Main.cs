@@ -87,7 +87,7 @@ namespace Data_acquisition
         public static bool isRights;//操作权限，1为上位机，0为混砂橇
         public static int[] wellDataIndex;// 井口数据来源,0井口油压，1井口流量，2井口密度
         public static bool isSend; //是否发送计划表，默认为false
-
+        int beat;  //心跳信号，发送给混砂橇
         [DllImport("user32.dll")]
         static extern bool ClipCursor(ref  RECT rect);
         RECT _ScreenRect;
@@ -1592,7 +1592,7 @@ namespace Data_acquisition
                 case 1: test[32] = test[2]; break;
                 case 2: test[32] = test[3]; break;
                 case 3: test[32] = test[4]; break;
-               
+
             }
 
             //井口密度
@@ -1604,7 +1604,7 @@ namespace Data_acquisition
                 case 3: test[33] = test[8]; break;
                 case 4: test[33] = test[35]; break;
             }
- 
+
             //井口流量
             switch (wellDataIndex[1])
             {
@@ -1619,6 +1619,8 @@ namespace Data_acquisition
             {
                 test[i] = Convert.ToDouble(value_blender.GetValue(i - 30));
             }
+            //0529修改，混砂橇的排出流量等于混砂橇+混配液的流量
+            // test[39] += test[83];
             test[50] = test[47] + test[48] + test[49]; //液添当前总流量
             test[51] = Convert.ToDouble(value_blender.GetValue(21));//干添1流量
             test[52] = Convert.ToDouble(value_blender.GetValue(22));//干添2流量
@@ -1680,6 +1682,18 @@ namespace Data_acquisition
                 test[79] = (test[51] / (2 * 60) + test[79]);//干添1总量
                 test[80] = (test[52] / (2 * 60) + test[80]);//干添2总量
                 test[81] = (test[53] / (2 * 60) + test[81]);//干添总量
+
+            }
+
+            //0529修改，砂比和混配液流量
+            test[82] = Convert.ToDouble(value_blender.GetValue(24));//砂比
+            test[83] = Convert.ToDouble(value_blender.GetValue(34));//混配液撬流量
+            //0529增加，发送心跳信号到混砂橇和混配液模拟量
+            if (!Convert.ToBoolean(value_state.GetValue(18)))
+            {
+                if (beat % 10 == 0) kep1.KepItems.Item(37).Write(beat);
+                beat++;
+                if (beat == 5000) beat = 0;
 
             }
         }
@@ -1888,7 +1902,7 @@ namespace Data_acquisition
             frm5.Visible = false;
 
             Frm_Manifold frm6 = new Frm_Manifold();
-            frm6.Location = new Point(9600, 0);
+            frm6.Location = new Point(0, 0);
             frm6.Show();
             frm6.BringToFront();
             this.Focus();
@@ -1964,7 +1978,10 @@ namespace Data_acquisition
             lbl_now.Text = DateTime.Now.ToString();
             //0512添加，增加连接状态信号显示
             if (Convert.ToBoolean(value_state.GetValue(18))) tssl_B.BackColor = Color.Red;
-            else tssl_B.BackColor = Color.Lime;
+            else
+            {
+                tssl_B.BackColor = Color.Lime;
+            }
             if (Convert.ToBoolean(value_state.GetValue(2))) tssl_F1.BackColor = Color.Red;
             else tssl_F1.BackColor = Color.Lime;
             if (Convert.ToBoolean(value_state.GetValue(4))) tssl_F2.BackColor = Color.Red;
@@ -2077,10 +2094,11 @@ namespace Data_acquisition
 
         private void btn_send_Click(object sender, EventArgs e)
         {
-            if (isSend) {
+            if (isSend)
+            {
                 MessageBox.Show("警告！计划表此前已经发送！");
             }
-            
+
             if (dataGridView1.Rows.Count < 2)
             {
                 if (lan == "Chinese") MessageBox.Show("请现导入计划表！");
@@ -2571,12 +2589,13 @@ namespace Data_acquisition
                     btn_override.Enabled = false;
 
                     label11.ForeColor = Color.Gray;
-                    label12.ForeColor = Color.Gray;    
+                    label12.ForeColor = Color.Gray;
                     btn_ifrac.BackColor = Color.Gray;
                     btn_blender.BackColor = Color.Gray;
                 }
 
-                else {
+                else
+                {
                     //通讯正常时判断权限
                     if (isRights)
                     {
@@ -2594,7 +2613,8 @@ namespace Data_acquisition
                         btn_override.Enabled = true;
                     }
 
-                    else {
+                    else
+                    {
                         btn_blenderhold.ForeColor = Color.Gray;
                         btn_blenderhold.Enabled = false;
                         btn_blendernext.ForeColor = Color.Gray;
@@ -2607,25 +2627,26 @@ namespace Data_acquisition
                         btn_jobstart.Enabled = false;
                         btn_override.ForeColor = Color.Gray;
                         btn_override.Enabled = false;
-                                       
+
                     }
 
 
                     label11.ForeColor = Color.White;
                     label12.ForeColor = Color.White;
-                   
+
 
                     //显示控制权限
-                  
+
                     if ((bool)value_blender.GetValue(23))
                     {
                         isRights = true;
-                  
+
                         btn_ifrac.BackColor = Color.Lime;
                         btn_blender.BackColor = Color.Gray;
 
                     }
-                    else {
+                    else
+                    {
                         isRights = false;
                         btn_blender.BackColor = Color.Lime;
                         btn_ifrac.BackColor = Color.Gray;
@@ -2637,7 +2658,7 @@ namespace Data_acquisition
                         //isRights = false;
                         //MessageBox.Show("权限切换到混砂撬，阶段同步取消切换到手动模式！");
                         //isSync = false;
-                       
+
                     }
                 }
 
@@ -2648,10 +2669,11 @@ namespace Data_acquisition
                     btn_next.ForeColor = Color.Gray;
                     btn_next.Enabled = false;
                 }
-                else {
+                else
+                {
                     btn_next.ForeColor = Color.White;
                     btn_next.Enabled = true;
-                
+
                 }
                 if (readfinish)
                 {
@@ -2672,7 +2694,7 @@ namespace Data_acquisition
                 //}
                 //else { rdbtn_auto.Checked = true; rdbtn_hand.Checked = false; }
 
-               
+
             }
             catch (Exception)
             {
@@ -2691,7 +2713,7 @@ namespace Data_acquisition
             if (isfracmode)
             {
                 SaveFileDialog sflg = new SaveFileDialog();
-               
+
                 sflg.Filter = "Csv(*.csv)|*.csv";
                 if (sflg.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
                 {
@@ -3153,9 +3175,20 @@ namespace Data_acquisition
             if (Offlist.ContainsKey(e.KeyChar.ToString().ToUpper()))
             {
                 if (Offlist[e.KeyChar.ToString().ToUpper()].active)
-                    offset[Offlist[e.KeyChar.ToString().ToUpper()].index] += Offlist[e.KeyChar.ToString().ToUpper()].value;
-            }
+                {
+                    //0529新增发送混配液模拟量到混砂橇
+                    if (Offlist[e.KeyChar.ToString().ToUpper()].index == 83 && !Convert.ToBoolean(value_state.GetValue(18)))
+                    {   test[83]+=Offlist[e.KeyChar.ToString().ToUpper()].value;
+                        kep1.KepItems.Item(34).Write(test[83] ) ;
+                    }
+                    else
+                    {
+                        offset[Offlist[e.KeyChar.ToString().ToUpper()].index] += Offlist[e.KeyChar.ToString().ToUpper()].value;
+                    }
 
+                }
+
+            }
         }
 
         private void Form_Main_MouseMove(object sender, MouseEventArgs e)
@@ -3177,7 +3210,7 @@ namespace Data_acquisition
             frm.ShowDialog();
         }
 
-     
+
 
 
     }

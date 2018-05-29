@@ -43,8 +43,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lbl_value1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_OK = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -207,7 +207,7 @@
             this.textBox1.Location = new System.Drawing.Point(142, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(39, 21);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             this.textBox1.Tag = "最小值";
             // 
             // textBox2
@@ -252,7 +252,7 @@
             this.textBox3.Location = new System.Drawing.Point(375, 20);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(39, 21);
-            this.textBox3.TabIndex = 1;
+            this.textBox3.TabIndex = 2;
             this.textBox3.Tag = "范围下限";
             // 
             // textBox4
@@ -260,7 +260,7 @@
             this.textBox4.Location = new System.Drawing.Point(452, 20);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(39, 21);
-            this.textBox4.TabIndex = 1;
+            this.textBox4.TabIndex = 3;
             this.textBox4.Tag = "范围上限";
             // 
             // label6
@@ -278,7 +278,7 @@
             this.lbl_temp1.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp1.Name = "lbl_temp1";
             this.lbl_temp1.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp1.TabIndex = 0;
+            this.lbl_temp1.TabIndex = 4;
             this.lbl_temp1.Tag = "电流值";
             this.lbl_temp1.Text = "0.00mA";
             // 
@@ -297,7 +297,7 @@
             this.lbl_value1.Location = new System.Drawing.Point(696, 24);
             this.lbl_value1.Name = "lbl_value1";
             this.lbl_value1.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value1.TabIndex = 0;
+            this.lbl_value1.TabIndex = 5;
             this.lbl_value1.Tag = "数值";
             this.lbl_value1.Text = "0.00MPa";
             // 
@@ -319,27 +319,28 @@
             this.groupBox1.Location = new System.Drawing.Point(21, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(764, 59);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "通道1";
             // 
-            // button1
+            // btn_OK
             // 
-            this.button1.Location = new System.Drawing.Point(24, 664);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "确认";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_OK.Location = new System.Drawing.Point(24, 664);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(75, 23);
+            this.btn_OK.TabIndex = 3;
+            this.btn_OK.Text = "确认";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
-            // button2
+            // btn_cancel
             // 
-            this.button2.Location = new System.Drawing.Point(118, 664);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_cancel.Location = new System.Drawing.Point(118, 664);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancel.TabIndex = 3;
+            this.btn_cancel.Text = "取消";
+            this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -360,7 +361,7 @@
             this.groupBox2.Location = new System.Drawing.Point(21, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(764, 59);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "通道2";
             // 
@@ -369,7 +370,7 @@
             this.textBox5.Location = new System.Drawing.Point(375, 20);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(39, 21);
-            this.textBox5.TabIndex = 1;
+            this.textBox5.TabIndex = 2;
             this.textBox5.Tag = "范围下限";
             // 
             // textBox6
@@ -377,7 +378,7 @@
             this.textBox6.Location = new System.Drawing.Point(452, 20);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(39, 21);
-            this.textBox6.TabIndex = 1;
+            this.textBox6.TabIndex = 3;
             this.textBox6.Tag = "范围上限";
             // 
             // label10
@@ -421,7 +422,7 @@
             this.textBox8.Location = new System.Drawing.Point(142, 20);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(39, 21);
-            this.textBox8.TabIndex = 1;
+            this.textBox8.TabIndex = 0;
             this.textBox8.Tag = "最小值";
             // 
             // label13
@@ -440,7 +441,7 @@
             this.lbl_value2.Location = new System.Drawing.Point(696, 24);
             this.lbl_value2.Name = "lbl_value2";
             this.lbl_value2.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value2.TabIndex = 0;
+            this.lbl_value2.TabIndex = 5;
             this.lbl_value2.Text = "0.00MPa";
             // 
             // label15
@@ -476,7 +477,7 @@
             this.lbl_temp2.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp2.Name = "lbl_temp2";
             this.lbl_temp2.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp2.TabIndex = 0;
+            this.lbl_temp2.TabIndex = 4;
             this.lbl_temp2.Text = "0.00mA";
             // 
             // groupBox3
@@ -499,14 +500,14 @@
             this.groupBox3.Size = new System.Drawing.Size(764, 59);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "通道3";
+            this.groupBox3.Text = " ";
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(375, 20);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(39, 21);
-            this.textBox9.TabIndex = 1;
+            this.textBox9.TabIndex = 2;
             this.textBox9.Tag = "范围下限";
             // 
             // textBox10
@@ -514,7 +515,7 @@
             this.textBox10.Location = new System.Drawing.Point(452, 20);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(39, 21);
-            this.textBox10.TabIndex = 1;
+            this.textBox10.TabIndex = 3;
             this.textBox10.Tag = "范围上限";
             // 
             // label19
@@ -558,7 +559,7 @@
             this.textBox12.Location = new System.Drawing.Point(142, 20);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(39, 21);
-            this.textBox12.TabIndex = 1;
+            this.textBox12.TabIndex = 0;
             this.textBox12.Tag = "最小值";
             // 
             // label22
@@ -577,7 +578,7 @@
             this.lbl_value3.Location = new System.Drawing.Point(696, 24);
             this.lbl_value3.Name = "lbl_value3";
             this.lbl_value3.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value3.TabIndex = 0;
+            this.lbl_value3.TabIndex = 5;
             this.lbl_value3.Text = "0.00MPa";
             // 
             // label24
@@ -613,7 +614,7 @@
             this.lbl_temp3.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp3.Name = "lbl_temp3";
             this.lbl_temp3.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp3.TabIndex = 0;
+            this.lbl_temp3.TabIndex = 4;
             this.lbl_temp3.Text = "0.00mA";
             // 
             // groupBox4
@@ -635,7 +636,7 @@
             this.groupBox4.Location = new System.Drawing.Point(21, 207);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(764, 59);
-            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "通道4";
             // 
@@ -644,7 +645,7 @@
             this.textBox13.Location = new System.Drawing.Point(375, 20);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(39, 21);
-            this.textBox13.TabIndex = 1;
+            this.textBox13.TabIndex = 2;
             this.textBox13.Tag = "范围下限";
             // 
             // textBox14
@@ -652,7 +653,7 @@
             this.textBox14.Location = new System.Drawing.Point(452, 20);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(39, 21);
-            this.textBox14.TabIndex = 1;
+            this.textBox14.TabIndex = 3;
             this.textBox14.Tag = "范围上限";
             // 
             // label28
@@ -696,7 +697,7 @@
             this.textBox16.Location = new System.Drawing.Point(142, 20);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(39, 21);
-            this.textBox16.TabIndex = 1;
+            this.textBox16.TabIndex = 0;
             this.textBox16.Tag = "最小值";
             // 
             // label31
@@ -715,7 +716,7 @@
             this.lbl_value4.Location = new System.Drawing.Point(696, 24);
             this.lbl_value4.Name = "lbl_value4";
             this.lbl_value4.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value4.TabIndex = 0;
+            this.lbl_value4.TabIndex = 5;
             this.lbl_value4.Text = "0.00MPa";
             // 
             // label33
@@ -751,7 +752,7 @@
             this.lbl_temp4.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp4.Name = "lbl_temp4";
             this.lbl_temp4.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp4.TabIndex = 0;
+            this.lbl_temp4.TabIndex = 4;
             this.lbl_temp4.Text = "0.00mA";
             // 
             // groupBox5
@@ -772,7 +773,7 @@
             this.groupBox5.Location = new System.Drawing.Point(21, 272);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(764, 59);
-            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "通道5";
             // 
@@ -781,7 +782,7 @@
             this.textBox17.Location = new System.Drawing.Point(375, 20);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(39, 21);
-            this.textBox17.TabIndex = 1;
+            this.textBox17.TabIndex = 2;
             this.textBox17.Tag = "范围下限";
             // 
             // textBox18
@@ -789,7 +790,7 @@
             this.textBox18.Location = new System.Drawing.Point(452, 20);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(39, 21);
-            this.textBox18.TabIndex = 1;
+            this.textBox18.TabIndex = 3;
             this.textBox18.Tag = "范围上限";
             // 
             // label37
@@ -833,7 +834,7 @@
             this.textBox20.Location = new System.Drawing.Point(142, 20);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(39, 21);
-            this.textBox20.TabIndex = 1;
+            this.textBox20.TabIndex = 0;
             this.textBox20.Tag = "最小值";
             // 
             // label40
@@ -852,7 +853,7 @@
             this.lbl_value5.Location = new System.Drawing.Point(696, 24);
             this.lbl_value5.Name = "lbl_value5";
             this.lbl_value5.Size = new System.Drawing.Size(59, 12);
-            this.lbl_value5.TabIndex = 0;
+            this.lbl_value5.TabIndex = 5;
             this.lbl_value5.Text = "0.00kg/m3";
             // 
             // label42
@@ -888,7 +889,7 @@
             this.lbl_temp5.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp5.Name = "lbl_temp5";
             this.lbl_temp5.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp5.TabIndex = 0;
+            this.lbl_temp5.TabIndex = 4;
             this.lbl_temp5.Text = "0.00mA";
             // 
             // groupBox6
@@ -910,7 +911,7 @@
             this.groupBox6.Location = new System.Drawing.Point(21, 337);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(764, 59);
-            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "通道6";
             // 
@@ -919,7 +920,7 @@
             this.textBox21.Location = new System.Drawing.Point(375, 20);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(39, 21);
-            this.textBox21.TabIndex = 1;
+            this.textBox21.TabIndex = 2;
             this.textBox21.Tag = "范围下限";
             // 
             // textBox22
@@ -927,7 +928,7 @@
             this.textBox22.Location = new System.Drawing.Point(452, 20);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(39, 21);
-            this.textBox22.TabIndex = 1;
+            this.textBox22.TabIndex = 3;
             this.textBox22.Tag = "范围上限";
             // 
             // label46
@@ -971,7 +972,7 @@
             this.textBox24.Location = new System.Drawing.Point(142, 20);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(39, 21);
-            this.textBox24.TabIndex = 1;
+            this.textBox24.TabIndex = 0;
             this.textBox24.Tag = "最小值";
             // 
             // label49
@@ -990,7 +991,7 @@
             this.lbl_value6.Location = new System.Drawing.Point(696, 24);
             this.lbl_value6.Name = "lbl_value6";
             this.lbl_value6.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value6.TabIndex = 0;
+            this.lbl_value6.TabIndex = 5;
             this.lbl_value6.Text = "0.00MPa";
             // 
             // label51
@@ -1026,7 +1027,7 @@
             this.lbl_temp6.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp6.Name = "lbl_temp6";
             this.lbl_temp6.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp6.TabIndex = 0;
+            this.lbl_temp6.TabIndex = 4;
             this.lbl_temp6.Text = "0.00mA";
             // 
             // groupBox7
@@ -1047,7 +1048,7 @@
             this.groupBox7.Location = new System.Drawing.Point(21, 402);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(764, 59);
-            this.groupBox7.TabIndex = 2;
+            this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "通道7";
             // 
@@ -1056,7 +1057,7 @@
             this.textBox25.Location = new System.Drawing.Point(375, 20);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(39, 21);
-            this.textBox25.TabIndex = 1;
+            this.textBox25.TabIndex = 2;
             this.textBox25.Tag = "范围下限";
             // 
             // textBox26
@@ -1064,7 +1065,7 @@
             this.textBox26.Location = new System.Drawing.Point(452, 20);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(39, 21);
-            this.textBox26.TabIndex = 1;
+            this.textBox26.TabIndex = 3;
             this.textBox26.Tag = "范围上限";
             // 
             // label55
@@ -1108,7 +1109,7 @@
             this.textBox28.Location = new System.Drawing.Point(142, 20);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(39, 21);
-            this.textBox28.TabIndex = 1;
+            this.textBox28.TabIndex = 0;
             this.textBox28.Tag = "最小值";
             // 
             // label58
@@ -1127,7 +1128,7 @@
             this.lbl_value7.Location = new System.Drawing.Point(696, 24);
             this.lbl_value7.Name = "lbl_value7";
             this.lbl_value7.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value7.TabIndex = 0;
+            this.lbl_value7.TabIndex = 5;
             this.lbl_value7.Text = "0.00MPa";
             // 
             // label60
@@ -1163,7 +1164,7 @@
             this.lbl_temp7.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp7.Name = "lbl_temp7";
             this.lbl_temp7.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp7.TabIndex = 0;
+            this.lbl_temp7.TabIndex = 4;
             this.lbl_temp7.Text = "0.00mA";
             // 
             // groupBox8
@@ -1185,7 +1186,7 @@
             this.groupBox8.Location = new System.Drawing.Point(21, 467);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(764, 59);
-            this.groupBox8.TabIndex = 2;
+            this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "通道8";
             // 
@@ -1194,7 +1195,7 @@
             this.textBox29.Location = new System.Drawing.Point(375, 20);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(39, 21);
-            this.textBox29.TabIndex = 1;
+            this.textBox29.TabIndex = 2;
             this.textBox29.Tag = "范围下限";
             // 
             // textBox30
@@ -1202,7 +1203,7 @@
             this.textBox30.Location = new System.Drawing.Point(452, 20);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(39, 21);
-            this.textBox30.TabIndex = 1;
+            this.textBox30.TabIndex = 3;
             this.textBox30.Tag = "范围上限";
             // 
             // label64
@@ -1246,7 +1247,7 @@
             this.textBox32.Location = new System.Drawing.Point(142, 20);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(39, 21);
-            this.textBox32.TabIndex = 1;
+            this.textBox32.TabIndex = 0;
             this.textBox32.Tag = "最小值";
             // 
             // label67
@@ -1265,7 +1266,7 @@
             this.lbl_value8.Location = new System.Drawing.Point(696, 24);
             this.lbl_value8.Name = "lbl_value8";
             this.lbl_value8.Size = new System.Drawing.Size(47, 12);
-            this.lbl_value8.TabIndex = 0;
+            this.lbl_value8.TabIndex = 5;
             this.lbl_value8.Text = "0.00MPa";
             // 
             // label69
@@ -1301,7 +1302,7 @@
             this.lbl_temp8.Location = new System.Drawing.Point(566, 24);
             this.lbl_temp8.Name = "lbl_temp8";
             this.lbl_temp8.Size = new System.Drawing.Size(41, 12);
-            this.lbl_temp8.TabIndex = 0;
+            this.lbl_temp8.TabIndex = 4;
             this.lbl_temp8.Text = "0.00mA";
             // 
             // timer1
@@ -1328,7 +1329,7 @@
             this.groupBox9.Location = new System.Drawing.Point(21, 532);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(764, 59);
-            this.groupBox9.TabIndex = 2;
+            this.groupBox9.TabIndex = 8;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "通道9";
             // 
@@ -1337,7 +1338,7 @@
             this.textBox33.Location = new System.Drawing.Point(375, 20);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(39, 21);
-            this.textBox33.TabIndex = 1;
+            this.textBox33.TabIndex = 2;
             this.textBox33.Tag = "范围下限";
             // 
             // textBox34
@@ -1345,7 +1346,7 @@
             this.textBox34.Location = new System.Drawing.Point(452, 20);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(39, 21);
-            this.textBox34.TabIndex = 1;
+            this.textBox34.TabIndex = 3;
             this.textBox34.Tag = "范围上限";
             // 
             // label7
@@ -1389,7 +1390,7 @@
             this.textBox36.Location = new System.Drawing.Point(142, 20);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(39, 21);
-            this.textBox36.TabIndex = 1;
+            this.textBox36.TabIndex = 0;
             this.textBox36.Tag = "最小值";
             // 
             // label18
@@ -1408,7 +1409,7 @@
             this.label23.Location = new System.Drawing.Point(696, 24);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(47, 12);
-            this.label23.TabIndex = 0;
+            this.label23.TabIndex = 5;
             this.label23.Text = "0.00MPa";
             // 
             // label27
@@ -1444,7 +1445,7 @@
             this.label41.Location = new System.Drawing.Point(566, 24);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(41, 12);
-            this.label41.TabIndex = 0;
+            this.label41.TabIndex = 4;
             this.label41.Text = "0.00mA";
             // 
             // groupBox10
@@ -1466,7 +1467,7 @@
             this.groupBox10.Location = new System.Drawing.Point(21, 597);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(764, 59);
-            this.groupBox10.TabIndex = 2;
+            this.groupBox10.TabIndex = 9;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "通道10";
             // 
@@ -1475,7 +1476,7 @@
             this.textBox37.Location = new System.Drawing.Point(375, 20);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(39, 21);
-            this.textBox37.TabIndex = 1;
+            this.textBox37.TabIndex = 2;
             this.textBox37.Tag = "范围下限";
             // 
             // textBox38
@@ -1483,7 +1484,7 @@
             this.textBox38.Location = new System.Drawing.Point(452, 20);
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(39, 21);
-            this.textBox38.TabIndex = 1;
+            this.textBox38.TabIndex = 3;
             this.textBox38.Tag = "范围上限";
             // 
             // label45
@@ -1527,7 +1528,7 @@
             this.textBox40.Location = new System.Drawing.Point(142, 20);
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(39, 21);
-            this.textBox40.TabIndex = 1;
+            this.textBox40.TabIndex = 0;
             this.textBox40.Tag = "最小值";
             // 
             // label59
@@ -1546,7 +1547,7 @@
             this.label63.Location = new System.Drawing.Point(696, 24);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(47, 12);
-            this.label63.TabIndex = 0;
+            this.label63.TabIndex = 5;
             this.label63.Text = "0.00MPa";
             // 
             // label68
@@ -1582,7 +1583,7 @@
             this.label74.Location = new System.Drawing.Point(566, 24);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(41, 12);
-            this.label74.TabIndex = 0;
+            this.label74.TabIndex = 4;
             this.label74.Text = "0.00mA";
             // 
             // Frm_calibration
@@ -1591,8 +1592,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(821, 464);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
@@ -1648,8 +1649,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbl_value1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_OK;
+        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;

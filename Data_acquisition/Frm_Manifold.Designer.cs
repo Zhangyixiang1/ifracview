@@ -72,8 +72,6 @@
             this.panel45 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.ovalShape5 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
-            this.ovalShape6 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape7 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -81,6 +79,10 @@
             this.label65 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label49 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -140,13 +142,9 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.lbl_level = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.level1 = new Data_acquisition.Ctrl.level();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox57 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
@@ -175,15 +173,28 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel55 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.panel37 = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_stage = new System.Windows.Forms.Label();
+            this.lbl_wellnum = new System.Windows.Forms.Label();
+            this.lbl_stagebig = new System.Windows.Forms.Label();
+            this.lbl_wellinfo = new System.Windows.Forms.Label();
+            this.radProgressBar1 = new Telerik.WinControls.UI.RadProgressBar();
+            this.radProgressBar2 = new Telerik.WinControls.UI.RadProgressBar();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox60 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox62 = new System.Windows.Forms.PictureBox();
             this.pictureBox61 = new System.Windows.Forms.PictureBox();
-            this.pictureBox60 = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
@@ -208,45 +219,21 @@
             this.pictureBox47 = new System.Windows.Forms.PictureBox();
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbl_stage = new System.Windows.Forms.Label();
-            this.lbl_wellnum = new System.Windows.Forms.Label();
-            this.lbl_stagebig = new System.Windows.Forms.Label();
-            this.lbl_wellinfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.radProgressBar1 = new Telerik.WinControls.UI.RadProgressBar();
-            this.radProgressBar2 = new Telerik.WinControls.UI.RadProgressBar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.level1 = new Data_acquisition.Ctrl.level();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
@@ -264,12 +251,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -278,12 +262,16 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
@@ -308,16 +296,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -388,7 +370,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("宋体", 10F);
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(1554, 485);
+            this.label31.Location = new System.Drawing.Point(1728, 485);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(14, 14);
             this.label31.TabIndex = 116;
@@ -399,7 +381,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("宋体", 10F);
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(1554, 455);
+            this.label29.Location = new System.Drawing.Point(1728, 455);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(14, 14);
             this.label29.TabIndex = 117;
@@ -421,7 +403,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("宋体", 10F);
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(1554, 425);
+            this.label27.Location = new System.Drawing.Point(1728, 425);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(14, 14);
             this.label27.TabIndex = 119;
@@ -432,7 +414,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("宋体", 20F);
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(1479, 472);
+            this.label30.Location = new System.Drawing.Point(1653, 472);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(68, 27);
             this.label30.TabIndex = 120;
@@ -443,7 +425,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("宋体", 20F);
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(1479, 442);
+            this.label28.Location = new System.Drawing.Point(1653, 442);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(68, 27);
             this.label28.TabIndex = 125;
@@ -465,7 +447,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("宋体", 20F);
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(1479, 412);
+            this.label26.Location = new System.Drawing.Point(1653, 412);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(68, 27);
             this.label26.TabIndex = 122;
@@ -755,9 +737,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.shapeContainer3);
-            this.panel2.Location = new System.Drawing.Point(1571, 315);
+            this.panel2.Location = new System.Drawing.Point(1749, 320);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(313, 124);
+            this.panel2.Size = new System.Drawing.Size(144, 113);
             this.panel2.TabIndex = 47;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -767,32 +749,10 @@
             this.shapeContainer3.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer3.Name = "shapeContainer3";
             this.shapeContainer3.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.ovalShape5,
-            this.ovalShape6,
             this.ovalShape7});
-            this.shapeContainer3.Size = new System.Drawing.Size(311, 122);
+            this.shapeContainer3.Size = new System.Drawing.Size(142, 111);
             this.shapeContainer3.TabIndex = 0;
             this.shapeContainer3.TabStop = false;
-            // 
-            // ovalShape5
-            // 
-            this.ovalShape5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(117)))), ((int)(((byte)(166)))));
-            this.ovalShape5.BorderColor = System.Drawing.Color.Black;
-            this.ovalShape5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(117)))), ((int)(((byte)(166)))));
-            this.ovalShape5.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.ovalShape5.Location = new System.Drawing.Point(196, 20);
-            this.ovalShape5.Name = "ovalShape4";
-            this.ovalShape5.Size = new System.Drawing.Size(75, 75);
-            // 
-            // ovalShape6
-            // 
-            this.ovalShape6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(117)))), ((int)(((byte)(166)))));
-            this.ovalShape6.BorderColor = System.Drawing.Color.Black;
-            this.ovalShape6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(117)))), ((int)(((byte)(166)))));
-            this.ovalShape6.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.ovalShape6.Location = new System.Drawing.Point(117, 20);
-            this.ovalShape6.Name = "ovalShape3";
-            this.ovalShape6.Size = new System.Drawing.Size(75, 75);
             // 
             // ovalShape7
             // 
@@ -800,7 +760,7 @@
             this.ovalShape7.BorderColor = System.Drawing.Color.Black;
             this.ovalShape7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(117)))), ((int)(((byte)(166)))));
             this.ovalShape7.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.ovalShape7.Location = new System.Drawing.Point(38, 20);
+            this.ovalShape7.Location = new System.Drawing.Point(33, 20);
             this.ovalShape7.Name = "ovalShape2";
             this.ovalShape7.Size = new System.Drawing.Size(75, 75);
             // 
@@ -866,8 +826,6 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel15);
-            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.label49);
             this.panel4.Controls.Add(this.label45);
@@ -908,16 +866,56 @@
             this.panel4.Controls.Add(this.pictureBox16);
             this.panel4.Controls.Add(this.panel21);
             this.panel4.Controls.Add(this.panel20);
-            this.panel4.Controls.Add(this.pictureBox9);
-            this.panel4.Controls.Add(this.pictureBox57);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.pictureBox39);
             this.panel4.Location = new System.Drawing.Point(921, 77);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(543, 577);
+            this.panel4.Size = new System.Drawing.Size(653, 577);
             this.panel4.TabIndex = 48;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox9);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.pictureBox8);
+            this.panel3.Location = new System.Drawing.Point(398, 8);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(77, 174);
+            this.panel3.TabIndex = 143;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Data_acquisition.Properties.Resources.蛟龙1;
+            this.pictureBox9.Location = new System.Drawing.Point(14, 113);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 77;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Data_acquisition.Properties.Resources.蛟龙1;
+            this.pictureBox4.Location = new System.Drawing.Point(14, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 77;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Data_acquisition.Properties.Resources.蛟龙1;
+            this.pictureBox8.Location = new System.Drawing.Point(14, 59);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 77;
+            this.pictureBox8.TabStop = false;
             // 
             // label49
             // 
@@ -1023,7 +1021,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("宋体", 10F);
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(486, 196);
+            this.label22.Location = new System.Drawing.Point(590, 154);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 14);
             this.label22.TabIndex = 20;
@@ -1034,7 +1032,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 10F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(486, 169);
+            this.label7.Location = new System.Drawing.Point(590, 99);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 14);
             this.label7.TabIndex = 20;
@@ -1045,7 +1043,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("宋体", 10F);
             this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(486, 142);
+            this.label33.Location = new System.Drawing.Point(590, 45);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(49, 14);
             this.label33.TabIndex = 20;
@@ -1199,7 +1197,7 @@
             // 
             this.label18.Font = new System.Drawing.Font("宋体", 20F);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(377, 183);
+            this.label18.Location = new System.Drawing.Point(481, 141);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(103, 27);
             this.label18.TabIndex = 45;
@@ -1211,7 +1209,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("宋体", 20F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(377, 156);
+            this.label6.Location = new System.Drawing.Point(481, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 27);
             this.label6.TabIndex = 44;
@@ -1223,7 +1221,7 @@
             // 
             this.label32.Font = new System.Drawing.Font("宋体", 20F);
             this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(377, 129);
+            this.label32.Location = new System.Drawing.Point(481, 32);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(103, 27);
             this.label32.TabIndex = 43;
@@ -1235,9 +1233,9 @@
             // 
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
             this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel35.Location = new System.Drawing.Point(340, 90);
+            this.panel35.Location = new System.Drawing.Point(340, 83);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(11, 30);
+            this.panel35.Size = new System.Drawing.Size(11, 35);
             this.panel35.TabIndex = 8;
             // 
             // pictureBox24
@@ -1575,35 +1573,6 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "搅拌罐";
             // 
-            // level1
-            // 
-            this.level1.Location = new System.Drawing.Point(49, 5);
-            this.level1.Name = "level1";
-            this.level1.Size = new System.Drawing.Size(135, 135);
-            this.level1.TabIndex = 140;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox9.Location = new System.Drawing.Point(390, 41);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(13, 82);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox57
-            // 
-            this.pictureBox57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.pictureBox57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox57.Location = new System.Drawing.Point(463, 41);
-            this.pictureBox57.Name = "pictureBox57";
-            this.pictureBox57.Size = new System.Drawing.Size(13, 82);
-            this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox57.TabIndex = 8;
-            this.pictureBox57.TabStop = false;
-            // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
@@ -1630,21 +1599,11 @@
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
             this.pictureBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox39.Location = new System.Drawing.Point(340, 75);
+            this.pictureBox39.Location = new System.Drawing.Point(340, 68);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(56, 16);
             this.pictureBox39.TabIndex = 74;
             this.pictureBox39.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(829, 367);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(222, 16);
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
             // 
             // timer1
             // 
@@ -1944,46 +1903,264 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel38);
-            this.panel1.Controls.Add(this.panel37);
             this.panel1.Controls.Add(this.panel36);
-            this.panel1.Location = new System.Drawing.Point(1570, 102);
+            this.panel1.Location = new System.Drawing.Point(1749, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 113);
+            this.panel1.Size = new System.Drawing.Size(144, 113);
             this.panel1.TabIndex = 50;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // panel38
-            // 
-            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel38.Location = new System.Drawing.Point(22, 15);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(84, 84);
-            this.panel38.TabIndex = 0;
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel37.Location = new System.Drawing.Point(112, 15);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(84, 84);
-            this.panel37.TabIndex = 0;
             // 
             // panel36
             // 
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
             this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel36.Location = new System.Drawing.Point(200, 15);
+            this.panel36.Location = new System.Drawing.Point(30, 11);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(84, 84);
             this.panel36.TabIndex = 0;
             // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.BackColor = System.Drawing.Color.Black;
+            this.label79.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label79.ForeColor = System.Drawing.Color.White;
+            this.label79.Location = new System.Drawing.Point(1748, 297);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(72, 20);
+            this.label79.TabIndex = 130;
+            this.label79.Text = "储水罐";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.BackColor = System.Drawing.Color.Black;
+            this.label80.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label80.ForeColor = System.Drawing.Color.White;
+            this.label80.Location = new System.Drawing.Point(1743, 86);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(72, 20);
+            this.label80.TabIndex = 130;
+            this.label80.Text = "储砂罐";
+            // 
+            // zedGraphControl1
+            // 
+            this.zedGraphControl1.Location = new System.Drawing.Point(38, 676);
+            this.zedGraphControl1.Name = "zedGraphControl1";
+            this.zedGraphControl1.ScrollGrace = 0D;
+            this.zedGraphControl1.ScrollMaxX = 0D;
+            this.zedGraphControl1.ScrollMaxY = 0D;
+            this.zedGraphControl1.ScrollMaxY2 = 0D;
+            this.zedGraphControl1.ScrollMinX = 0D;
+            this.zedGraphControl1.ScrollMinY = 0D;
+            this.zedGraphControl1.ScrollMinY2 = 0D;
+            this.zedGraphControl1.Size = new System.Drawing.Size(1384, 380);
+            this.zedGraphControl1.TabIndex = 131;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("宋体", 13F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1703, 948);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 132;
+            this.label4.Text = "阶段:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("宋体", 13F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1476, 949);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.TabIndex = 133;
+            this.label3.Text = "段号:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("宋体", 13F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(1703, 911);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.TabIndex = 134;
+            this.label1.Text = "井号:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Font = new System.Drawing.Font("宋体", 13F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(1476, 912);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.TabIndex = 135;
+            this.label5.Text = "油田:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_stage
+            // 
+            this.lbl_stage.AutoSize = true;
+            this.lbl_stage.BackColor = System.Drawing.Color.Black;
+            this.lbl_stage.Font = new System.Drawing.Font("宋体", 13F);
+            this.lbl_stage.ForeColor = System.Drawing.Color.White;
+            this.lbl_stage.Location = new System.Drawing.Point(1773, 949);
+            this.lbl_stage.Name = "lbl_stage";
+            this.lbl_stage.Size = new System.Drawing.Size(26, 18);
+            this.lbl_stage.TabIndex = 136;
+            this.lbl_stage.Text = "##";
+            // 
+            // lbl_wellnum
+            // 
+            this.lbl_wellnum.AutoSize = true;
+            this.lbl_wellnum.BackColor = System.Drawing.Color.Black;
+            this.lbl_wellnum.Font = new System.Drawing.Font("宋体", 13F);
+            this.lbl_wellnum.ForeColor = System.Drawing.Color.White;
+            this.lbl_wellnum.Location = new System.Drawing.Point(1773, 912);
+            this.lbl_wellnum.Name = "lbl_wellnum";
+            this.lbl_wellnum.Size = new System.Drawing.Size(26, 18);
+            this.lbl_wellnum.TabIndex = 137;
+            this.lbl_wellnum.Text = "##";
+            // 
+            // lbl_stagebig
+            // 
+            this.lbl_stagebig.AutoSize = true;
+            this.lbl_stagebig.BackColor = System.Drawing.Color.Black;
+            this.lbl_stagebig.Font = new System.Drawing.Font("宋体", 13F);
+            this.lbl_stagebig.ForeColor = System.Drawing.Color.White;
+            this.lbl_stagebig.Location = new System.Drawing.Point(1536, 949);
+            this.lbl_stagebig.Name = "lbl_stagebig";
+            this.lbl_stagebig.Size = new System.Drawing.Size(26, 18);
+            this.lbl_stagebig.TabIndex = 138;
+            this.lbl_stagebig.Text = "##";
+            // 
+            // lbl_wellinfo
+            // 
+            this.lbl_wellinfo.AutoSize = true;
+            this.lbl_wellinfo.BackColor = System.Drawing.Color.Black;
+            this.lbl_wellinfo.Font = new System.Drawing.Font("宋体", 13F);
+            this.lbl_wellinfo.ForeColor = System.Drawing.Color.White;
+            this.lbl_wellinfo.Location = new System.Drawing.Point(1536, 912);
+            this.lbl_wellinfo.Name = "lbl_wellinfo";
+            this.lbl_wellinfo.Size = new System.Drawing.Size(26, 18);
+            this.lbl_wellinfo.TabIndex = 139;
+            this.lbl_wellinfo.Text = "##";
+            // 
+            // radProgressBar1
+            // 
+            this.radProgressBar1.BackColor = System.Drawing.Color.Black;
+            this.radProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.radProgressBar1.Location = new System.Drawing.Point(1605, 985);
+            this.radProgressBar1.Name = "radProgressBar1";
+            this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.Black;
+            this.radProgressBar1.SeparatorColor2 = System.Drawing.Color.Black;
+            this.radProgressBar1.SeparatorColor3 = System.Drawing.Color.Black;
+            this.radProgressBar1.SeparatorColor4 = System.Drawing.Color.Black;
+            this.radProgressBar1.Size = new System.Drawing.Size(256, 21);
+            this.radProgressBar1.TabIndex = 142;
+            this.radProgressBar1.Text = "0%";
+            ((Telerik.WinControls.UI.RadProgressBarElement)(this.radProgressBar1.GetChildAt(0))).Text = "0%";
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderWidth = 1F;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderInnerColor4 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor2 = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor3 = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor4 = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).HorizontalLineColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(3))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(3))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(3))).Text = "0%";
+            // 
+            // radProgressBar2
+            // 
+            this.radProgressBar2.BackColor = System.Drawing.Color.Black;
+            this.radProgressBar2.ForeColor = System.Drawing.Color.White;
+            this.radProgressBar2.Location = new System.Drawing.Point(1605, 1022);
+            this.radProgressBar2.Name = "radProgressBar2";
+            this.radProgressBar2.SeparatorColor1 = System.Drawing.Color.Black;
+            this.radProgressBar2.SeparatorColor2 = System.Drawing.Color.Black;
+            this.radProgressBar2.SeparatorColor3 = System.Drawing.Color.Black;
+            this.radProgressBar2.SeparatorColor4 = System.Drawing.Color.Black;
+            this.radProgressBar2.Size = new System.Drawing.Size(256, 21);
+            this.radProgressBar2.TabIndex = 142;
+            this.radProgressBar2.Text = "0%";
+            ((Telerik.WinControls.UI.RadProgressBarElement)(this.radProgressBar2.GetChildAt(0))).Text = "0%";
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderWidth = 1F;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor4 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor2 = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor3 = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor4 = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).HorizontalLineColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.SeaGreen;
+            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
+            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).Text = "0%";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.pictureBox11.Image = global::Data_acquisition.Properties.Resources.Meter2;
+            this.pictureBox11.Location = new System.Drawing.Point(967, 352);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 75;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox60
+            // 
+            this.pictureBox60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
+            this.pictureBox60.Image = global::Data_acquisition.Properties.Resources.arrows4;
+            this.pictureBox60.Location = new System.Drawing.Point(862, 368);
+            this.pictureBox60.Name = "pictureBox60";
+            this.pictureBox60.Size = new System.Drawing.Size(62, 13);
+            this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox60.TabIndex = 68;
+            this.pictureBox60.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox6.Location = new System.Drawing.Point(829, 367);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(222, 16);
+            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.TabStop = false;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Data_acquisition.Properties.Resources.Meter2;
-            this.pictureBox7.Location = new System.Drawing.Point(1497, 352);
+            this.pictureBox7.Location = new System.Drawing.Point(1671, 352);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2031,17 +2208,6 @@
             this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox61.TabIndex = 69;
             this.pictureBox61.TabStop = false;
-            // 
-            // pictureBox60
-            // 
-            this.pictureBox60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
-            this.pictureBox60.Image = global::Data_acquisition.Properties.Resources.arrows4;
-            this.pictureBox60.Location = new System.Drawing.Point(862, 368);
-            this.pictureBox60.Name = "pictureBox60";
-            this.pictureBox60.Size = new System.Drawing.Size(62, 13);
-            this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox60.TabIndex = 68;
-            this.pictureBox60.TabStop = false;
             // 
             // pictureBox35
             // 
@@ -2316,24 +2482,34 @@
             this.pictureBox41.TabIndex = 94;
             this.pictureBox41.TabStop = false;
             // 
-            // pictureBox11
+            // pictureBox1
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.pictureBox11.Image = global::Data_acquisition.Properties.Resources.Meter2;
-            this.pictureBox11.Location = new System.Drawing.Point(967, 352);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 75;
-            this.pictureBox11.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
+            this.pictureBox1.Image = global::Data_acquisition.Properties.Resources.arrows4;
+            this.pictureBox1.Location = new System.Drawing.Point(1421, 146);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 13);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 74;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(1395, 145);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(354, 16);
+            this.pictureBox2.TabIndex = 74;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(117)))), ((int)(((byte)(166)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(1470, 368);
+            this.pictureBox3.Location = new System.Drawing.Point(1471, 368);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(102, 16);
+            this.pictureBox3.Size = new System.Drawing.Size(278, 16);
             this.pictureBox3.TabIndex = 74;
             this.pictureBox3.TabStop = false;
             // 
@@ -2347,373 +2523,12 @@
             this.pictureBox30.TabIndex = 91;
             this.pictureBox30.TabStop = false;
             // 
-            // label79
+            // level1
             // 
-            this.label79.AutoSize = true;
-            this.label79.BackColor = System.Drawing.Color.Black;
-            this.label79.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label79.ForeColor = System.Drawing.Color.White;
-            this.label79.Location = new System.Drawing.Point(1573, 292);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(72, 20);
-            this.label79.TabIndex = 130;
-            this.label79.Text = "储水罐";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.BackColor = System.Drawing.Color.Black;
-            this.label80.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label80.ForeColor = System.Drawing.Color.White;
-            this.label80.Location = new System.Drawing.Point(1571, 78);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(72, 20);
-            this.label80.TabIndex = 130;
-            this.label80.Text = "储砂罐";
-            // 
-            // zedGraphControl1
-            // 
-            this.zedGraphControl1.Location = new System.Drawing.Point(38, 676);
-            this.zedGraphControl1.Name = "zedGraphControl1";
-            this.zedGraphControl1.ScrollGrace = 0D;
-            this.zedGraphControl1.ScrollMaxX = 0D;
-            this.zedGraphControl1.ScrollMaxY = 0D;
-            this.zedGraphControl1.ScrollMaxY2 = 0D;
-            this.zedGraphControl1.ScrollMinX = 0D;
-            this.zedGraphControl1.ScrollMinY = 0D;
-            this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(1384, 380);
-            this.zedGraphControl1.TabIndex = 131;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Font = new System.Drawing.Font("宋体", 13F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1703, 948);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 132;
-            this.label4.Text = "阶段:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("宋体", 13F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1476, 949);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
-            this.label3.TabIndex = 133;
-            this.label3.Text = "段号:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("宋体", 13F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1703, 911);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "井号:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("宋体", 13F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1476, 912);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
-            this.label5.TabIndex = 135;
-            this.label5.Text = "油田:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_stage
-            // 
-            this.lbl_stage.AutoSize = true;
-            this.lbl_stage.BackColor = System.Drawing.Color.Black;
-            this.lbl_stage.Font = new System.Drawing.Font("宋体", 13F);
-            this.lbl_stage.ForeColor = System.Drawing.Color.White;
-            this.lbl_stage.Location = new System.Drawing.Point(1773, 949);
-            this.lbl_stage.Name = "lbl_stage";
-            this.lbl_stage.Size = new System.Drawing.Size(26, 18);
-            this.lbl_stage.TabIndex = 136;
-            this.lbl_stage.Text = "##";
-            // 
-            // lbl_wellnum
-            // 
-            this.lbl_wellnum.AutoSize = true;
-            this.lbl_wellnum.BackColor = System.Drawing.Color.Black;
-            this.lbl_wellnum.Font = new System.Drawing.Font("宋体", 13F);
-            this.lbl_wellnum.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellnum.Location = new System.Drawing.Point(1773, 912);
-            this.lbl_wellnum.Name = "lbl_wellnum";
-            this.lbl_wellnum.Size = new System.Drawing.Size(26, 18);
-            this.lbl_wellnum.TabIndex = 137;
-            this.lbl_wellnum.Text = "##";
-            // 
-            // lbl_stagebig
-            // 
-            this.lbl_stagebig.AutoSize = true;
-            this.lbl_stagebig.BackColor = System.Drawing.Color.Black;
-            this.lbl_stagebig.Font = new System.Drawing.Font("宋体", 13F);
-            this.lbl_stagebig.ForeColor = System.Drawing.Color.White;
-            this.lbl_stagebig.Location = new System.Drawing.Point(1536, 949);
-            this.lbl_stagebig.Name = "lbl_stagebig";
-            this.lbl_stagebig.Size = new System.Drawing.Size(26, 18);
-            this.lbl_stagebig.TabIndex = 138;
-            this.lbl_stagebig.Text = "##";
-            // 
-            // lbl_wellinfo
-            // 
-            this.lbl_wellinfo.AutoSize = true;
-            this.lbl_wellinfo.BackColor = System.Drawing.Color.Black;
-            this.lbl_wellinfo.Font = new System.Drawing.Font("宋体", 13F);
-            this.lbl_wellinfo.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellinfo.Location = new System.Drawing.Point(1536, 912);
-            this.lbl_wellinfo.Name = "lbl_wellinfo";
-            this.lbl_wellinfo.Size = new System.Drawing.Size(26, 18);
-            this.lbl_wellinfo.TabIndex = 139;
-            this.lbl_wellinfo.Text = "##";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.pictureBox1.Image = global::Data_acquisition.Properties.Resources.arrows4;
-            this.pictureBox1.Location = new System.Drawing.Point(1428, 153);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 13);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 74;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(1397, 152);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(174, 16);
-            this.pictureBox2.TabIndex = 74;
-            this.pictureBox2.TabStop = false;
-            // 
-            // radProgressBar1
-            // 
-            this.radProgressBar1.BackColor = System.Drawing.Color.Black;
-            this.radProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.radProgressBar1.Location = new System.Drawing.Point(1605, 985);
-            this.radProgressBar1.Name = "radProgressBar1";
-            this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.Black;
-            this.radProgressBar1.SeparatorColor2 = System.Drawing.Color.Black;
-            this.radProgressBar1.SeparatorColor3 = System.Drawing.Color.Black;
-            this.radProgressBar1.SeparatorColor4 = System.Drawing.Color.Black;
-            this.radProgressBar1.Size = new System.Drawing.Size(256, 21);
-            this.radProgressBar1.TabIndex = 142;
-            this.radProgressBar1.Text = "0%";
-            ((Telerik.WinControls.UI.RadProgressBarElement)(this.radProgressBar1.GetChildAt(0))).Text = "0%";
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderWidth = 1F;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BorderInnerColor4 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor2 = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor3 = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor4 = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).HorizontalLineColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(3))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(3))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(3))).Text = "0%";
-            // 
-            // radProgressBar2
-            // 
-            this.radProgressBar2.BackColor = System.Drawing.Color.Black;
-            this.radProgressBar2.ForeColor = System.Drawing.Color.White;
-            this.radProgressBar2.Location = new System.Drawing.Point(1605, 1022);
-            this.radProgressBar2.Name = "radProgressBar2";
-            this.radProgressBar2.SeparatorColor1 = System.Drawing.Color.Black;
-            this.radProgressBar2.SeparatorColor2 = System.Drawing.Color.Black;
-            this.radProgressBar2.SeparatorColor3 = System.Drawing.Color.Black;
-            this.radProgressBar2.SeparatorColor4 = System.Drawing.Color.Black;
-            this.radProgressBar2.Size = new System.Drawing.Size(256, 21);
-            this.radProgressBar2.TabIndex = 142;
-            this.radProgressBar2.Text = "0%";
-            ((Telerik.WinControls.UI.RadProgressBarElement)(this.radProgressBar2.GetChildAt(0))).Text = "0%";
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderWidth = 1F;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).BorderInnerColor4 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            ((Telerik.WinControls.UI.ProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor2 = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor3 = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor4 = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).HorizontalLineColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.SeaGreen;
-            ((Telerik.WinControls.UI.UpperProgressIndicatorElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).BorderInnerColor = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).BorderInnerColor2 = System.Drawing.SystemColors.ControlDark;
-            ((Telerik.WinControls.UI.ProgressBarTextElement)(this.radProgressBar2.GetChildAt(0).GetChildAt(3))).Text = "0%";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.shapeContainer1);
-            this.panel3.Location = new System.Drawing.Point(402, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(62, 20);
-            this.panel3.TabIndex = 77;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape3,
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(60, 18);
-            this.shapeContainer1.TabIndex = 0;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 40;
-            this.lineShape3.X2 = 60;
-            this.lineShape3.Y1 = 20;
-            this.lineShape3.Y2 = 0;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 20;
-            this.lineShape2.X2 = 40;
-            this.lineShape2.Y1 = 20;
-            this.lineShape2.Y2 = 0;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 0;
-            this.lineShape1.X2 = 20;
-            this.lineShape1.Y1 = 20;
-            this.lineShape1.Y2 = 0;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.shapeContainer4);
-            this.panel15.Location = new System.Drawing.Point(402, 103);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(62, 20);
-            this.panel15.TabIndex = 77;
-            // 
-            // shapeContainer4
-            // 
-            this.shapeContainer4.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer4.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer4.Name = "shapeContainer4";
-            this.shapeContainer4.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape7,
-            this.lineShape8,
-            this.lineShape9});
-            this.shapeContainer4.Size = new System.Drawing.Size(60, 18);
-            this.shapeContainer4.TabIndex = 0;
-            this.shapeContainer4.TabStop = false;
-            // 
-            // lineShape7
-            // 
-            this.lineShape7.Name = "lineShape3";
-            this.lineShape7.X1 = 40;
-            this.lineShape7.X2 = 60;
-            this.lineShape7.Y1 = 20;
-            this.lineShape7.Y2 = 0;
-            // 
-            // lineShape8
-            // 
-            this.lineShape8.Name = "lineShape2";
-            this.lineShape8.X1 = 20;
-            this.lineShape8.X2 = 40;
-            this.lineShape8.Y1 = 20;
-            this.lineShape8.Y2 = 0;
-            // 
-            // lineShape9
-            // 
-            this.lineShape9.Name = "lineShape1";
-            this.lineShape9.X1 = 0;
-            this.lineShape9.X2 = 20;
-            this.lineShape9.Y1 = 20;
-            this.lineShape9.Y2 = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(150)))), ((int)(((byte)(81)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.shapeContainer2);
-            this.panel5.Location = new System.Drawing.Point(402, 72);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(62, 20);
-            this.panel5.TabIndex = 77;
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape4,
-            this.lineShape5,
-            this.lineShape6});
-            this.shapeContainer2.Size = new System.Drawing.Size(60, 18);
-            this.shapeContainer2.TabIndex = 0;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.Name = "lineShape3";
-            this.lineShape4.X1 = 40;
-            this.lineShape4.X2 = 60;
-            this.lineShape4.Y1 = 20;
-            this.lineShape4.Y2 = 0;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.Name = "lineShape2";
-            this.lineShape5.X1 = 20;
-            this.lineShape5.X2 = 40;
-            this.lineShape5.Y1 = 20;
-            this.lineShape5.Y2 = 0;
-            // 
-            // lineShape6
-            // 
-            this.lineShape6.Name = "lineShape1";
-            this.lineShape6.X1 = 0;
-            this.lineShape6.X2 = 20;
-            this.lineShape6.Y1 = 20;
-            this.lineShape6.Y2 = 0;
+            this.level1.Location = new System.Drawing.Point(49, 5);
+            this.level1.Name = "level1";
+            this.level1.Size = new System.Drawing.Size(135, 135);
+            this.level1.TabIndex = 140;
             // 
             // Frm_Manifold
             // 
@@ -2721,6 +2536,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.radProgressBar2);
             this.Controls.Add(this.radProgressBar1);
             this.Controls.Add(this.pictureBox11);
@@ -2795,8 +2612,6 @@
             this.Controls.Add(this.pictureBox47);
             this.Controls.Add(this.pictureBox45);
             this.Controls.Add(this.pictureBox41);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel14);
@@ -2825,6 +2640,10 @@
             this.panel13.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
@@ -2843,12 +2662,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -2863,12 +2679,16 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
@@ -2893,16 +2713,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2981,8 +2795,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer3;
-        private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape5;
-        private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape6;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape7;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
@@ -3044,7 +2856,6 @@
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox57;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel12;
@@ -3074,8 +2885,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel55;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.Label label79;
@@ -3089,7 +2898,6 @@
         private System.Windows.Forms.Label lbl_wellnum;
         private System.Windows.Forms.Label lbl_stagebig;
         private System.Windows.Forms.Label lbl_wellinfo;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox39;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -3104,21 +2912,10 @@
         private System.Windows.Forms.Label label6;
         public Telerik.WinControls.UI.RadProgressBar radProgressBar1;
         public Telerik.WinControls.UI.RadProgressBar radProgressBar2;
-        private System.Windows.Forms.Panel panel15;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape9;
-        private System.Windows.Forms.Panel panel5;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel3;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
 
     }
 }

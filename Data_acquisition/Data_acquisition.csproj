@@ -506,6 +506,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\蛟龙2.png" />
+    <None Include="Resources\蛟龙1.png" />
     <None Include="Resources\arrow51.png" />
     <None Include="Resources\arrows31.png" />
     <None Include="Resources\arrows42.png" />
