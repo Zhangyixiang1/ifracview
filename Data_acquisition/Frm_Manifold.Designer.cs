@@ -1563,7 +1563,6 @@
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("宋体", 10F);
             this.label16.ForeColor = System.Drawing.Color.White;
@@ -1572,6 +1571,7 @@
             this.label16.Size = new System.Drawing.Size(49, 14);
             this.label16.TabIndex = 0;
             this.label16.Text = "搅拌罐";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox10
             // 
@@ -1962,7 +1962,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("宋体", 13F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1703, 948);
+            this.label4.Location = new System.Drawing.Point(1709, 948);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 132;

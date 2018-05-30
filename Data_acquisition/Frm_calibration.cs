@@ -94,6 +94,7 @@ namespace Data_acquisition
                         {
                             Label lbl = ctr_ as Label;
                             int index2 = lbl.TabIndex;
+                            if (index2 == 4 || index2 == 5)
                             lbl.Text = Form_Main.Array_daq[index1, index2].ToString();
                         }
                     }
@@ -143,6 +144,7 @@ namespace Data_acquisition
                         if (ctr_ is Label) {
                             Label lbl = ctr_ as Label;
                             int index3 = lbl.TabIndex;
+                            if(index3==4||index3==5)
                             temparray[index1, index3] = Convert.ToSingle(lbl.Text);
                         
                         }

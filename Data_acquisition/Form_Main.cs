@@ -35,12 +35,12 @@ namespace Data_acquisition
     {
 
         #region 变量声明
-        public static Single[] Array_daq; //beckoff原始参数
+        public static Single[,] Array_daq; //beckoff原始参数,10行6维数组
         public static float[] Array_daqtemp;//beckoff校准电流值
         public static float[] Array_daqcal;//beckoff校准值
         public static float[] daqk, daqb, daqk1, daqb1;
         public static TcAdsClient tcClient; //beck客户端
-        int tcHandle; //beckoff的参数句柄
+        public static int tcHandle; //beckoff的参数句柄
         public static Kepware kep1;//混砂车
         public static Kepware kep2;//压裂泵
         public static Kepware kep3;//系统状态量
@@ -135,20 +135,25 @@ namespace Data_acquisition
                     //读取状态信息和ip地址
                     value_state = kep3.kep_read();
                     //读取daq参数
-                    if (tcClient.IsConnected)
-                    {
-                        AdsStream dataStream = new AdsStream(500);
-                        BinaryReader binRead = new BinaryReader(dataStream);
-                        dataStream.Position = 0;
-                        tcClient.Read(tcHandle, dataStream, 0, 32);
-                        for (int i = 0; i < 8; i++)
-                        {
-                            Array_daq[i] = binRead.ReadSingle();
-                            //运用公式y=kx+b
-                            test[i + 1] = Math.Round((Array_daq[i] - daqb1[i]) / daqk1[i], 2);
-                        }
+                    //if (tcClient.IsConnected)
+                    //{
+                    //    AdsStream dataStream = new AdsStream(2 * 60);
+                    //    BinaryReader binRead = new BinaryReader(dataStream);
+                    //    dataStream.Position = 0;
+                    //    tcClient.Read(tcHandle, dataStream);
+                    //    for (int i = 0; i < 60; i++)
+                    //    {
+                    //        Array_daq[i / 10, i % 6] = binRead.ReadSingle();
+                    //        //运用公式y=kx+b
+                    //        //test[i + 1] = Math.Round((Array_daq[i] - daqb1[i]) / daqk1[i], 2);
 
-                    }
+                    //    }
+                    //    for (int i = 0; i < 9; i++)
+                    //    {
+                    //        test[i + 1] = (double)Array_daq.GetValue(5+i*6);
+
+                    //    }
+                    //}
                     readfinish = true;
 
                     //更新进度条，0524修改，只有阶段与混砂橇同步时才更新
@@ -533,8 +538,8 @@ namespace Data_acquisition
                 PingReply reply = pin.Send(Pub_func.GetValue("daq"), 100);
                 if (reply.Status == IPStatus.Success)
                 {
-                    tcClient.Connect(Pub_func.GetValue("daq") + ".1.1", 851);
-                    tcHandle = tcClient.CreateVariableHandle("GVL.AI_Arrayout");
+                    tcClient.Connect(Pub_func.GetValue("daq") + ".1.1", 801);
+                   // tcHandle = tcClient.CreateVariableHandle("MAIN.ChannelData");
 
                 }
                 else { MessageBox.Show("无法连接到DAQ请检查网络设置！"); }
@@ -1816,7 +1821,7 @@ namespace Data_acquisition
             list_stage = new List<int>();
             report_index = new List<int>();
             series_index = new List<int>();
-            Array_daq = new float[8];
+            Array_daq = new float[10, 6];
             Array_daqtemp = new float[8];
             Array_daqcal = new float[8];
             daqk = new float[10];
@@ -3178,8 +3183,9 @@ namespace Data_acquisition
                 {
                     //0529新增发送混配液模拟量到混砂橇
                     if (Offlist[e.KeyChar.ToString().ToUpper()].index == 83 && !Convert.ToBoolean(value_state.GetValue(18)))
-                    {   test[83]+=Offlist[e.KeyChar.ToString().ToUpper()].value;
-                        kep1.KepItems.Item(34).Write(test[83] ) ;
+                    {
+                        test[83] += Offlist[e.KeyChar.ToString().ToUpper()].value;
+                        kep1.KepItems.Item(34).Write(test[83]);
                     }
                     else
                     {

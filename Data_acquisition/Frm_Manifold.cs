@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data_acquisiton;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,7 @@ namespace Data_acquisition
             InitializeComponent();
         }
 
-        private void Frm_Manifold_Load(object sender, EventArgs e)
-        {
+        public void chart_initial() {
             //zed
             GraphPane myPane = zedGraphControl1.GraphPane;
             myPane.Fill = new Fill(Color.Black);
@@ -75,7 +75,7 @@ namespace Data_acquisition
 
             //第2条线的标号为4
             myCurve = myPane.AddCurve("排出流量",
-               List2, Color.FromArgb(0,255,0), SymbolType.None);
+               List2, Color.FromArgb(0, 255, 0), SymbolType.None);
             myCurve.Line.Width = 1;
             // Fill the symbols with white
             // myCurve.Symbol.Fill = new Fill(Color.White);
@@ -84,7 +84,7 @@ namespace Data_acquisition
 
             // 第3条线的标号为2
             myCurve = myPane.AddCurve("砂浓度",
-               List3, Color.FromArgb(255,128,128), SymbolType.None);
+               List3, Color.FromArgb(255, 128, 128), SymbolType.None);
             myCurve.Line.Width = 1;
             // Fill the symbols with white
             //   myCurve.Symbol.Fill = new Fill(Color.White);
@@ -202,26 +202,85 @@ namespace Data_acquisition
 
 
             zedGraphControl1.AxisChange();
-            int index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "排出总量";
-            //index = dataGridView1.Rows.Add();
-            //dataGridView1.Rows[index].Cells[0].Value = "排出";
-            index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "支撑剂";
-            index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "干添1";
-            index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "干添2";
-            index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "液添1";
-            index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "液添2";
-            index = dataGridView1.Rows.Add();
-            dataGridView1.Rows[index].Cells[0].Value = "液添3";
-            index = dataGridView1.Rows.Add();
-            //液添4暂时没有数据
-            dataGridView1.Rows[index].Cells[0].Value = "液添4";
-            dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
+        
+        }
+
+
+        private void Frm_Manifold_Load(object sender, EventArgs e)
+        {
+            chart_initial();
+
+            //语言切换
+            MultiLanguage.LoadLanguage(Application.OpenForms["Frm_Manifold"], Form_Main.lan);
+            if (Form_Main.lan == "Chinese")
+            {
+                zedGraphControl1.GraphPane.XAxis.Title.Text = "时间(分钟)";
+                zedGraphControl1.GraphPane.CurveList[0].Label.Text = "井口油压";
+                zedGraphControl1.GraphPane.CurveList[1].Label.Text = "排出流量";
+                zedGraphControl1.GraphPane.CurveList[2].Label.Text = "砂浓度";
+                zedGraphControl1.AxisChange();
+                zedGraphControl1.Invalidate();
+                //datagridview初始化
+                int index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "排出";
+                //index = dataGridView1.Rows.Add();
+                //dataGridView1.Rows[index].Cells[0].Value = "排出";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "支撑剂";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "干添1";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "干添2";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "液添1";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "液添2";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "液添3";
+                index = dataGridView1.Rows.Add();
+                //液添4暂时没有数据
+                dataGridView1.Rows[index].Cells[0].Value = "液添4";
+                dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
+                dataGridView1.Columns[0].HeaderText = "名称";
+                dataGridView1.Columns[0].HeaderText = "阶段";
+                dataGridView1.Columns[0].HeaderText = "总量";
+
+            }
+            else if (Form_Main.lan == "English")
+            {
+               zedGraphControl1.GraphPane.XAxis.Title.Text = "Time(min)";
+               zedGraphControl1.GraphPane.CurveList[0].Label.Text = "Tub Pressure";
+               zedGraphControl1.GraphPane.CurveList[1].Label.Text = "Discharge Rate";
+               zedGraphControl1.GraphPane.CurveList[2].Label.Text = "Proppant Conc.";
+               zedGraphControl1.AxisChange();
+               zedGraphControl1.Invalidate();
+               //datagridview初始化
+               int index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "Discharge";
+               //index = dataGridView1.Rows.Add();
+               //dataGridView1.Rows[index].Cells[0].Value = "排出";
+               index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "Proppant";
+               index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "DryAdd1";
+               index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "DryAdd2";
+               index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "Chem1";
+               index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "Chem2";
+               index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = "Chem3";
+               index = dataGridView1.Rows.Add();
+               //液添4暂时没有数据
+               dataGridView1.Rows[index].Cells[0].Value = "Chem4";
+               dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
+               dataGridView1.Columns[0].HeaderText = "Name";
+               dataGridView1.Columns[0].HeaderText = "Stage";
+               dataGridView1.Columns[0].HeaderText = "Total";
+            }
+            
+          
             // dataGridView1.DefaultCellStyle.BackColor = Color.White;
             // dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
             dataGridView1.ClearSelection();

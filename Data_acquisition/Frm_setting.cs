@@ -152,6 +152,7 @@ namespace Data_acquisition
             txb_f7.Text = Form_Main.value_state.GetValue(13).ToString().Substring(0, Form_Main.value_state.GetValue(13).ToString().Length - 4);
             txb_f8.Text = Form_Main.value_state.GetValue(15).ToString().Substring(0, Form_Main.value_state.GetValue(15).ToString().Length - 4);
             txb_b.Text = Form_Main.value_state.GetValue(17).ToString().Substring(0, Form_Main.value_state.GetValue(17).ToString().Length - 4);
+            txb_daq.Text = Comm.Pub_func.GetValue("daq");
 
 
         }
@@ -182,6 +183,7 @@ namespace Data_acquisition
             Form_Main.kep3.KepItems.Item(13).Write(txb_f7.Text + ",1,0");
             Form_Main.kep3.KepItems.Item(15).Write(txb_f8.Text + ",1,0");
             Form_Main.kep3.KepItems.Item(17).Write(txb_b.Text + ",1,0");
+            Comm.Pub_func.SetValue("daq", txb_daq.Text);
             btn_confirm.Enabled = false;
         }
     }

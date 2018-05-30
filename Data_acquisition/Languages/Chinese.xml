@@ -64,6 +64,7 @@
       <Control name="btn_blenderstop" text="停止"/>
       <Control name="btn_blenderhold" text="保持"/>
       <Control name="btn_blendernext" text="下一阶段"/>
+      <Control name="groupBox5" text="控制权限"/>
       <Control name="label11" text="上位机"/>
       <Control name="label12" text="混砂橇"/>
       <Control name="label10" text="阶段:"/>
@@ -143,6 +144,24 @@
       <Control name="label8" text="施工指挥:"/>
       <Control name="label9" text="备注:"/>
       <Control name="btn_OK" text="确定"/>
+      <Control name="tabPage1" text="一般信息"/>
+      <Control name="tabPage2" text="通讯相关"/>
+      <Control name="label19" text="混砂橇"/>
+      <Control name="label18" text="泵1"/>
+      <Control name="label17" text="泵2"/>
+      <Control name="label16" text="泵3"/>
+      <Control name="label15" text="泵4"/>
+      <Control name="label14" text="泵5"/>
+      <Control name="label13" text="泵6"/>
+      <Control name="label12" text="泵7"/>
+      <Control name="label11" text="泵8"/>
+      <Control name="btn_confirm" text="应用"/>
+      <Control name="label22" text="井口油压"/>
+      <Control name="label25" text="井口套压"/>
+      <Control name="label23" text="井口流量"/>
+      <Control name="label24" text="井口密度"/>
+      <Control name="label21" text="阶段号是否与混砂橇同步"/>
+      
     </Controls>
   </Form>
   <Form>
@@ -174,6 +193,13 @@
       <Control name="btn_OK" text="确定"/>
       <Control name="btn_Cancel" text="取消"/>
       <Control name="tabPage2" text="串口"/>
+      <Control name="rdbtn_stander" text="甲方标准格式"/>
+      <Control name="button1" text="编辑"/>
+      <Control name="btn_add" text="添加参数"/>
+      <Control name="btn_remove" text="移除参数"/>
+      <Control name="btn_series" text="配置"/>
+      <Control name="btn_add1" text="添加参数"/>
+      <Control name="btn_remove1" text="移除参数"/>
     </Controls>
   </Form>
   <Form>
@@ -212,6 +238,16 @@
       <Control name="rdb_chn" text="中文"/>
       <Control name="btn_OK" text="确定"/>
       <Control name="btn_cancel" text="取消"/>
+      <Control name="label2" text="混砂橇"/>
+      <Control name="label3" text="泵1"/>
+      <Control name="label4" text="泵2"/>
+      <Control name="label5" text="泵3"/>
+      <Control name="label6" text="泵4"/>
+      <Control name="label7" text="泵5"/>
+      <Control name="label8" text="泵6"/>
+      <Control name="label9" text="泵7"/>
+      <Control name="label10" text="泵8"/>
+      <Control name="btn_confirm" text="应用"/>
     </Controls>
   </Form>
   <Form>
@@ -227,6 +263,76 @@
       <Control name="btn_cancel" text="取消"/>
       <Control name="label2" text="最小值"/>
       <Control name="label1" text="最大值"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--管汇界面-->
+    <Name>Frm_Manifold</Name>
+    <Controls>
+      <Control name="label8" text="压裂橇1"/>
+      <Control name="label9" text="压裂橇2"/>
+      <Control name="label10" text="压裂橇3"/>
+      <Control name="label11" text="压裂橇4"/>
+      <Control name="label15" text="压裂橇5"/>
+      <Control name="label14" text="压裂橇6"/>
+      <Control name="label13" text="压裂橇7"/>
+      <Control name="label12" text="压裂橇8"/>
+      <Control name="label76" text="混砂橇"/>
+      <Control name="label20" text="固态化学品添加剂"/>
+      <Control name="label21" text="支撑剂"/>
+      <Control name="label23" text="液态化学品添加剂"/>
+      <Control name="label80" text="储砂罐"/>
+      <Control name="label79" text="储水罐"/>
+      <Control name="label5" text="油田"/>
+      <Control name="label1" text="井号"/>
+      <Control name="label3" text="段号"/>
+      <Control name="label4" text="阶段"/>
+      <Control name="label25" text="阶段进度"/>
+      <Control name="label24" text="作业总进度"/>
+      <Control name="label16" text="搅拌罐"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--参数设置界面-->
+    <Name>Frm_Chnset</Name>
+    <Controls>
+      <Control name="Frm_Chnset" text="参数设置"/>
+      <Control name="label1" text="名称"/>
+      <Control name="label2" text="增加"/>
+      <Control name="label3" text="减少"/>
+      <Control name="label4" text="幅度"/>
+      <Control name="checkBox1" text="启用快捷键"/>
+      <Control name="btn_confirm" text="应用"/>
+      <Control name="btn_ok" text="确定"/>
+      <Control name="btn_close" text="关闭"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--报表格式-->
+    <Name>Frm_report</Name>
+    <Controls>
+      <Control name="Frm_report" text="报表格式"/>
+      <Control name="label1" text="标题"/>
+      <Control name="label2" text="油田名称"/>
+      <Control name="label3" text="井号"/>
+      <Control name="label4" text="客户名称"/>
+      <Control name="label5" text="客户代表"/>
+      <Control name="label6" text="施工单位"/>
+      <Control name="label9" text="施工代表"/>
+      <Control name="label7" text="施工指挥"/>
+      <Control name="label8" text="备注"/>
+      <Control name="btn_OK" text="下一步"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--串口设置-->
+    <Name>Frm_serial</Name>
+    <Controls>
+      <Control name="Frm_serial" text="串口设置"/>
+      <Control name="label1" text="端口"/>
+      <Control name="label2" text="波特率"/>
+      <Control name="btn_OK" text="确定"/>
+      <Control name="btn_cancel" text="取消"/>
     </Controls>
   </Form>
 </Lan>

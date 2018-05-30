@@ -119,11 +119,29 @@ namespace Data_acquisition
         private void Frm_creat_Load(object sender, EventArgs e)
         {
             //语言切换
-            if (Form_Main.lan == "Chinese") MultiLanguage.LoadLanguage(this, "Chinese");
-            else if (Form_Main.lan == "English") MultiLanguage.LoadLanguage(this, "English");
+            cmb_wellpre.Items.Clear(); cmb_wellpipe.Items.Clear(); cmb_wellflow.Items.Clear(); cmb_wellden.Items.Clear();
+
+            if (Form_Main.lan == "Chinese")
+            {
+                MultiLanguage.LoadLanguage(this, "Chinese");
+                cmb_wellpre.Items.AddRange(new object[]{"压力1","压力2","压力3","压力4","压裂泵1","压力泵2","压裂泵3","压裂泵4","压裂泵5","压力泵6","压力泵7","压力泵8"});
+                cmb_wellpipe.Items.AddRange(new object[]{"压力1","压力2","压力3","压力4"});
+                cmb_wellflow.Items.AddRange(new object[]{"流量计1","流量计2","压裂泵","混砂橇"});
+                cmb_wellden.Items.AddRange(new object[]{"密度计1","密度计2","密度计3","密度计4","混砂橇"});
+            }
+            else if (Form_Main.lan == "English")
+            {
+                MultiLanguage.LoadLanguage(this, "English");
+                cmb_wellpre.Items.AddRange(new object[] { "Pressure1", "Pressure2", "Pressure3", "Pressure4", "Pump1", "Pump2", "Pump3", "Pump4", "Pump5", "Pump6", "Pump7", "Pump8" });
+                cmb_wellpipe.Items.AddRange(new object[] { "Pressure1", "Pressure2", "Pressure3", "Pressure4" });
+                cmb_wellflow.Items.AddRange(new object[] { "Flow1", "Flow2", "Pump", "Blender" });
+                cmb_wellden.Items.AddRange(new object[] { "Density1", "Density2", "Density3", "Density4", "Blender" });
+
+            }
             //0522添加，除了段号和时间，其他信息只要输入一次就记忆下来
             xmlload();
             //0512读取设备IP
+            txb_daq.Text = Comm.Pub_func.GetValue("daq");
             txb_f1.Text = Form_Main.value_state.GetValue(1).ToString().Substring(0, Form_Main.value_state.GetValue(1).ToString().Length - 4);
             txb_f2.Text = Form_Main.value_state.GetValue(3).ToString().Substring(0, Form_Main.value_state.GetValue(3).ToString().Length - 4);
             txb_f3.Text = Form_Main.value_state.GetValue(5).ToString().Substring(0, Form_Main.value_state.GetValue(5).ToString().Length - 4);
@@ -156,6 +174,7 @@ namespace Data_acquisition
             cmb_wellpre.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellpre"].Value);
             cmb_wellflow.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellflow"].Value);
             cmb_wellden.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellden"].Value);
+            cmb_wellpipe.SelectedIndex = Convert.ToInt16(list[0].Attributes["wellpipe"].Value);
         }
 
         //保存xml
@@ -191,6 +210,7 @@ namespace Data_acquisition
             Form_Main.kep3.KepItems.Item(13).Write(txb_f7.Text + ",1,0");
             Form_Main.kep3.KepItems.Item(15).Write(txb_f8.Text + ",1,0");
             Form_Main.kep3.KepItems.Item(17).Write(txb_b.Text + ",1,0");
+            Comm.Pub_func.SetValue("daq", txb_daq.Text);
             btn_confirm.Enabled = false;
         }
 

@@ -78,7 +78,7 @@
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 41;
             this.label4.Text = "阶段:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -89,7 +89,7 @@
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 42;
             this.label3.Text = "段号:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -97,10 +97,10 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(239, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "井号:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -108,17 +108,17 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 44;
             this.label1.Text = "油田:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_stage
             // 
             this.lbl_stage.AutoSize = true;
             this.lbl_stage.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_stage.ForeColor = System.Drawing.Color.White;
-            this.lbl_stage.Location = new System.Drawing.Point(309, 38);
+            this.lbl_stage.Location = new System.Drawing.Point(365, 38);
             this.lbl_stage.Name = "lbl_stage";
             this.lbl_stage.Size = new System.Drawing.Size(31, 20);
             this.lbl_stage.TabIndex = 45;
@@ -129,7 +129,7 @@
             this.lbl_wellnum.AutoSize = true;
             this.lbl_wellnum.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_wellnum.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellnum.Location = new System.Drawing.Point(309, 12);
+            this.lbl_wellnum.Location = new System.Drawing.Point(365, 12);
             this.lbl_wellnum.Name = "lbl_wellnum";
             this.lbl_wellnum.Size = new System.Drawing.Size(31, 20);
             this.lbl_wellnum.TabIndex = 46;
@@ -140,7 +140,7 @@
             this.lbl_stagebig.AutoSize = true;
             this.lbl_stagebig.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_stagebig.ForeColor = System.Drawing.Color.White;
-            this.lbl_stagebig.Location = new System.Drawing.Point(88, 38);
+            this.lbl_stagebig.Location = new System.Drawing.Point(126, 38);
             this.lbl_stagebig.Name = "lbl_stagebig";
             this.lbl_stagebig.Size = new System.Drawing.Size(31, 20);
             this.lbl_stagebig.TabIndex = 47;
@@ -151,7 +151,7 @@
             this.lbl_wellinfo.AutoSize = true;
             this.lbl_wellinfo.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_wellinfo.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellinfo.Location = new System.Drawing.Point(88, 12);
+            this.lbl_wellinfo.Location = new System.Drawing.Point(126, 12);
             this.lbl_wellinfo.Name = "lbl_wellinfo";
             this.lbl_wellinfo.Size = new System.Drawing.Size(31, 20);
             this.lbl_wellinfo.TabIndex = 48;
@@ -161,7 +161,7 @@
             // 
             this.radProgressBar2.BackColor = System.Drawing.Color.Black;
             this.radProgressBar2.ForeColor = System.Drawing.Color.White;
-            this.radProgressBar2.Location = new System.Drawing.Point(576, 40);
+            this.radProgressBar2.Location = new System.Drawing.Point(620, 40);
             this.radProgressBar2.Name = "radProgressBar2";
             this.radProgressBar2.SeparatorColor1 = System.Drawing.Color.Black;
             this.radProgressBar2.SeparatorColor2 = System.Drawing.Color.Black;
@@ -194,7 +194,7 @@
             // 
             this.radProgressBar1.BackColor = System.Drawing.Color.Black;
             this.radProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.radProgressBar1.Location = new System.Drawing.Point(576, 13);
+            this.radProgressBar1.Location = new System.Drawing.Point(620, 13);
             this.radProgressBar1.Name = "radProgressBar1";
             this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.Black;
             this.radProgressBar1.SeparatorColor2 = System.Drawing.Color.Black;
@@ -227,7 +227,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(406, 39);
+            this.label5.Location = new System.Drawing.Point(450, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(176, 20);
             this.label5.TabIndex = 49;
@@ -238,7 +238,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(402, 12);
+            this.label6.Location = new System.Drawing.Point(446, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 20);
             this.label6.TabIndex = 50;
@@ -352,7 +352,7 @@
             this.lbl_totaltime.AutoSize = true;
             this.lbl_totaltime.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.lbl_totaltime.ForeColor = System.Drawing.Color.White;
-            this.lbl_totaltime.Location = new System.Drawing.Point(697, 38);
+            this.lbl_totaltime.Location = new System.Drawing.Point(741, 38);
             this.lbl_totaltime.Name = "lbl_totaltime";
             this.lbl_totaltime.Size = new System.Drawing.Size(82, 22);
             this.lbl_totaltime.TabIndex = 53;
@@ -363,7 +363,7 @@
             this.lbl_stagetime.AutoSize = true;
             this.lbl_stagetime.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.lbl_stagetime.ForeColor = System.Drawing.Color.White;
-            this.lbl_stagetime.Location = new System.Drawing.Point(697, 11);
+            this.lbl_stagetime.Location = new System.Drawing.Point(741, 11);
             this.lbl_stagetime.Name = "lbl_stagetime";
             this.lbl_stagetime.Size = new System.Drawing.Size(82, 22);
             this.lbl_stagetime.TabIndex = 53;

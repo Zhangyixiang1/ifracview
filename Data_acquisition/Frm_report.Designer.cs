@@ -62,7 +62,7 @@
             // 
             // txb_title
             // 
-            this.txb_title.Location = new System.Drawing.Point(82, 9);
+            this.txb_title.Location = new System.Drawing.Point(101, 9);
             this.txb_title.Name = "txb_title";
             this.txb_title.Size = new System.Drawing.Size(100, 21);
             this.txb_title.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(216, 10);
+            this.dataGridView1.Location = new System.Drawing.Point(244, 10);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
@@ -145,56 +145,56 @@
             // 
             // txb_wellname
             // 
-            this.txb_wellname.Location = new System.Drawing.Point(82, 35);
+            this.txb_wellname.Location = new System.Drawing.Point(101, 35);
             this.txb_wellname.Name = "txb_wellname";
             this.txb_wellname.Size = new System.Drawing.Size(100, 21);
             this.txb_wellname.TabIndex = 1;
             // 
             // txb_wellnum
             // 
-            this.txb_wellnum.Location = new System.Drawing.Point(82, 61);
+            this.txb_wellnum.Location = new System.Drawing.Point(101, 61);
             this.txb_wellnum.Name = "txb_wellnum";
             this.txb_wellnum.Size = new System.Drawing.Size(100, 21);
             this.txb_wellnum.TabIndex = 1;
             // 
             // txb_clientname
             // 
-            this.txb_clientname.Location = new System.Drawing.Point(82, 87);
+            this.txb_clientname.Location = new System.Drawing.Point(101, 87);
             this.txb_clientname.Name = "txb_clientname";
             this.txb_clientname.Size = new System.Drawing.Size(100, 21);
             this.txb_clientname.TabIndex = 1;
             // 
             // txb_clientrep
             // 
-            this.txb_clientrep.Location = new System.Drawing.Point(82, 113);
+            this.txb_clientrep.Location = new System.Drawing.Point(101, 113);
             this.txb_clientrep.Name = "txb_clientrep";
             this.txb_clientrep.Size = new System.Drawing.Size(100, 21);
             this.txb_clientrep.TabIndex = 1;
             // 
             // txb_cstunit
             // 
-            this.txb_cstunit.Location = new System.Drawing.Point(82, 139);
+            this.txb_cstunit.Location = new System.Drawing.Point(101, 139);
             this.txb_cstunit.Name = "txb_cstunit";
             this.txb_cstunit.Size = new System.Drawing.Size(100, 21);
             this.txb_cstunit.TabIndex = 1;
             // 
             // txb_cstcomm
             // 
-            this.txb_cstcomm.Location = new System.Drawing.Point(82, 191);
+            this.txb_cstcomm.Location = new System.Drawing.Point(101, 191);
             this.txb_cstcomm.Name = "txb_cstcomm";
             this.txb_cstcomm.Size = new System.Drawing.Size(100, 21);
             this.txb_cstcomm.TabIndex = 1;
             // 
             // txb_remark
             // 
-            this.txb_remark.Location = new System.Drawing.Point(82, 217);
+            this.txb_remark.Location = new System.Drawing.Point(101, 217);
             this.txb_remark.Name = "txb_remark";
             this.txb_remark.Size = new System.Drawing.Size(100, 21);
             this.txb_remark.TabIndex = 1;
             // 
             // txb_cstrep
             // 
-            this.txb_cstrep.Location = new System.Drawing.Point(82, 165);
+            this.txb_cstrep.Location = new System.Drawing.Point(101, 165);
             this.txb_cstrep.Name = "txb_cstrep";
             this.txb_cstrep.Size = new System.Drawing.Size(100, 21);
             this.txb_cstrep.TabIndex = 1;
@@ -222,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 284);
+            this.ClientSize = new System.Drawing.Size(582, 284);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txb_remark);

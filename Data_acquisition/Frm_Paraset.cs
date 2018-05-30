@@ -27,11 +27,16 @@ namespace Data_acquisition
             {
                 MultiLanguage.LoadLanguage(this, "Chinese");
                 lan = "中文名称";
+                dataGridView1.Columns[0].HeaderText = "名称"; dataGridView1.Columns[1].HeaderText = "单位";
+                dataGridView2.Columns[0].HeaderText = "名称"; dataGridView2.Columns[1].HeaderText = "单位";
+                
             }
             else if (Form_Main.lan == "English")
             {
                 MultiLanguage.LoadLanguage(this, "English");
                 lan = "英文名称";
+                dataGridView1.Columns[0].HeaderText = "Name"; dataGridView1.Columns[1].HeaderText = "Unit";
+                dataGridView2.Columns[0].HeaderText = "Name"; dataGridView2.Columns[1].HeaderText = "Unit";
             }
 
 
@@ -53,7 +58,9 @@ namespace Data_acquisition
             {
                 int sec_index = Convert.ToInt16(temp[i]);
                 int index = dataGridView1.Rows.Add();
+                if (Form_Main.lan == "Chinese")
                 dataGridView1.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[sec_index - 1]["中文名称"];
+                else dataGridView1.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[sec_index - 1]["英文名称"];
                 dataGridView1.Rows[index].Cells[1].Value = Form_Main.dt_para.Rows[sec_index - 1]["公制单位"];
                 dataGridView1.Rows[index].Cells[2].Value = Form_Main.dt_para.Rows[sec_index - 1]["序号"];
                 dataGridView1.Rows[index].HeaderCell.Value = string.Format("{0}", i + 1);
@@ -67,7 +74,9 @@ namespace Data_acquisition
             {
                 int sec_index = Convert.ToInt16(temp1[i]);
                 int index = dataGridView2.Rows.Add();
+                if (Form_Main.lan == "Chinese")
                 dataGridView2.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[sec_index - 1]["中文名称"];
+                else dataGridView2.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[sec_index - 1]["英文名称"];
                 dataGridView2.Rows[index].Cells[1].Value = Form_Main.dt_para.Rows[sec_index - 1]["公制单位"];
                 dataGridView2.Rows[index].Cells[2].Value = Form_Main.dt_para.Rows[sec_index - 1]["序号"];
                 dataGridView2.Rows[index].HeaderCell.Value = string.Format("{0}", i + 1);

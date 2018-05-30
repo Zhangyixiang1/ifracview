@@ -1,5 +1,6 @@
 ﻿using Data_acquisition.Comm;
 using Data_acquisition.Ctrl;
+using Data_acquisiton;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,11 +23,14 @@ namespace Data_acquisition
 
         private void Frm_Chnset_Load(object sender, EventArgs e)
         {
+           
+
             //0528修改，曲线daq的参数设置，行数从30开始，即混砂橇
-          dt = Form_Main.dt_para.Clone();
-            for (int i = 0; i < Form_Main.dt_para.Rows.Count-30; i++) {
-               
-                dt.Rows.Add( Form_Main.dt_para.Rows[i + 30].ItemArray);
+            dt = Form_Main.dt_para.Clone();
+            for (int i = 0; i < Form_Main.dt_para.Rows.Count - 30; i++)
+            {
+
+                dt.Rows.Add(Form_Main.dt_para.Rows[i + 30].ItemArray);
             }
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Width = 40;
@@ -34,8 +38,21 @@ namespace Data_acquisition
             dataGridView1.Columns["加快捷键"].Visible = false; dataGridView1.Columns["减快捷键"].Visible = false;
             dataGridView1.Columns["幅度"].Visible = false; dataGridView1.Columns["启用快捷键"].Visible = false;
             dataGridView1.Columns["序号"].ReadOnly = true;
-          
 
+            //语言切换
+            if (Form_Main.lan == "Chinese")
+            {
+                MultiLanguage.LoadLanguage(this, "Chinese");
+
+            }
+            else if (Form_Main.lan == "English")
+            {
+                MultiLanguage.LoadLanguage(this, "English");
+                //表头
+                dataGridView1.Columns[0].HeaderText = "ID"; dataGridView1.Columns[1].HeaderText = "CH Name"; dataGridView1.Columns[2].HeaderText = "EN Name";
+                dataGridView1.Columns[3].HeaderText = "EN Unit"; dataGridView1.Columns[4].HeaderText = "Metric Unit"; dataGridView1.Columns[5].HeaderText = "MAX";
+                dataGridView1.Columns[6].HeaderText = "MIN"; dataGridView1.Columns[7].HeaderText = "Factor"; dataGridView1.Columns[8].HeaderText = "Offset";
+            }
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -43,7 +60,9 @@ namespace Data_acquisition
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 btn_confirm.Enabled = true;
+                if(Form_Main.lan=="Chinese")
                 label1.Text = dataGridView1.SelectedRows[0].Cells["中文名称"].Value.ToString();
+                else label1.Text = dataGridView1.SelectedRows[0].Cells["英文名称"].Value.ToString();
                 txb_add.Text = dataGridView1.SelectedRows[0].Cells["加快捷键"].Value.ToString();
                 txb_sub.Text = dataGridView1.SelectedRows[0].Cells["减快捷键"].Value.ToString();
                 txb_value.Text = dataGridView1.SelectedRows[0].Cells["幅度"].Value.ToString();
@@ -132,7 +151,7 @@ namespace Data_acquisition
         private void btn_ok_Click(object sender, EventArgs e)
         {
             //0528修改，临时的表要修改到Form_main.dt_para
-           
+
             for (int i = 0; i < Form_Main.dt_para.Rows.Count - 30; i++)
             {
                 Form_Main.dt_para.Rows[i + 30].ItemArray = dt.Rows[i].ItemArray;
@@ -142,9 +161,9 @@ namespace Data_acquisition
             XmlDocument xml = new XmlDocument();
             xml.Load(path);
             XmlNodeList list = xml.GetElementsByTagName("item");
-            for (int i = 0; i < list.Count-30; i++)
+            for (int i = 0; i < list.Count - 30; i++)
             {
-                list[i+30].Attributes["中文名称"].Value = dataGridView1.Rows[i].Cells["中文名称"].Value.ToString();
+                list[i + 30].Attributes["中文名称"].Value = dataGridView1.Rows[i].Cells["中文名称"].Value.ToString();
                 list[i + 30].Attributes["英文名称"].Value = dataGridView1.Rows[i].Cells["英文名称"].Value.ToString();
                 list[i + 30].Attributes["英制单位"].Value = dataGridView1.Rows[i].Cells["英制单位"].Value.ToString();
                 list[i + 30].Attributes["公制单位"].Value = dataGridView1.Rows[i].Cells["公制单位"].Value.ToString();
@@ -152,7 +171,7 @@ namespace Data_acquisition
                 list[i + 30].Attributes["最小值"].Value = dataGridView1.Rows[i].Cells["最小值"].Value.ToString();
                 list[i + 30].Attributes["因子"].Value = dataGridView1.Rows[i].Cells["因子"].Value.ToString();
                 list[i + 30].Attributes["偏移量"].Value = dataGridView1.Rows[i].Cells["偏移量"].Value.ToString();
-                Form_Main.offset[i + +30+1] = Convert.ToDouble(dataGridView1.Rows[i].Cells["偏移量"].Value.ToString());
+                Form_Main.offset[i + +30 + 1] = Convert.ToDouble(dataGridView1.Rows[i].Cells["偏移量"].Value.ToString());
                 list[i + 30].Attributes["加快捷键"].Value = dataGridView1.Rows[i].Cells["加快捷键"].Value.ToString();
                 list[i + 30].Attributes["减快捷键"].Value = dataGridView1.Rows[i].Cells["减快捷键"].Value.ToString();
                 list[i + 30].Attributes["启用快捷键"].Value = dataGridView1.Rows[i].Cells["启用快捷键"].Value.ToString();

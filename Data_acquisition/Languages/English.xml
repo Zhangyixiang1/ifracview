@@ -14,6 +14,8 @@
       <Control name="系统设置ToolStripMenuItem1" text="System Settings"/>
       <Control name="通道设置ToolStripMenuItem" text="Channel Settings"/>
       <Control name="图像编辑ToolStripMenuItem1" text="Graph Edit"/>
+      <Control name="参数设置ToolStripMenuItem" text="Para Settings"/>
+      <Control name="参数校准ToolStripMenuItem1" text="Para Calibration"/>
       <Control name="视图ToolStripMenuItem1" text="Window"/>
       <Control name="视图1ToolStripMenuItem1" text="Window1"/>
       <Control name="视图2ToolStripMenuItem1" text="Window2"/>
@@ -66,8 +68,9 @@
       <Control name="btn_blenderstop" text="Stop"/>
       <Control name="btn_blenderhold" text="Hold"/>
       <Control name="btn_blendernext" text="Next"/>
-      <Control name="rdbtn_auto" text="Stage Auto"/>
-      <Control name="rdbtn_hand" text="Stage Hand"/>
+      <Control name="groupBox5" text="Rights"/>
+      <Control name="label11" text="iFracView"/>
+      <Control name="label12" text="Blender"/>
       <Control name="label10" text="Stage:"/>
       <Control name="label2" text="Stage Progress"/>
       <Control name="label1" text="Job Progress"/>
@@ -133,7 +136,7 @@
     <!--新建施工界面-->
     <Name>Frm_creat</Name>
     <Controls>
-      <Control name="Frm_creat" text="Information"/>
+      <Control name="Frm_creat" text="Job Creat"/>
       <Control name="label1" text="Oil Field"/>
       <Control name="label2" text="Well No."/>
       <Control name="label10" text="Job No."/>
@@ -145,6 +148,24 @@
       <Control name="label8" text="Lease Leader"/>
       <Control name="label9" text="Comment"/>
       <Control name="btn_OK" text="OK"/>
+      <Control name="tabPage1" text="Information"/>
+      <Control name="tabPage2" text="Communication"/>
+      <Control name="label19" text="Blender"/>
+      <Control name="label18" text="Pump1"/>
+      <Control name="label17" text="Pump2"/>
+      <Control name="label16" text="Pump3"/>
+      <Control name="label15" text="Pump4"/>
+      <Control name="label14" text="Pump5"/>
+      <Control name="label13" text="Pump6"/>
+      <Control name="label12" text="Pump7"/>
+      <Control name="label11" text="Pump8"/>
+      <Control name="btn_confirm" text="Apply"/>
+      <Control name="label22" text="Tube Pressure"/>
+      <Control name="label25" text="Casing Pressure"/>
+      <Control name="label23" text="Rate(WH)"/>
+      <Control name="label24" text="Density(WH)"/>
+      <Control name="label21" text="Stage Sync Enabled"/>
+      
     </Controls>
   </Form>
   <Form>
@@ -176,6 +197,14 @@
       <Control name="btn_OK" text="OK"/>
       <Control name="btn_Cancel" text="Cancel"/>
       <Control name="tabPage2" text="Series Port"/>
+      <Control name="rdbtn_stander" text="Stander"/>
+      <Control name="button1" text="Edit"/>
+      <Control name="btn_add" text="Add"/>
+      <Control name="btn_remove" text="Remove"/>
+      <Control name="btn_series" text="Set"/>
+      <Control name="btn_add1" text="Add"/>
+      <Control name="btn_remove1" text="Remove"/>
+      
     </Controls>
   </Form>
   <Form>
@@ -214,6 +243,16 @@
       <Control name="rdb_chn" text="中文"/>
       <Control name="btn_OK" text="OK"/>
       <Control name="btn_cancel" text="Cancel"/>
+      <Control name="label2" text="Blender"/>
+      <Control name="label3" text="Pump1"/>
+      <Control name="label4" text="Pump2"/>
+      <Control name="label5" text="Pump3"/>
+      <Control name="label6" text="Pump4"/>
+      <Control name="label7" text="Pump5"/>
+      <Control name="label8" text="Pump6"/>
+      <Control name="label9" text="Pump7"/>
+      <Control name="label10" text="Pump8"/>
+      <Control name="btn_confirm" text="Apply"/>
     </Controls>
   </Form>
   <Form>
@@ -229,6 +268,76 @@
       <Control name="btn_cancel" text="Cancel"/>
       <Control name="label2" text="Min"/>
       <Control name="label1" text="Max"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--管汇界面-->
+    <Name>Frm_Manifold</Name>
+    <Controls>
+      <Control name="label8" text="Pump1"/>
+      <Control name="label9" text="Pump2"/>
+      <Control name="label10" text="Pump3"/>
+      <Control name="label11" text="Pump4"/>
+      <Control name="label15" text="Pupm5"/>
+      <Control name="label14" text="Pump6"/>
+      <Control name="label13" text="Pump7"/>
+      <Control name="label12" text="Pump8"/>
+      <Control name="label76" text="Blender"/>
+      <Control name="label20" text="DryAdd"/>
+      <Control name="label21" text="Proppant"/>
+      <Control name="label23" text="ChemAdd"/>
+      <Control name="label80" text="Sand Tank"/>
+      <Control name="label79" text="Water Tank"/>
+      <Control name="label5" text="Oil Field"/>
+      <Control name="label1" text="Well No."/>
+      <Control name="label3" text="Job"/>
+      <Control name="label4" text="Stage"/>
+      <Control name="label25" text="Stage Pro."/>
+      <Control name="label24" text="Job Pro."/>
+       <Control name="label16" text="Tank"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--参数设置界面-->
+    <Name>Frm_Chnset</Name>
+    <Controls>
+      <Control name="Frm_Chnset" text="Para Settings"/>
+      <Control name="label1" text="Name"/>
+      <Control name="label2" text="Add"/>
+      <Control name="label3" text="Sub"/>
+      <Control name="label4" text="Value"/>
+      <Control name="checkBox1" text="Enabled"/>
+      <Control name="btn_confirm" text="Apply"/>
+      <Control name="btn_ok" text="OK"/>
+      <Control name="btn_close" text="Close"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--报表格式-->
+    <Name>Frm_report</Name>
+    <Controls>
+      <Control name="Frm_report" text="Report Format"/>
+      <Control name="label1" text="Title"/>
+      <Control name="label2" text="Oil Feild"/>
+      <Control name="label3" text="Well No."/>
+      <Control name="label4" text="Client Name"/>
+      <Control name="label5" text="Client Rep"/>
+      <Control name="label6" text="Lease"/>
+      <Control name="label9" text="Lease Rep"/>
+      <Control name="label7" text="Lease Leader"/>
+      <Control name="label8" text="Comment"/>
+      <Control name="btn_OK" text="Next"/>
+    </Controls>
+  </Form>
+  <Form>
+    <!--串口设置-->
+    <Name>Frm_serial</Name>
+    <Controls>
+      <Control name="Frm_serial" text="Serial Settings"/>
+      <Control name="label1" text="Port"/>
+      <Control name="label2" text="Baud Rate"/>
+      <Control name="btn_OK" text="OK"/>
+      <Control name="btn_cancel" text="Cancel"/>
     </Controls>
   </Form>
 </Lan>

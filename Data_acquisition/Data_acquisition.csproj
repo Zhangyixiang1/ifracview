@@ -157,8 +157,7 @@
     </Reference>
     <Reference Include="TwinCAT.Ads, Version=4.2.109.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TwinCAT.Ads.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>C:\Users\zhangyx1\Downloads\c#与twincatplc 之间通过变量名进行通讯\C#读写程序\c#程序\writeread\writeread\bin\Debug\TwinCAT.Ads.dll</HintPath>
     </Reference>
     <Reference Include="ZedGraph, Version=5.1.0.621, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

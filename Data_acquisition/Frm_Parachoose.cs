@@ -30,11 +30,17 @@ namespace Data_acquisition
             {
                 MultiLanguage.LoadLanguage(this, "Chinese");
                 lan = "中文名称";
+                groupBox2.Text = "参数列表";
+                btn_OK.Text = "确认";
+                btn_Cancel.Text = "取消";
             }
             else if (Form_Main.lan == "English")
             {
                 MultiLanguage.LoadLanguage(this, "English");
                 lan = "英文名称";
+                groupBox2.Text = "Para List";
+                btn_OK.Text = "OK";
+                btn_Cancel.Text = "Cancel";
             }
 
             //初始化listbox1
@@ -43,7 +49,7 @@ namespace Data_acquisition
             xml.Load(path);
             XmlNodeList list = xml.GetElementsByTagName("item");
 
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 30; i < list.Count; i++)
             {
                 XmlNode node = list.Item(i);
                 string Index = node.Attributes["序号"].Value;
@@ -66,7 +72,7 @@ namespace Data_acquisition
                 for (int i = 0; i < dgv.Rows.Count; i++)
                 {
 
-                    if (dgv.Rows[i].Cells[2].Value == Form_Main.dt_para.Rows[listBox1.SelectedIndex]["序号"])
+                    if (dgv.Rows[i].Cells[2].Value == Form_Main.dt_para.Rows[listBox1.SelectedIndex+30]["序号"])
                     {
                         MessageBox.Show("参数已经选择，请勾选其他参数！"); return;
                     }
@@ -76,18 +82,21 @@ namespace Data_acquisition
                 if (sec_index == -1)
                 {
                     int index = dgv.Rows.Add();
-                    dgv.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex]["中文名称"];
-                    dgv.Rows[index].Cells[1].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex]["公制单位"];
-                    dgv.Rows[index].Cells[2].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex]["序号"];
+                    if(Form_Main.lan=="Chinese")
+                    dgv.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["中文名称"];
+                    else dgv.Rows[index].Cells[0].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["英文名称"];
+                    dgv.Rows[index].Cells[1].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["公制单位"];
+                    dgv.Rows[index].Cells[2].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["序号"];
                     dgv.Rows[index].HeaderCell.Value = string.Format("{0}", index + 1);
                 }
                 //更改选择参数
                 else
                 {
-                   
-                    dgv.Rows[sec_index].Cells[0].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex]["中文名称"];
-                    dgv.Rows[sec_index].Cells[1].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex]["公制单位"];
-                    dgv.Rows[sec_index].Cells[2].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex]["序号"];
+                    if (Form_Main.lan == "Chinese")
+                    dgv.Rows[sec_index].Cells[0].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["中文名称"];
+                    else dgv.Rows[sec_index].Cells[0].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["英文名称"];
+                    dgv.Rows[sec_index].Cells[1].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["公制单位"];
+                    dgv.Rows[sec_index].Cells[2].Value = Form_Main.dt_para.Rows[listBox1.SelectedIndex + 30]["序号"];
 
 
                 }

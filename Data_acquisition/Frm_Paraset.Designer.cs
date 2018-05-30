@@ -193,9 +193,9 @@
             this.rdbrn_fracpro.AutoSize = true;
             this.rdbrn_fracpro.Location = new System.Drawing.Point(6, 47);
             this.rdbrn_fracpro.Name = "rdbrn_fracpro";
-            this.rdbrn_fracpro.Size = new System.Drawing.Size(137, 16);
+            this.rdbrn_fracpro.Size = new System.Drawing.Size(113, 16);
             this.rdbrn_fracpro.TabIndex = 5;
-            this.rdbrn_fracpro.Text = "FracproPt(.csv)格式";
+            this.rdbrn_fracpro.Text = "FracproPt(.csv)";
             this.rdbrn_fracpro.UseVisualStyleBackColor = true;
             // 
             // groupBox3

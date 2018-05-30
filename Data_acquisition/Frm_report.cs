@@ -1,4 +1,5 @@
 ﻿using Data_acquisition.Comm;
+using Data_acquisiton;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,8 @@ namespace Data_acquisition
 
         private void Frm_report_Load(object sender, EventArgs e)
         {
+
+
             //配置文件读取井队信息
             //txb_title.Text = Pub_func.GetValue("title");
             //txb_wellname.Text = Pub_func.GetValue("wellname");
@@ -37,6 +40,17 @@ namespace Data_acquisition
             //txb_remark.Text = Pub_func.GetValue("remark");
 
             //从数据库获得当前井队信息
+            //语言切换
+            if (Form_Main.lan == "Chinese")
+            {
+                MultiLanguage.LoadLanguage(this, "Chinese");
+
+            }
+            else if (Form_Main.lan == "English")
+            {
+                MultiLanguage.LoadLanguage(this, "English");
+            }
+
 
             string ConnStr = "Data Source=localhost;" +
                             "Initial Catalog=ifracview;User Id=root;Password=hhdq;";
@@ -50,9 +64,18 @@ namespace Data_acquisition
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Width = 100;
             dataGridView1.Columns[1].ReadOnly = true;
-            dataGridView1.Columns[1].HeaderText = "阶段号";
-            dataGridView1.Columns[2].HeaderText = "阶段类型";
-            dataGridView1.Columns[3].HeaderText = "支撑剂名称";
+            if (Form_Main.lan == "Chinese")
+            {
+                dataGridView1.Columns[1].HeaderText = "阶段号";
+                dataGridView1.Columns[2].HeaderText = "阶段类型";
+                dataGridView1.Columns[3].HeaderText = "支撑剂名称";
+            }
+            else {
+
+                dataGridView1.Columns[1].HeaderText = "Stage";
+                dataGridView1.Columns[2].HeaderText = "Mode";
+                dataGridView1.Columns[3].HeaderText = "Proppant";
+            }
             xmlload();
 
         }

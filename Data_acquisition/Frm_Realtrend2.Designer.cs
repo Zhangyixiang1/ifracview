@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lbl_blender2 = new System.Windows.Forms.Label();
             this.lbl_blender1 = new System.Windows.Forms.Label();
@@ -140,14 +140,14 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -158,32 +158,32 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(9, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 15F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("宋体", 15F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridView1.RowTemplate.Height = 20;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -251,7 +251,6 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(239, 38);
@@ -259,7 +258,7 @@
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 36;
             this.label4.Text = "阶段:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -270,19 +269,18 @@
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 37;
             this.label3.Text = "段号:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(239, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 38;
             this.label2.Text = "井号:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -290,17 +288,17 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 39;
             this.label1.Text = "油田:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_wellinfo
             // 
             this.lbl_wellinfo.AutoSize = true;
             this.lbl_wellinfo.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_wellinfo.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellinfo.Location = new System.Drawing.Point(88, 12);
+            this.lbl_wellinfo.Location = new System.Drawing.Point(126, 12);
             this.lbl_wellinfo.Name = "lbl_wellinfo";
             this.lbl_wellinfo.Size = new System.Drawing.Size(31, 20);
             this.lbl_wellinfo.TabIndex = 40;
@@ -311,7 +309,7 @@
             this.lbl_wellnum.AutoSize = true;
             this.lbl_wellnum.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_wellnum.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellnum.Location = new System.Drawing.Point(309, 12);
+            this.lbl_wellnum.Location = new System.Drawing.Point(365, 12);
             this.lbl_wellnum.Name = "lbl_wellnum";
             this.lbl_wellnum.Size = new System.Drawing.Size(31, 20);
             this.lbl_wellnum.TabIndex = 40;
@@ -322,7 +320,7 @@
             this.lbl_stagebig.AutoSize = true;
             this.lbl_stagebig.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_stagebig.ForeColor = System.Drawing.Color.White;
-            this.lbl_stagebig.Location = new System.Drawing.Point(88, 38);
+            this.lbl_stagebig.Location = new System.Drawing.Point(126, 38);
             this.lbl_stagebig.Name = "lbl_stagebig";
             this.lbl_stagebig.Size = new System.Drawing.Size(31, 20);
             this.lbl_stagebig.TabIndex = 40;
@@ -333,7 +331,7 @@
             this.lbl_stage.AutoSize = true;
             this.lbl_stage.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_stage.ForeColor = System.Drawing.Color.White;
-            this.lbl_stage.Location = new System.Drawing.Point(309, 38);
+            this.lbl_stage.Location = new System.Drawing.Point(365, 38);
             this.lbl_stage.Name = "lbl_stage";
             this.lbl_stage.Size = new System.Drawing.Size(31, 20);
             this.lbl_stage.TabIndex = 40;
@@ -343,7 +341,7 @@
             // 
             this.radProgressBar2.BackColor = System.Drawing.Color.Black;
             this.radProgressBar2.ForeColor = System.Drawing.Color.White;
-            this.radProgressBar2.Location = new System.Drawing.Point(576, 39);
+            this.radProgressBar2.Location = new System.Drawing.Point(613, 39);
             this.radProgressBar2.Name = "radProgressBar2";
             this.radProgressBar2.SeparatorColor1 = System.Drawing.Color.Black;
             this.radProgressBar2.SeparatorColor2 = System.Drawing.Color.Black;
@@ -376,7 +374,7 @@
             // 
             this.radProgressBar1.BackColor = System.Drawing.Color.Black;
             this.radProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.radProgressBar1.Location = new System.Drawing.Point(576, 13);
+            this.radProgressBar1.Location = new System.Drawing.Point(613, 13);
             this.radProgressBar1.Name = "radProgressBar1";
             this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.Black;
             this.radProgressBar1.SeparatorColor2 = System.Drawing.Color.Black;
@@ -413,7 +411,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(402, 38);
+            this.label5.Location = new System.Drawing.Point(439, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 20);
             this.label5.TabIndex = 41;
@@ -424,7 +422,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(402, 12);
+            this.label6.Location = new System.Drawing.Point(439, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 20);
             this.label6.TabIndex = 42;
@@ -544,7 +542,7 @@
             this.lbl_stagetime.AutoSize = true;
             this.lbl_stagetime.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.lbl_stagetime.ForeColor = System.Drawing.Color.White;
-            this.lbl_stagetime.Location = new System.Drawing.Point(697, 11);
+            this.lbl_stagetime.Location = new System.Drawing.Point(734, 11);
             this.lbl_stagetime.Name = "lbl_stagetime";
             this.lbl_stagetime.Size = new System.Drawing.Size(82, 22);
             this.lbl_stagetime.TabIndex = 54;
@@ -555,7 +553,7 @@
             this.lbl_totaltime.AutoSize = true;
             this.lbl_totaltime.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.lbl_totaltime.ForeColor = System.Drawing.Color.White;
-            this.lbl_totaltime.Location = new System.Drawing.Point(697, 37);
+            this.lbl_totaltime.Location = new System.Drawing.Point(734, 37);
             this.lbl_totaltime.Name = "lbl_totaltime";
             this.lbl_totaltime.Size = new System.Drawing.Size(82, 22);
             this.lbl_totaltime.TabIndex = 55;

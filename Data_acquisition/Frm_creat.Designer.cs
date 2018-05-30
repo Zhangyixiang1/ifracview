@@ -56,9 +56,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmb_wellden = new System.Windows.Forms.ComboBox();
             this.cmb_wellflow = new System.Windows.Forms.ComboBox();
+            this.cmb_wellpipe = new System.Windows.Forms.ComboBox();
             this.cmb_wellpre = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -85,8 +87,6 @@
             this.txb_daq = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.cmb_wellpipe = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -354,9 +354,9 @@
             "密度计3",
             "密度计4",
             "混砂橇"});
-            this.cmb_wellden.Location = new System.Drawing.Point(79, 91);
+            this.cmb_wellden.Location = new System.Drawing.Point(98, 91);
             this.cmb_wellden.Name = "cmb_wellden";
-            this.cmb_wellden.Size = new System.Drawing.Size(121, 20);
+            this.cmb_wellden.Size = new System.Drawing.Size(102, 20);
             this.cmb_wellden.TabIndex = 2;
             // 
             // cmb_wellflow
@@ -367,10 +367,23 @@
             "流量计2",
             "压裂泵",
             "混砂橇"});
-            this.cmb_wellflow.Location = new System.Drawing.Point(79, 65);
+            this.cmb_wellflow.Location = new System.Drawing.Point(98, 65);
             this.cmb_wellflow.Name = "cmb_wellflow";
-            this.cmb_wellflow.Size = new System.Drawing.Size(121, 20);
+            this.cmb_wellflow.Size = new System.Drawing.Size(102, 20);
             this.cmb_wellflow.TabIndex = 2;
+            // 
+            // cmb_wellpipe
+            // 
+            this.cmb_wellpipe.FormattingEnabled = true;
+            this.cmb_wellpipe.Items.AddRange(new object[] {
+            "压力1",
+            "压力2",
+            "压力3",
+            "压力4"});
+            this.cmb_wellpipe.Location = new System.Drawing.Point(98, 39);
+            this.cmb_wellpipe.Name = "cmb_wellpipe";
+            this.cmb_wellpipe.Size = new System.Drawing.Size(102, 20);
+            this.cmb_wellpipe.TabIndex = 2;
             // 
             // cmb_wellpre
             // 
@@ -388,9 +401,9 @@
             "压力泵6",
             "压力泵7",
             "压力泵8"});
-            this.cmb_wellpre.Location = new System.Drawing.Point(79, 13);
+            this.cmb_wellpre.Location = new System.Drawing.Point(98, 13);
             this.cmb_wellpre.Name = "cmb_wellpre";
-            this.cmb_wellpre.Size = new System.Drawing.Size(121, 20);
+            this.cmb_wellpre.Size = new System.Drawing.Size(102, 20);
             this.cmb_wellpre.TabIndex = 2;
             // 
             // label24
@@ -410,6 +423,15 @@
             this.label23.Size = new System.Drawing.Size(53, 12);
             this.label23.TabIndex = 0;
             this.label23.Text = "井口流量";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(7, 43);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 12);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "井口套压";
             // 
             // label22
             // 
@@ -646,28 +668,6 @@
             this.label11.Size = new System.Drawing.Size(23, 12);
             this.label11.TabIndex = 12;
             this.label11.Text = "泵8";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(7, 43);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 12);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "井口套压";
-            // 
-            // cmb_wellpipe
-            // 
-            this.cmb_wellpipe.FormattingEnabled = true;
-            this.cmb_wellpipe.Items.AddRange(new object[] {
-            "压力1",
-            "压力2",
-            "压力3",
-            "压力4"});
-            this.cmb_wellpipe.Location = new System.Drawing.Point(79, 39);
-            this.cmb_wellpipe.Name = "cmb_wellpipe";
-            this.cmb_wellpipe.Size = new System.Drawing.Size(121, 20);
-            this.cmb_wellpipe.TabIndex = 2;
             // 
             // Frm_creat
             // 

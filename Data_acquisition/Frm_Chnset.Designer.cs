@@ -74,14 +74,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 473);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(579, 47);
+            this.groupBox1.Size = new System.Drawing.Size(595, 47);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(392, 21);
+            this.checkBox1.Location = new System.Drawing.Point(414, 21);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(84, 16);
             this.checkBox1.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(498, 18);
+            this.btn_confirm.Location = new System.Drawing.Point(506, 18);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(75, 23);
             this.btn_confirm.TabIndex = 3;
@@ -100,7 +100,7 @@
             // 
             // txb_value
             // 
-            this.txb_value.Location = new System.Drawing.Point(341, 19);
+            this.txb_value.Location = new System.Drawing.Point(363, 19);
             this.txb_value.Name = "txb_value";
             this.txb_value.Size = new System.Drawing.Size(36, 21);
             this.txb_value.TabIndex = 2;
@@ -109,7 +109,7 @@
             // txb_sub
             // 
             this.txb_sub.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txb_sub.Location = new System.Drawing.Point(246, 19);
+            this.txb_sub.Location = new System.Drawing.Point(268, 19);
             this.txb_sub.MaxLength = 1;
             this.txb_sub.Name = "txb_sub";
             this.txb_sub.Size = new System.Drawing.Size(36, 21);
@@ -118,7 +118,7 @@
             // txb_add
             // 
             this.txb_add.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txb_add.Location = new System.Drawing.Point(151, 19);
+            this.txb_add.Location = new System.Drawing.Point(173, 19);
             this.txb_add.MaxLength = 1;
             this.txb_add.Name = "txb_add";
             this.txb_add.Size = new System.Drawing.Size(36, 21);
@@ -128,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(297, 23);
+            this.label4.Location = new System.Drawing.Point(319, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 12);
             this.label4.TabIndex = 1;
@@ -137,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 23);
+            this.label3.Location = new System.Drawing.Point(224, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 1;
@@ -146,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 23);
+            this.label2.Location = new System.Drawing.Point(129, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 1;
