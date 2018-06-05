@@ -136,6 +136,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Name = "ParaLine";
             this.Size = new System.Drawing.Size(174, 50);
+            this.Click += new System.EventHandler(this.ParaLine_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,13 +144,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label6;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.CheckBox checkBox1;
     }
 }

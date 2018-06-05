@@ -102,6 +102,16 @@ namespace Data_acquisition.Ctrl
             frm.ShowDialog();
         }
 
+       
+
+        private void ParaLine_Click(object sender, EventArgs e)
+        {
+            Para_choose frm = new Para_choose(this, this.Name);
+            frm.ShowDialog();
+        }
+
+       
+
 
     }
 

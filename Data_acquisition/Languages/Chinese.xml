@@ -278,9 +278,11 @@
       <Control name="label13" text="压裂橇7"/>
       <Control name="label12" text="压裂橇8"/>
       <Control name="label76" text="混砂橇"/>
-      <Control name="label20" text="固态化学品添加剂"/>
+      <Control name="label20" text="固态化学品
+添加剂"/>
       <Control name="label21" text="支撑剂"/>
-      <Control name="label23" text="液态化学品添加剂"/>
+      <Control name="label23" text="液态化学品
+添加剂"/>
       <Control name="label80" text="储砂罐"/>
       <Control name="label79" text="储水罐"/>
       <Control name="label5" text="油田"/>

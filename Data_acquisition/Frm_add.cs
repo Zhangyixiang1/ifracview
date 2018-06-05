@@ -200,6 +200,7 @@ namespace Data_acquisition
                 time = time.AddSeconds(tb1.Rows.Count);
                 time_stage = time_stage.AddSeconds(Convert.ToInt32(tb2.Rows[0][1]));
                 Form_Main.num_stage = num_stage;
+                Form_Main.num_totalstage = Convert.ToInt16(Comm.Pub_func.GetValue("totalstage"));
                 Form_Main.time = time;
                 Form_Main.time_stage = time_stage;
                 
@@ -238,8 +239,49 @@ namespace Data_acquisition
                     line.Clear();
                 }
                 Form_Main.Paralist.Clear(); Form_Main.Loglist.Clear();
-                //刷新曲线
-                ((Form_Main)Application.OpenForms["Form_Main"]).list_add(data);
+
+                //0605新增，追加施工时统计量要赋个初值
+                //blender
+                Form_Main.test[54] = data.Values.ElementAt(data.Count - 1).DATA[54];//井口排出阶段量
+                Form_Main.test[55] = data.Values.ElementAt(data.Count - 1).DATA[55];//吸入阶段总量
+                Form_Main.test[56] = data.Values.ElementAt(data.Count - 1).DATA[56];//排出阶段总量
+                Form_Main.test[57] = data.Values.ElementAt(data.Count - 1).DATA[57];//绞龙1阶段总量
+                Form_Main.test[58] = data.Values.ElementAt(data.Count - 1).DATA[58];//绞龙2阶段总量
+                Form_Main.test[59] = data.Values.ElementAt(data.Count - 1).DATA[59];//绞龙3阶段总量
+                Form_Main.test[60] = data.Values.ElementAt(data.Count - 1).DATA[60];//输砂阶段总量
+                Form_Main.test[61] = data.Values.ElementAt(data.Count - 1).DATA[61];//液添1阶段总量
+                Form_Main.test[62] = data.Values.ElementAt(data.Count - 1).DATA[62];//液添2阶段总量
+                Form_Main.test[63] = data.Values.ElementAt(data.Count - 1).DATA[63];//液添3阶段总量
+                Form_Main.test[64] = data.Values.ElementAt(data.Count - 1).DATA[64];//液添阶段总量
+                Form_Main.test[65] = data.Values.ElementAt(data.Count - 1).DATA[65];//干添1阶段总量
+                Form_Main.test[66] = data.Values.ElementAt(data.Count - 1).DATA[66];//干添2阶段总量
+                Form_Main.test[67] = data.Values.ElementAt(data.Count - 1).DATA[67];//干添阶段总量
+                Form_Main.test[68] = data.Values.ElementAt(data.Count - 1).DATA[68];//井口排出总量
+                Form_Main.test[69] = data.Values.ElementAt(data.Count - 1).DATA[69];//吸入总量
+                Form_Main.test[70] = data.Values.ElementAt(data.Count - 1).DATA[70];//排出总量
+                Form_Main.test[71] = data.Values.ElementAt(data.Count - 1).DATA[71];//蛟龙1总量
+                Form_Main.test[72] = data.Values.ElementAt(data.Count - 1).DATA[72];//蛟龙2总量
+                Form_Main.test[73] = data.Values.ElementAt(data.Count - 1).DATA[73];//蛟龙3总量
+                Form_Main.test[74] = data.Values.ElementAt(data.Count - 1).DATA[74];//蛟龙总量
+                Form_Main.test[75] = data.Values.ElementAt(data.Count - 1).DATA[75];//液添1总量
+                Form_Main.test[76] = data.Values.ElementAt(data.Count - 1).DATA[76];//液添2总量
+                Form_Main.test[77] = data.Values.ElementAt(data.Count - 1).DATA[77];//液添3总量
+                Form_Main.test[78] = data.Values.ElementAt(data.Count - 1).DATA[78];//液添总量
+                Form_Main.test[79] = data.Values.ElementAt(data.Count - 1).DATA[79];//干添1总量
+                Form_Main.test[80] = data.Values.ElementAt(data.Count - 1).DATA[80];//干添2总量
+                Form_Main.test[81] = data.Values.ElementAt(data.Count - 1).DATA[81];//干添总量
+                //pumps
+                for (int i =1; i <=8; i++) {
+                    Form_Main.test[104 + (i - 1) * 5] = data.Values.ElementAt(data.Count - 1).DATA[104 + (i - 1) * 5];//阶段量
+                    Form_Main.test[105 + (i - 1) * 5] = data.Values.ElementAt(data.Count - 1).DATA[105 + (i - 1) * 5];//累积量
+                }
+                Form_Main.test[141] = data.Values.ElementAt(data.Count - 1).DATA[141];//泵总排量
+                Form_Main.test[142] = data.Values.ElementAt(data.Count - 1).DATA[142];//泵总阶段累计
+                Form_Main.test[143] = data.Values.ElementAt(data.Count - 1).DATA[143];//泵总累计                                                                 
+
+
+                    //刷新曲线
+                    ((Form_Main)Application.OpenForms["Form_Main"]).list_add(data);
                 if (progressBar1.InvokeRequired)
                 {
                     progressBar1.Invoke(new Action(() => progressBar1.Visible = false));
@@ -254,8 +296,8 @@ namespace Data_acquisition
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("数据包错误，请重新选择数据文件！");
+                //throw;
             }
 
         }

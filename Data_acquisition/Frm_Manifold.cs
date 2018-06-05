@@ -18,7 +18,8 @@ namespace Data_acquisition
             InitializeComponent();
         }
 
-        public void chart_initial() {
+        public void chart_initial()
+        {
             //zed
             GraphPane myPane = zedGraphControl1.GraphPane;
             myPane.Fill = new Fill(Color.Black);
@@ -202,7 +203,7 @@ namespace Data_acquisition
 
 
             zedGraphControl1.AxisChange();
-        
+
         }
 
 
@@ -248,39 +249,39 @@ namespace Data_acquisition
             }
             else if (Form_Main.lan == "English")
             {
-               zedGraphControl1.GraphPane.XAxis.Title.Text = "Time(min)";
-               zedGraphControl1.GraphPane.CurveList[0].Label.Text = "Tub Pressure";
-               zedGraphControl1.GraphPane.CurveList[1].Label.Text = "Discharge Rate";
-               zedGraphControl1.GraphPane.CurveList[2].Label.Text = "Proppant Conc.";
-               zedGraphControl1.AxisChange();
-               zedGraphControl1.Invalidate();
-               //datagridview初始化
-               int index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "Discharge";
-               //index = dataGridView1.Rows.Add();
-               //dataGridView1.Rows[index].Cells[0].Value = "排出";
-               index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "Proppant";
-               index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "DryAdd1";
-               index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "DryAdd2";
-               index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "Chem1";
-               index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "Chem2";
-               index = dataGridView1.Rows.Add();
-               dataGridView1.Rows[index].Cells[0].Value = "Chem3";
-               index = dataGridView1.Rows.Add();
-               //液添4暂时没有数据
-               dataGridView1.Rows[index].Cells[0].Value = "Chem4";
-               dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
-               dataGridView1.Columns[0].HeaderText = "Name";
-               dataGridView1.Columns[0].HeaderText = "Stage";
-               dataGridView1.Columns[0].HeaderText = "Total";
+                zedGraphControl1.GraphPane.XAxis.Title.Text = "Time(min)";
+                zedGraphControl1.GraphPane.CurveList[0].Label.Text = "Tub Pressure";
+                zedGraphControl1.GraphPane.CurveList[1].Label.Text = "Discharge Rate";
+                zedGraphControl1.GraphPane.CurveList[2].Label.Text = "Proppant Conc.";
+                zedGraphControl1.AxisChange();
+                zedGraphControl1.Invalidate();
+                //datagridview初始化
+                int index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "Discharge";
+                //index = dataGridView1.Rows.Add();
+                //dataGridView1.Rows[index].Cells[0].Value = "排出";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "Proppant";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "DryAdd1";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "DryAdd2";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "Chem1";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "Chem2";
+                index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = "Chem3";
+                index = dataGridView1.Rows.Add();
+                //液添4暂时没有数据
+                dataGridView1.Rows[index].Cells[0].Value = "Chem4";
+                dataGridView1.Rows[index].Cells[1].Value = "0.0" + " L"; dataGridView1.Rows[index].Cells[2].Value = "0.0" + " L";
+                dataGridView1.Columns[0].HeaderText = "Name";
+                dataGridView1.Columns[0].HeaderText = "Stage";
+                dataGridView1.Columns[0].HeaderText = "Total";
             }
-            
-          
+
+
             // dataGridView1.DefaultCellStyle.BackColor = Color.White;
             // dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(218, 226, 230);
             dataGridView1.ClearSelection();
@@ -309,29 +310,46 @@ namespace Data_acquisition
                 ////吸入
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(8)) + " m3/min";//速率
                 //dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(39)) + " m3";//总量
-                //井口排出量
                 //dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.value_blender.GetValue(9)) + " m3";//阶段
                 //dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.value_blender.GetValue(40)) + " m3";//总量
+
+                //井口排出量
                 dataGridView1.Rows[0].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[54]) + " m3";//阶段
                 dataGridView1.Rows[0].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[68]) + " m3";//总量
+                dataGridView1.Rows[0].Cells[1].Style.ForeColor = Color.FromArgb(0, 176, 240);
+                dataGridView1.Rows[0].Cells[2].Style.ForeColor = Color.FromArgb(0, 176, 240);
                 //支撑剂
                 dataGridView1.Rows[1].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[60]) + " kg";//阶段
                 dataGridView1.Rows[1].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[74]) + " kg";//总量
+                dataGridView1.Rows[1].Cells[1].Style.ForeColor = Color.FromArgb(234, 150, 81);
+                dataGridView1.Rows[1].Cells[2].Style.ForeColor = Color.FromArgb(234, 150, 81);
                 //干添1
                 dataGridView1.Rows[2].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[65]) + " kg";//阶段
                 dataGridView1.Rows[2].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[79]) + " kg";//总量
+                dataGridView1.Rows[2].Cells[1].Style.ForeColor = Color.FromArgb(255, 198, 26);
+                dataGridView1.Rows[2].Cells[2].Style.ForeColor = Color.FromArgb(255, 198, 26);
                 //干添2
                 dataGridView1.Rows[3].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[66]) + " kg";//阶段
                 dataGridView1.Rows[3].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[80]) + " kg";//总量
+                dataGridView1.Rows[3].Cells[1].Style.ForeColor = Color.FromArgb(255, 198, 26);
+                dataGridView1.Rows[3].Cells[2].Style.ForeColor = Color.FromArgb(255, 198, 26);
                 //液添1
                 dataGridView1.Rows[4].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[61]) + " L";//阶段
                 dataGridView1.Rows[4].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[75]) + " L";//总量
+                dataGridView1.Rows[4].Cells[1].Style.ForeColor = Color.FromArgb(185, 139, 0);
+                dataGridView1.Rows[4].Cells[2].Style.ForeColor = Color.FromArgb(185, 139, 0);
                 //液添2
                 dataGridView1.Rows[5].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[62]) + " L";//阶段
                 dataGridView1.Rows[5].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[76]) + " L";//总量
+                dataGridView1.Rows[5].Cells[1].Style.ForeColor = Color.FromArgb(185, 139, 0);
+                dataGridView1.Rows[5].Cells[2].Style.ForeColor = Color.FromArgb(185, 139, 0);
                 //液添3
                 dataGridView1.Rows[6].Cells[1].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[63]) + " L";//阶段
                 dataGridView1.Rows[6].Cells[2].Value = trans_point(Form_Main.Paralist.Last().Value.DATA[77]) + " L";//总量
+                dataGridView1.Rows[6].Cells[1].Style.ForeColor = Color.FromArgb(185, 139, 0);
+                dataGridView1.Rows[6].Cells[2].Style.ForeColor = Color.FromArgb(185, 139, 0);
+                dataGridView1.Rows[7].Cells[1].Style.ForeColor = Color.FromArgb(185, 139, 0);
+                dataGridView1.Rows[7].Cells[2].Style.ForeColor = Color.FromArgb(185, 139, 0);
                 //刷新曲线的值
 
                 CurveList list = zedGraphControl1.GraphPane.CurveList;
@@ -376,11 +394,23 @@ namespace Data_acquisition
                         {
                             if (lbl.Tag.ToString() == "HH")
                                 if (lbl.TabIndex == 37) { lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.00"); }
+                                else if (lbl.TabIndex == 36) { lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.000"); }
                                 else { lbl.Text = Form_Main.Paralist.Last().Value.DATA[lbl.TabIndex].ToString("#0.0"); }
+
                         }
                     }
                     else if (ctr is Panel)
                     {
+                        Panel pan = ctr as Panel;
+                        if (pan.Tag != null)
+                        {
+                            if (pan.Tag.ToString() == "HH")
+                            {
+                                double data = Form_Main.Paralist.Last().Value.DATA[pan.TabIndex];
+                                if (data > 0.1) pan.BackColor = Color.FromArgb(192, 0, 0);
+                                else pan.BackColor = Color.FromArgb(0, 176, 240);
+                            }
+                        }
                         refresh(ctr);
                     }
                 }

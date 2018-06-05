@@ -4,12 +4,12 @@
     <!--首界面-->
     <Name>Form_Main</Name>
     <Controlsline>
-      <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" />
-      <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" />
-      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0" max="300" unit="kg/m3" index="35" color="255,128,128" />
-      <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="20" unit="m3/min" index="34" color="0,255,0" />
-      <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" />
-      <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" />
+      <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" visible="true"/>
+      <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" visible="true"/>
+      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0" max="300" unit="kg/m3" index="35" color="255,128,128" visible="true"/>
+      <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="20" unit="m3/min" index="34" color="0,255,0" visible="true"/>
+      <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" visible="true"/>
+      <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" visible="true"/>
     </Controlsline>
     <Controlsshow>
       <Control name="parashow1" tagname="泵1排量" tagname_en="Pump1 Rate" unit="m3/min" index="103" color="0,0,255" />
@@ -268,24 +268,24 @@
     <!--曲线界面1-->
     <Name>Frm_Realtrend</Name>
     <Controlsline>
-      <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" />
-      <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" />
-      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0" max="300" unit="kg/m3" index="35" color="255,128,128" />
-      <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="20" unit="m3/min" index="34" color="0,255,0" />
-      <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" />
-      <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" />
+      <Control name="paraLine1" tagname="井口油压" tagname_en="Tubing Pressure(WH)" min="0" max="120" unit="MPa" index="31" color="255,0,0" visible="true"/>
+      <Control name="paraLine2" tagname="井口套压" tagname_en="Casing Pressure(WH)" min="0" max="120" unit="MPa" index="32" color="255,255,0" visible="true"/>
+      <Control name="paraLine3" tagname="实际砂浓度" tagname_en="Proppant Concentration" min="0" max="300" unit="kg/m3" index="35" color="255,128,128" visible="true"/>
+      <Control name="paraLine4" tagname="井口排出流量" tagname_en="Discharge Rate(WH)" min="0" max="20" unit="m3/min" index="34" color="0,255,0" visible="true"/>
+      <Control name="paraLine5" tagname="混砂车吸入压力" tagname_en="Suction Pressure" min="0" max="20" unit="MPa" index="36" color="107,142,35" visible="true"/>
+      <Control name="paraLine6" tagname="混砂车排出压力" tagname_en="Discharge Pressure" min="0" max="20" unit="MPa" index="37" color="218,112,214" visible="true"/>
     </Controlsline>
   </Form>
   <Form>
     <!--曲线界面2-->
     <Name>Frm_Realtrend2</Name>
     <Controlsline>
-      <Control name="paraLine1" tagname="输砂速率" tagname_en="Proppant Rate" min="0" max="5" unit="ton/min" index="46" color="255,0,0" />
-      <Control name="paraLine2" tagname="液添1流量" tagname_en="Chem1 Rate" min="0" max="170" unit="LPM" index="47" color="255,255,0" />
-      <Control name="paraLine3" tagname="液添2流量" tagname_en="Chem2 Rate" min="0" max="170" unit="LPM" index="48" color="0,0,255" />
-      <Control name="paraLine4" tagname="液添3流量" tagname_en="Chem3 Rate" min="0" max="170" unit="LPM" index="49" color="255,128,128" />
-      <Control name="paraLine5" tagname="干添1流量" tagname_en="DryAdd1 Rate" min="0" max="64" unit="kg/min" index="51" color="0,255,0" />
-      <Control name="paraLine6" tagname="干添2流量" tagname_en="DryAdd2 Rate" min="0" max="64" unit="kg/min" index="52" color="218,112,214" />
+      <Control name="paraLine1" tagname="输砂速率" tagname_en="Proppant Rate" min="0" max="5" unit="ton/min" index="46" color="255,0,0" visible="true"/>
+      <Control name="paraLine2" tagname="液添1流量" tagname_en="Chem1 Rate" min="0" max="170" unit="LPM" index="47" color="255,255,0" visible="true"/>
+      <Control name="paraLine3" tagname="液添2流量" tagname_en="Chem2 Rate" min="0" max="170" unit="LPM" index="48" color="0,0,255" visible="true"/>
+      <Control name="paraLine4" tagname="液添3流量" tagname_en="Chem3 Rate" min="0" max="170" unit="LPM" index="49" color="255,128,128" visible="true"/>
+      <Control name="paraLine5" tagname="干添1流量" tagname_en="DryAdd1 Rate" min="0" max="64" unit="kg/min" index="51" color="0,255,0" visible="true"/>
+      <Control name="paraLine6" tagname="干添2流量" tagname_en="DryAdd2 Rate" min="0" max="64" unit="kg/min" index="52" color="218,112,214" visible="true"/>
     </Controlsline>
   </Form>
   <Form>

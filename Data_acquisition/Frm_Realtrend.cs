@@ -30,35 +30,38 @@ namespace Data_acquisition
         {
             string num = num_line.Substring(num_line.Length - 1);
             //对应编号的曲线重绘，包括上下限和编号
-            switch (num)
+            if (zedGraphControl1.GraphPane.CurveList.Count > 0)
             {
-                case "1":
-                    zedGraphControl1.GraphPane.CurveList[4].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.YAxisList[2].IsVisible = isshow;
-                    break;
-                case "2":
-                    zedGraphControl1.GraphPane.CurveList[2].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.YAxisList[1].IsVisible = isshow;
-                    break;
-                case "3":
-                    zedGraphControl1.GraphPane.CurveList[0].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.YAxisList[0].IsVisible = isshow;
-                    break;
-                case "4":
-                    zedGraphControl1.GraphPane.CurveList[1].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.Y2AxisList[0].IsVisible = isshow;
-                    break;
-                case "5":
-                    zedGraphControl1.GraphPane.CurveList[3].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.Y2AxisList[1].IsVisible = isshow;
-                    break;
-                case "6":
-                    zedGraphControl1.GraphPane.CurveList[5].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.Y2AxisList[2].IsVisible = isshow;
-                    break;
+                switch (num)
+                {
+                    case "1":
+                        zedGraphControl1.GraphPane.CurveList[4].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.YAxisList[2].IsVisible = isshow;
+                        break;
+                    case "2":
+                        zedGraphControl1.GraphPane.CurveList[2].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.YAxisList[1].IsVisible = isshow;
+                        break;
+                    case "3":
+                        zedGraphControl1.GraphPane.CurveList[0].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.YAxisList[0].IsVisible = isshow;
+                        break;
+                    case "4":
+                        zedGraphControl1.GraphPane.CurveList[1].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.Y2AxisList[0].IsVisible = isshow;
+                        break;
+                    case "5":
+                        zedGraphControl1.GraphPane.CurveList[3].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.Y2AxisList[1].IsVisible = isshow;
+                        break;
+                    case "6":
+                        zedGraphControl1.GraphPane.CurveList[5].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.Y2AxisList[2].IsVisible = isshow;
+                        break;
+                }
+                zedGraphControl1.AxisChange();
+                zedGraphControl1.Refresh();
             }
-            zedGraphControl1.AxisChange();
-            zedGraphControl1.Refresh();
         }
         /// <summary>
         /// 读取xml偏好配置文件
@@ -99,6 +102,13 @@ namespace Data_acquisition
                                 if (Form_Main.Unit == 1) ctr.Unit = Form_Main.dt_para.Rows[index - 1]["英制单位"].ToString();
                                 ctr.Color = Comm.ReadColor.getcolor(node.SelectSingleNode("@color").InnerText);
                                 //if (Form_Main.Unit == 1) ctr.Unit = Form_Main.factor_unit[Convert.ToInt16(ctr.Tag)];
+                                bool isvisible = Convert.ToBoolean(node.SelectSingleNode("@visible").InnerText);
+                                ctr.label1.Visible = isvisible;
+                                ctr.label2.Visible = isvisible;
+                                ctr.label3.Visible = isvisible;
+                                ctr.label4.Visible = isvisible;
+                                ctr.label6.Visible = isvisible;
+                                ctr.checkBox1.Checked = isvisible;
                                 ctr.refresh();
 
                             }
@@ -340,7 +350,9 @@ namespace Data_acquisition
             //新增，读取配置文件的曲线颜色信息，更新曲线
             trend_refresh("1"); trend_refresh("2"); trend_refresh("3");
             trend_refresh("4"); trend_refresh("5"); trend_refresh("6");
-
+            trend_refresh(paraLine1.checkBox1.Checked, "1"); trend_refresh(paraLine4.checkBox1.Checked, "4");
+            trend_refresh(paraLine2.checkBox1.Checked, "2"); trend_refresh(paraLine5.checkBox1.Checked, "5");
+            trend_refresh(paraLine3.checkBox1.Checked, "3"); trend_refresh(paraLine6.checkBox1.Checked, "6");
 
             zedGraphControl1.AxisChange();
 

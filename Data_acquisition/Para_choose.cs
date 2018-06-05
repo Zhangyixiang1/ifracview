@@ -37,6 +37,7 @@ namespace Data_acquisition
             }
             //如果是打印界面，开放选择接口
             if (Frm_name == "Frm_print") tabControl1.Enabled = true;
+            btn_clear.Visible = true;
         }
         public Para_choose(Parashow ctr, string name)
         {
@@ -236,7 +237,12 @@ namespace Data_acquisition
 
                     }
                     doc.Save(path);
-
+                    this.ctr_line.label1.Visible = true;
+                    this.ctr_line.label2.Visible = true;
+                    this.ctr_line.label3.Visible = true;
+                    this.ctr_line.label4.Visible = true;
+                    this.ctr_line.label6.Visible = true;
+                    this.ctr_line.checkBox1.Checked = true;
                     ctr_line.refresh();
                     switch (Frm_name)
                     {
@@ -433,10 +439,46 @@ namespace Data_acquisition
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            this.ctr_show.label1.Visible = false;
-            this.ctr_show.label2.Visible = false;
-            this.ctr_show.label3.Visible = false;
-            this.ctr_show.BackColor = Color.Transparent;
+            if (ctr_show != null)
+            {
+                this.ctr_show.label1.Visible = false;
+                this.ctr_show.label2.Visible = false;
+                this.ctr_show.label3.Visible = false;
+                this.ctr_show.BackColor = Color.Transparent;
+                
+            }
+            else if (ctr_line != null) {
+                this.ctr_line.label1.Visible = false;
+                this.ctr_line.label2.Visible = false;
+                this.ctr_line.label3.Visible = false;
+                this.ctr_line.label4.Visible = false;
+                this.ctr_line.label6.Visible = false;
+                this.ctr_line.checkBox1.Checked = false;
+                //保存修改到偏好配置文件
+
+                string path = Application.StartupPath + "\\Config\\preference.xml";
+                XmlDocument doc = new XmlDocument();
+                doc.Load(path);
+                XmlNode root = doc.DocumentElement;
+                XmlNodeList nodeList = root.SelectNodes("Form[Name='" + Frm_name + "']//Controlsline//Control");
+
+                foreach (XmlNode node in nodeList)
+                {
+                    if (ctr_line.Name == node.SelectSingleNode("@name").InnerText)
+                    {
+                        node.SelectSingleNode("@visible").InnerText = false.ToString();
+                        
+                    }
+
+                }
+                doc.Save(path);
+                
+            }
+            this.Close();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

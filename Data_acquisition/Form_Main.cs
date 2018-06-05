@@ -68,7 +68,7 @@ namespace Data_acquisition
         public static Dictionary<string, Datamodel> Paralist; //实时数据缓存
         public static Dictionary<string, Datamodel> Loglist; //记录数据缓存
         public static Dictionary<string, Offmodel> Offlist;//快捷键缓存
-        double[] test = new double[201]; //暂存数据数组，维数201为了不错位
+        public static double[] test = new double[201]; //暂存数据数组，维数201为了不错位
         public static Array value_blender;//混砂车plc读到的原始值
         public static Array value_frac;//压力泵读到的原始值
         public static Array value_state;//读取设备状态信息
@@ -135,25 +135,25 @@ namespace Data_acquisition
                     //读取状态信息和ip地址
                     value_state = kep3.kep_read();
                     //读取daq参数
-                    //if (tcClient.IsConnected)
-                    //{
-                    //    AdsStream dataStream = new AdsStream(2 * 60);
-                    //    BinaryReader binRead = new BinaryReader(dataStream);
-                    //    dataStream.Position = 0;
-                    //    tcClient.Read(tcHandle, dataStream);
-                    //    for (int i = 0; i < 60; i++)
-                    //    {
-                    //        Array_daq[i / 10, i % 6] = binRead.ReadSingle();
-                    //        //运用公式y=kx+b
-                    //        //test[i + 1] = Math.Round((Array_daq[i] - daqb1[i]) / daqk1[i], 2);
+                    if (tcClient.IsConnected)
+                    {
+                        AdsStream dataStream = new AdsStream(4 * 60);
+                        BinaryReader binRead = new BinaryReader(dataStream);
+                        dataStream.Position = 0;
+                        tcClient.Read(tcHandle, dataStream);
+                        for (int i = 0; i < 60; i++)
+                        {
+                            Array_daq[i / 6, i % 6] = binRead.ReadSingle();
+                            //运用公式y=kx+b
+                            //test[i + 1] = Math.Round((Array_daq[i] - daqb1[i]) / daqk1[i], 2);
 
-                    //    }
-                    //    for (int i = 0; i < 9; i++)
-                    //    {
-                    //        test[i + 1] = (double)Array_daq.GetValue(5+i*6);
+                        }
+                        for (int i = 0; i < 9; i++)
+                        {
+                            test[i + 1] = (double)Array_daq.GetValue(5 + i * 6);
 
-                    //    }
-                    //}
+                        }
+                    }
                     readfinish = true;
 
                     //更新进度条，0524修改，只有阶段与混砂橇同步时才更新
@@ -539,7 +539,7 @@ namespace Data_acquisition
                 if (reply.Status == IPStatus.Success)
                 {
                     tcClient.Connect(Pub_func.GetValue("daq") + ".1.1", 801);
-                   // tcHandle = tcClient.CreateVariableHandle("MAIN.ChannelData");
+                    tcHandle = tcClient.CreateVariableHandle("MAIN.ChannelData");
 
                 }
                 else { MessageBox.Show("无法连接到DAQ请检查网络设置！"); }
@@ -802,35 +802,38 @@ namespace Data_acquisition
         {
             string num = num_line.Substring(num_line.Length - 1);
             //对应编号的曲线重绘，包括上下限和编号
-            switch (num)
+            if (zedGraphControl1.GraphPane.CurveList.Count > 0)
             {
-                case "1":
-                    zedGraphControl1.GraphPane.CurveList[4].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.YAxisList[2].IsVisible = isshow;
-                    break;
-                case "2":
-                    zedGraphControl1.GraphPane.CurveList[2].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.YAxisList[1].IsVisible = isshow;
-                    break;
-                case "3":
-                    zedGraphControl1.GraphPane.CurveList[0].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.YAxisList[0].IsVisible = isshow;
-                    break;
-                case "4":
-                    zedGraphControl1.GraphPane.CurveList[1].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.Y2AxisList[0].IsVisible = isshow;
-                    break;
-                case "5":
-                    zedGraphControl1.GraphPane.CurveList[3].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.Y2AxisList[1].IsVisible = isshow;
-                    break;
-                case "6":
-                    zedGraphControl1.GraphPane.CurveList[5].IsVisible = isshow;
-                    zedGraphControl1.GraphPane.Y2AxisList[2].IsVisible = isshow;
-                    break;
+                switch (num)
+                {
+                    case "1":
+                        zedGraphControl1.GraphPane.CurveList[4].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.YAxisList[2].IsVisible = isshow;
+                        break;
+                    case "2":
+                        zedGraphControl1.GraphPane.CurveList[2].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.YAxisList[1].IsVisible = isshow;
+                        break;
+                    case "3":
+                        zedGraphControl1.GraphPane.CurveList[0].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.YAxisList[0].IsVisible = isshow;
+                        break;
+                    case "4":
+                        zedGraphControl1.GraphPane.CurveList[1].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.Y2AxisList[0].IsVisible = isshow;
+                        break;
+                    case "5":
+                        zedGraphControl1.GraphPane.CurveList[3].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.Y2AxisList[1].IsVisible = isshow;
+                        break;
+                    case "6":
+                        zedGraphControl1.GraphPane.CurveList[5].IsVisible = isshow;
+                        zedGraphControl1.GraphPane.Y2AxisList[2].IsVisible = isshow;
+                        break;
+                }
+                zedGraphControl1.AxisChange();
+                zedGraphControl1.Refresh();
             }
-            zedGraphControl1.AxisChange();
-            zedGraphControl1.Refresh();
         }
 
         /// <summary>
@@ -931,6 +934,14 @@ namespace Data_acquisition
                                 if (Unit == 1) ctr.Unit = dt_para.Rows[index - 1]["英制单位"].ToString();
                                 ctr.Color = Comm.ReadColor.getcolor(node.SelectSingleNode("@color").InnerText);
                                 //if (Unit == 1) ctr.Unit = factor_unit[Convert.ToInt16(ctr.Tag)];
+                                bool isvisible = Convert.ToBoolean(node.SelectSingleNode("@visible").InnerText);
+                                ctr.label1.Visible = isvisible;
+                                ctr.label2.Visible = isvisible;
+                                ctr.label3.Visible = isvisible;
+                                ctr.label4.Visible = isvisible;
+                                ctr.label6.Visible = isvisible;
+                                ctr.checkBox1.Checked = isvisible;
+
                                 ctr.refresh();
 
                             }
@@ -1270,6 +1281,9 @@ namespace Data_acquisition
             //新增，读取配置文件的曲线颜色信息，更新曲线
             trend_refresh("1"); trend_refresh("2"); trend_refresh("3");
             trend_refresh("4"); trend_refresh("5"); trend_refresh("6");
+            trend_refresh(paraLine1.checkBox1.Checked, "1"); trend_refresh(paraLine4.checkBox1.Checked, "4");
+            trend_refresh(paraLine2.checkBox1.Checked, "2"); trend_refresh(paraLine5.checkBox1.Checked, "5");
+            trend_refresh(paraLine3.checkBox1.Checked, "3"); trend_refresh(paraLine6.checkBox1.Checked, "6");
             zedGraphControl1.AxisChange();
 
 
@@ -1693,6 +1707,7 @@ namespace Data_acquisition
             //0529修改，砂比和混配液流量
             test[82] = Convert.ToDouble(value_blender.GetValue(24));//砂比
             test[83] = Convert.ToDouble(value_blender.GetValue(34));//混配液撬流量
+
             //0529增加，发送心跳信号到混砂橇和混配液模拟量
             if (!Convert.ToBoolean(value_state.GetValue(18)))
             {
@@ -1980,26 +1995,35 @@ namespace Data_acquisition
         /// <param name="e"></param>
         private void timer_now_Tick(object sender, EventArgs e)
         {
-            lbl_now.Text = DateTime.Now.ToString();
-            //0512添加，增加连接状态信号显示
-            if (Convert.ToBoolean(value_state.GetValue(18))) tssl_B.BackColor = Color.Red;
-            else
+            try
             {
-                tssl_B.BackColor = Color.Lime;
+                lbl_now.Text = DateTime.Now.ToString();
+                //0512添加，增加连接状态信号显示
+                if (Convert.ToBoolean(value_state.GetValue(18))) tssl_B.BackColor = Color.Red;
+                else
+                {
+                    tssl_B.BackColor = Color.Lime;
+                }
+                if (Convert.ToBoolean(value_state.GetValue(2))) tssl_F1.BackColor = Color.Red;
+                else tssl_F1.BackColor = Color.Lime;
+                if (Convert.ToBoolean(value_state.GetValue(4))) tssl_F2.BackColor = Color.Red;
+                else tssl_F2.BackColor = Color.Lime;
+                if (Convert.ToBoolean(value_state.GetValue(6))) tssl_F3.BackColor = Color.Red;
+                else tssl_F3.BackColor = Color.Lime;
+                if (Convert.ToBoolean(value_state.GetValue(8))) tssl_F4.BackColor = Color.Red;
+                else tssl_F4.BackColor = Color.Lime;
+                if (Convert.ToBoolean(value_state.GetValue(10))) tssl_F5.BackColor = Color.Red;
+                if (Convert.ToBoolean(value_state.GetValue(12))) tssl_F6.BackColor = Color.Red;
+                if (Convert.ToBoolean(value_state.GetValue(14))) tssl_F7.BackColor = Color.Red;
+                if (Convert.ToBoolean(value_state.GetValue(16))) tssl_F8.BackColor = Color.Red;
+                if (!tcClient.IsConnected) tssl_DAQ.BackColor = Color.Red;
             }
-            if (Convert.ToBoolean(value_state.GetValue(2))) tssl_F1.BackColor = Color.Red;
-            else tssl_F1.BackColor = Color.Lime;
-            if (Convert.ToBoolean(value_state.GetValue(4))) tssl_F2.BackColor = Color.Red;
-            else tssl_F2.BackColor = Color.Lime;
-            if (Convert.ToBoolean(value_state.GetValue(6))) tssl_F3.BackColor = Color.Red;
-            else tssl_F3.BackColor = Color.Lime;
-            if (Convert.ToBoolean(value_state.GetValue(8))) tssl_F4.BackColor = Color.Red;
-            else tssl_F4.BackColor = Color.Lime;
-            if (Convert.ToBoolean(value_state.GetValue(10))) tssl_F5.BackColor = Color.Red;
-            if (Convert.ToBoolean(value_state.GetValue(12))) tssl_F6.BackColor = Color.Red;
-            if (Convert.ToBoolean(value_state.GetValue(14))) tssl_F7.BackColor = Color.Red;
-            if (Convert.ToBoolean(value_state.GetValue(16))) tssl_F8.BackColor = Color.Red;
-            if (!tcClient.IsConnected) tssl_DAQ.BackColor = Color.Red;
+            catch (Exception)
+            {
+                
+               // throw;
+            }
+           
         }
         /// <summary>
         /// 记录定时器
@@ -2141,6 +2165,7 @@ namespace Data_acquisition
                     dataGridView1.Columns.Clear();
                     dataGridView1.DataSource = dt;
                     num_totalstage = dt.Rows.Count;
+                    Comm.Pub_func.SetValue("totalstage", num_stage.ToString());
                     // ((Frm_Realtrend2)Application.OpenForms["Frm_Realtrend2"]).grid_refresh(dt);
                     //dataGridView1.Columns[10].HeaderText = "";
                     //dataGridView1.Columns[11].HeaderText = "";
