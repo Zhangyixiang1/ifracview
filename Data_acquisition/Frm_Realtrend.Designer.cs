@@ -108,7 +108,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 44;
             this.label1.Text = "油田:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,7 +140,7 @@
             this.lbl_stagebig.AutoSize = true;
             this.lbl_stagebig.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_stagebig.ForeColor = System.Drawing.Color.White;
-            this.lbl_stagebig.Location = new System.Drawing.Point(126, 38);
+            this.lbl_stagebig.Location = new System.Drawing.Point(77, 38);
             this.lbl_stagebig.Name = "lbl_stagebig";
             this.lbl_stagebig.Size = new System.Drawing.Size(31, 20);
             this.lbl_stagebig.TabIndex = 47;
@@ -151,7 +151,7 @@
             this.lbl_wellinfo.AutoSize = true;
             this.lbl_wellinfo.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.lbl_wellinfo.ForeColor = System.Drawing.Color.White;
-            this.lbl_wellinfo.Location = new System.Drawing.Point(126, 12);
+            this.lbl_wellinfo.Location = new System.Drawing.Point(77, 12);
             this.lbl_wellinfo.Name = "lbl_wellinfo";
             this.lbl_wellinfo.Size = new System.Drawing.Size(31, 20);
             this.lbl_wellinfo.TabIndex = 48;

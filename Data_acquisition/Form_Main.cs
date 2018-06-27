@@ -134,26 +134,37 @@ namespace Data_acquisition
                     value_frac = kep2.kep_read();
                     //读取状态信息和ip地址
                     value_state = kep3.kep_read();
-                    //读取daq参数
-                    if (tcClient.IsConnected)
+                    try
                     {
-                        AdsStream dataStream = new AdsStream(4 * 60);
-                        BinaryReader binRead = new BinaryReader(dataStream);
-                        dataStream.Position = 0;
-                        tcClient.Read(tcHandle, dataStream);
-                        for (int i = 0; i < 60; i++)
+                        //读取daq参数
+                        if (tcClient.IsConnected)
                         {
-                            Array_daq[i / 6, i % 6] = binRead.ReadSingle();
-                            //运用公式y=kx+b
-                            //test[i + 1] = Math.Round((Array_daq[i] - daqb1[i]) / daqk1[i], 2);
+                            AdsStream dataStream = new AdsStream(4 * 60);
+                            BinaryReader binRead = new BinaryReader(dataStream);
+                            dataStream.Position = 0;
+                            tcClient.Read(tcHandle, dataStream);
+                            for (int i = 0; i < 60; i++)
+                            {
+                                Array_daq[i / 6, i % 6] = binRead.ReadSingle();
+                                //运用公式y=kx+b
+                                //test[i + 1] = Math.Round((Array_daq[i] - daqb1[i]) / daqk1[i], 2);
 
-                        }
-                        for (int i = 0; i < 9; i++)
-                        {
-                            test[i + 1] = (double)Array_daq.GetValue(5 + i * 6);
+                            }
 
+                            for (int i = 0; i < 9; i++)
+                            {
+                                // 屏蔽了，跟beckoff的通信,目前是NAN
+                                //  test[i + 1] = (double)Array_daq[i,5];
+
+                            }
                         }
                     }
+                    catch (Exception)
+                    {
+
+                        //throw;
+                    }
+
                     readfinish = true;
 
                     //更新进度条，0524修改，只有阶段与混砂橇同步时才更新
@@ -529,26 +540,28 @@ namespace Data_acquisition
             path = Application.StartupPath + "\\Config\\System.txt";
             kep3.kep_initial(path, "S");
 
-            try
-            {
-                //注册daq
+            //    try
+            //    {
+            //        //注册daq
 
-                tcClient = new TcAdsClient();
-                Ping pin = new Ping();
-                PingReply reply = pin.Send(Pub_func.GetValue("daq"), 100);
-                if (reply.Status == IPStatus.Success)
-                {
-                    tcClient.Connect(Pub_func.GetValue("daq") + ".1.1", 801);
-                    tcHandle = tcClient.CreateVariableHandle("MAIN.ChannelData");
+            //        tcClient = new TcAdsClient();
+            //        Ping pin = new Ping();
+            //        PingReply reply = pin.Send(Pub_func.GetValue("daq"), 100);
+            //        if (reply.Status == IPStatus.Success)
+            //        {
+            //            tcClient.Connect(Pub_func.GetValue("daq") + ".1.1", 801);
+            //            tcHandle = tcClient.CreateVariableHandle("MAIN.ChannelData");
 
-                }
-                else { MessageBox.Show("无法连接到DAQ请检查网络设置！"); }
-            }
-            catch (Exception)
-            {
+            //        }
+            //        else { MessageBox.Show("无法连接到DAQ请检查网络设置！"); }
+            //    }
+            //    catch (Exception)
+            //    {
 
-                throw;
-            }
+            //       // throw;
+
+            //        MessageBox.Show("无法连接到DAQ请检查网络设置！");
+            //    }
 
         }
 
@@ -1572,7 +1585,8 @@ namespace Data_acquisition
             //xScale.Max = time + xScale.MajorStep;
             //xScale.Min = xScale.Max - 30.0;
 
-            if (refresh)
+            //0627修改，增加当编辑图像时，曲线不要刷新
+            if (refresh && !pnl_setting.Visible)
             {
                 //第三步:调用ZedGraphControl.AxisChange()方法更新X和Y轴的范围
                 zedGraphControl1.AxisChange();
@@ -1630,7 +1644,7 @@ namespace Data_acquisition
                 case 0: test[34] = test[9]; break;
                 case 1: test[34] = test[10]; break;
                 case 2: test[34] = test[141]; break;
-                case 3: test[34] = test[39]; break;
+                case 3: test[34] = test[39] + test[83]; break;
             }
 
             //读取混砂车数据
@@ -1706,7 +1720,7 @@ namespace Data_acquisition
 
             //0529修改，砂比和混配液流量
             test[82] = Convert.ToDouble(value_blender.GetValue(24));//砂比
-            test[83] = Convert.ToDouble(value_blender.GetValue(34));//混配液撬流量
+            //  test[83] = Convert.ToDouble(value_blender.GetValue(34));//混配液撬流量
 
             //0529增加，发送心跳信号到混砂橇和混配液模拟量
             if (!Convert.ToBoolean(value_state.GetValue(18)))
@@ -2020,10 +2034,10 @@ namespace Data_acquisition
             }
             catch (Exception)
             {
-                
-               // throw;
+
+                // throw;
             }
-           
+
         }
         /// <summary>
         /// 记录定时器

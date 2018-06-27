@@ -84,7 +84,7 @@ namespace Data_acquisition
             myCurve.YAxisIndex = 1;
 
             // 第3条线的标号为2
-            myCurve = myPane.AddCurve("砂浓度",
+            myCurve = myPane.AddCurve("砂比",
                List3, Color.FromArgb(255, 128, 128), SymbolType.None);
             myCurve.Line.Width = 1;
             // Fill the symbols with white
@@ -179,7 +179,7 @@ namespace Data_acquisition
             yAxis5.MajorTic.Color = Color.FromArgb(255, 128, 128);
             yAxis5.MinorTic.IsOpposite = false;
             yAxis5.MinorTic.Color = Color.FromArgb(255, 128, 128);
-            yAxis5.Scale.Max = 10000;
+            yAxis5.Scale.Max = 100;
             yAxis5.Scale.Min = 0;
             // Align the Y2 axis labels so they are flush to the axis
             yAxis5.Scale.Align = AlignP.Inside;
@@ -216,9 +216,9 @@ namespace Data_acquisition
             if (Form_Main.lan == "Chinese")
             {
                 zedGraphControl1.GraphPane.XAxis.Title.Text = "时间(分钟)";
-                zedGraphControl1.GraphPane.CurveList[0].Label.Text = "井口油压";
-                zedGraphControl1.GraphPane.CurveList[1].Label.Text = "排出流量";
-                zedGraphControl1.GraphPane.CurveList[2].Label.Text = "砂浓度";
+                zedGraphControl1.GraphPane.CurveList[0].Label.Text = "井口油压(MPa)";
+                zedGraphControl1.GraphPane.CurveList[1].Label.Text = "排出流量(m3/min)";
+                zedGraphControl1.GraphPane.CurveList[2].Label.Text = "砂比(%)";
                 zedGraphControl1.AxisChange();
                 zedGraphControl1.Invalidate();
                 //datagridview初始化
@@ -353,7 +353,7 @@ namespace Data_acquisition
                 //刷新曲线的值
 
                 CurveList list = zedGraphControl1.GraphPane.CurveList;
-                //0井口油压 1排出流量 2砂浓度
+                //0井口油压 1排出流量 2砂比
                 double x = DateTime.Now.ToOADate();
                 list[0].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[31]));
                 list[1].AddPoint(new PointPair(x, Form_Main.Paralist.Last().Value.DATA[34]));
@@ -589,6 +589,16 @@ namespace Data_acquisition
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, panel3.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel5.ClientRectangle,Color.White,ButtonBorderStyle.Solid);
+        }
+
+        private void panel15_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel15.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
         }
 
 
